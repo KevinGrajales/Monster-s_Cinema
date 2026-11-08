@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comprar tiquetes | Monster's Cinema</title>
+
+    <!-- Tipografías de la marca -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Bungee&family=Yellowtail&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS compilado -->
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+
+<body class="min-h-screen bg-charcoal font-sans text-cream">
+
+
+    <!-- ENCABEZADO -->
+    <header class="starfield border-b border-mustard/30 bg-gradient-to-b from-vintage-red/30 to-charcoal px-6 py-16 md:px-12">
+
+        <div class="mx-auto max-w-7xl">
+
+            <p class="font-script text-3xl text-mustard md:text-4xl">
+                Tu noche de cine
+            </p>
+
+            <h1 class="mt-2 font-display text-4xl uppercase leading-tight md:text-6xl">
+                Comprar tiquetes
+            </h1>
+
+            <p class="mt-5 max-w-3xl text-base leading-relaxed text-cream/80 md:text-lg">
+                El tiquete es por vehículo, sin importar cuántas personas vayan.
+                Capacidad máxima: 80 vehículos por función.
+            </p>
+
+        </div>
+
+    </header>
+
+
+      <h1 class="text-4xl font-bold">
+        Monster's Cinema
+    </h1>
+    <p class="text-xl mt-4">
+        Tailwind está funcionando correctamente.
+    </p>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="mx-auto max-w-7xl px-6 py-10 md:px-12">
+
+        <!-- INDICADOR DE LOS CINCO PASOS -->
+        <section class="relative mb-12">
+
+            <!-- Línea de conexión -->
+            <div class="absolute left-[10%] right-[10%] top-5 hidden h-px bg-white/20 md:block"></div>
+
+            <div class="relative z-10 grid grid-cols-5 gap-2">
+
+                <!-- PASO 1 -->
+                <div class="flex flex-col items-center gap-2">
+
+                    <div class="glow-red flex h-11 w-11 items-center justify-center rounded-full border-2 border-mustard bg-vintage-red font-display text-sm">
+                        1
+                    </div>
+
+                    <span class="text-center text-xs font-bold text-mustard">
+                        FUNCIÓN
+                    </span>
+
+                </div>
+
+                <!-- PASO 2 -->
+                <div class="flex flex-col items-center gap-2">
+
+                    <div class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/20 bg-charcoal font-display text-sm text-white/50">
+                        2
+                    </div>
+
+                    <span class="text-center text-xs font-bold text-white/50">
+                        ESPACIO
+                    </span>
+
+                </div>
+
+                <!-- PASO 3 -->
+                <div class="flex flex-col items-center gap-2">
+
+                    <div class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/20 bg-charcoal font-display text-sm text-white/50">
+                        3
+                    </div>
+
+                    <span class="text-center text-xs font-bold text-white/50">
+                        DATOS
+                    </span>
+
+                </div>
+
+                <!-- PASO 4 -->
+                <div class="flex flex-col items-center gap-2">
+
+                    <div class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/20 bg-charcoal font-display text-sm text-white/50">
+                        4
+                    </div>
+
+                    <span class="text-center text-xs font-bold text-white/50">
+                        PAGO
+                    </span>
+
+                </div>
+
+                <!-- PASO 5 -->
+                <div class="flex flex-col items-center gap-2">
+
+                    <div class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/20 bg-charcoal font-display text-sm text-white/50">
+                        5
+                    </div>
+
+                    <span class="text-center text-xs font-bold text-white/50">
+                        CONFIRMACIÓN
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO Y RESUMEN -->
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+
+            <!-- SECCIÓN DE SELECCIÓN -->
+            <section class="rounded-3xl border border-white/10 bg-asphalt p-6 shadow-ticket md:p-8 lg:col-span-2">
+
+                <h2 class="mb-8 font-display text-xl md:text-2xl">
+                    1. Selecciona la función
+                </h2>
+
+                <form>
+
+                    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+
+                        <!-- PELÍCULA -->
+                        <div class="flex flex-col gap-2">
+
+                            <label for="pelicula" class="font-semibold">
+                                Película
+                            </label>
+
+                            <select
+                                id="pelicula"
+                                name="pelicula"
+                                class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-3 py-3 text-cream outline-none transition focus:border-mustard"
+                            >
+
+                                <option value="">Elige una película...</option>
+                                <option value="pelicula1">Película de prueba 1</option>
+                                <option value="pelicula2">Película de prueba 2</option>
+                                <option value="pelicula3">Película de prueba 3</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SEDE -->
+                        <div class="flex flex-col gap-2">
+
+                            <label for="sede" class="font-semibold">
+                                Sede
+                            </label>
+
+                            <select
+                                id="sede"
+                                name="sede"
+                                disabled
+                                class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-3 py-3 text-cream/50 outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                            >
+
+                                <option value="">
+                                    Primero elige la película
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BOTÓN -->
+                    <div class="mt-8 flex justify-end">
+
+                        <button
+                            type="button"
+                            disabled
+                            class="flex items-center gap-3 rounded-xl border-2 border-mustard/40 bg-vintage-red px-7 py-3 font-display text-sm text-cream opacity-50"
+                        >
+
+                            ELEGIR ESPACIO
+
+                            <span class="text-xl">→</span>
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- RESUMEN DEL TIQUETE -->
+            <aside class="h-fit rounded-3xl border border-white/10 bg-asphalt p-6 shadow-ticket">
+
+                <h2 class="mb-5 font-display text-sm text-mustard">
+                    TU TIQUETE
+                </h2>
+
+                        <h3
+                    id="nombre-pelicula"
+                    class="font-display text-base text-cream"
+                >
+                    Aún no has elegido película
+                </h3>
+
+                <span
+                    id="clasificacion-pelicula"
+                        class="text-xs text-mustard"
+                ></span>
+
+                <span
+                    id="duracion-pelicula"
+                    class="text-xs text-cream/60"
+                ></span>
+
+                <div class="space-y-4 border-y border-white/10 py-5">
+
+                    <div class="flex justify-between gap-3 text-sm">
+                        <span class="text-cream/70">⌖ Sede:</span>
+                        <span class="text-cream/50">Pendiente</span>
+                    </div>
+
+                    <div class="flex justify-between gap-3 text-sm">
+                        <span class="text-cream/70">▦ Fecha:</span>
+                        <span class="text-cream/50">Pendiente</span>
+                    </div>
+
+                    <div class="flex justify-between gap-3 text-sm">
+                        <span class="text-cream/70">◷ Hora:</span>
+                        <span class="text-cream/50">Pendiente</span>
+                    </div>
+
+                    <div class="flex justify-between gap-3 text-sm">
+                        <span class="text-cream/70">▱ Espacio:</span>
+                        <span class="text-cream/50">Pendiente</span>
+                    </div>
+
+                </div>
+
+
+                <!-- TOTAL -->
+                <div class="mt-5 flex items-center justify-between">
+
+                    <span class="text-sm text-cream/70">
+                        Total
+                    </span>
+
+                    <span class="font-display text-2xl text-mustard">
+                        —
+                    </span>
+
+                </div>
+
+
+                <!-- TARIFAS -->
+                <div class="mt-10 text-xs leading-relaxed text-cream/60">
+
+                    <p>
+                        VIP: $45.000 - Preferencial: $35.000 - General: $25.000
+                    </p>
+
+                    <p class="mt-1">
+                        Precios por vehículo.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/tiquetes.js"></script>
+</body>
+</html>
