@@ -41,14 +41,46 @@ const seccionDatos = document.getElementById("seccion-datos");
 const formularioDatos = document.getElementById("formulario-datos");
 const botonVolverEspacios = document.getElementById("btn-volver-espacios");
 
-// ACTUALIZAR INDICADOR DE PROGRESO
+// ELEMENTOS DE LA ETAPA 4: PAGO
+const seccionPago = document.getElementById("seccion-pago");
+const botonVolverDatos = document.getElementById("btn-volver-datos");
+const botonContinuarConfirmacion = document.getElementById("btn-continuar-confirmacion");
+
+// ============================================
+// ELEMENTOS DE LA ETAPA 5: CONFIRMACIÓN
+// ============================================
+
+const seccionConfirmacion = document.getElementById("seccion-confirmacion");
+
+const codigoReserva = document.getElementById("codigo-reserva");
+const confirmacionPelicula = document.getElementById("confirmacion-pelicula");
+const confirmacionSede = document.getElementById("confirmacion-sede");
+const confirmacionFecha = document.getElementById("confirmacion-fecha");
+const confirmacionHora = document.getElementById("confirmacion-hora");
+const confirmacionEspacioFinal = document.getElementById("confirmacion-espacio-final");
+
+const confirmacionCliente = document.getElementById("confirmacion-cliente");
+const confirmacionDocumento = document.getElementById("confirmacion-documento");
+const confirmacionTelefono = document.getElementById("confirmacion-telefono");
+const confirmacionVehiculo = document.getElementById("confirmacion-vehiculo");
+const confirmacionPlaca = document.getElementById("confirmacion-placa");
+const confirmacionMetodoPago = document.getElementById("confirmacion-metodo-pago");
+const confirmacionTotal = document.getElementById("confirmacion-total");
+
+const botonImprimirReserva = document.getElementById("btn-imprimir-reserva");
+
+// ============================================
+// ACTUALIZAR INDICADOR DE LOS CINCO PASOS
+// ============================================
+
 function actualizarPaso(pasoActual) {
 
-    for (let numero = 1; numero <= 3; numero++) {
+    for (let numero = 1; numero <= 5; numero++) {
 
         const circulo = document.getElementById(`paso-${numero}`);
         const etiqueta = document.getElementById(`etiqueta-paso-${numero}`);
 
+        // Limpiar estilos anteriores
         circulo.classList.remove(
             "glow-red",
             "border-mustard",
@@ -60,12 +92,16 @@ function actualizarPaso(pasoActual) {
             "text-white/50"
         );
 
-        etiqueta.classList.remove("text-mustard", "text-white/50");
+        etiqueta.classList.remove(
+            "text-mustard",
+            "text-white/50"
+        );
 
         if (numero < pasoActual) {
 
             // PASOS COMPLETADOS
             circulo.textContent = "✓";
+
             circulo.classList.add(
                 "border-mustard",
                 "bg-mustard",
@@ -78,6 +114,7 @@ function actualizarPaso(pasoActual) {
 
             // PASO ACTUAL
             circulo.textContent = numero;
+
             circulo.classList.add(
                 "glow-red",
                 "border-mustard",
@@ -91,6 +128,7 @@ function actualizarPaso(pasoActual) {
 
             // PASOS PENDIENTES
             circulo.textContent = numero;
+
             circulo.classList.add(
                 "border-white/20",
                 "bg-charcoal",
@@ -98,8 +136,80 @@ function actualizarPaso(pasoActual) {
             );
 
             etiqueta.classList.add("text-white/50");
+
         }
     }
+}
+
+// ============================================
+// GENERAR CÓDIGO DE RESERVA
+// ============================================
+
+function generarCodigoReserva() {
+
+    const numero = Math.floor(100000 + Math.random() * 900000);
+
+    return "MC-" + numero;
+
+}
+
+// ============================================
+// COMPLETAR COMPROBANTE DE RESERVA
+// ============================================
+
+function completarComprobante() {
+
+    // OBTENER INFORMACIÓN DE LA PELÍCULA
+    const pelicula = peliculas[selectorPelicula.value];
+
+    // OBTENER INFORMACIÓN DE LA SEDE
+    const sede = sedes[selectorSede.value];
+
+    // OBTENER INFORMACIÓN DEL CLIENTE
+    const nombre = document.getElementById("nombre-cliente").value;
+    const tipoDocumento = document.getElementById("tipo-documento").value;
+    const documento = document.getElementById("numero-documento").value;
+    const telefono = document.getElementById("telefono-cliente").value;
+
+    // OBTENER INFORMACIÓN DEL VEHÍCULO
+    const placa = document.getElementById("placa-vehiculo").value;
+    const tipoVehiculo = document.getElementById("tipo-vehiculo").value;
+
+    // OBTENER MÉTODO DE PAGO
+    const metodoPago = document.querySelector(
+        'input[name="metodo-pago"]:checked'
+    );
+
+    // GENERAR CÓDIGO DE RESERVA
+    codigoReserva.textContent = generarCodigoReserva();
+
+    // INFORMACIÓN DE LA FUNCIÓN
+    confirmacionPelicula.textContent = pelicula.nombre;
+    confirmacionSede.textContent = "Monster's Cinema " + sede;
+    confirmacionFecha.textContent = fechaSeleccionada;
+    confirmacionHora.textContent = horaSeleccionada;
+
+    // INFORMACIÓN DEL ESPACIO
+    confirmacionEspacioFinal.textContent =
+        espacioSeleccionado.codigo + " · " + espacioSeleccionado.zona;
+
+    // INFORMACIÓN DEL CLIENTE
+    confirmacionCliente.textContent = nombre;
+    confirmacionDocumento.textContent =
+        tipoDocumento + " " + documento;
+    confirmacionTelefono.textContent = telefono;
+
+    // INFORMACIÓN DEL VEHÍCULO
+    confirmacionVehiculo.textContent = tipoVehiculo;
+    confirmacionPlaca.textContent = placa;
+
+    // MÉTODO DE PAGO
+    confirmacionMetodoPago.textContent = metodoPago.value;
+
+    // PRECIO TOTAL
+    confirmacionTotal.textContent =
+        "$" + espacioSeleccionado.precio.toLocaleString("es-CO");
+
 }
 
 // ============================================
@@ -857,7 +967,7 @@ botonVolverEspacios.addEventListener("click", function() {
 
 
 // ============================================
-// 20. VALIDAR FORMULARIO DE DATOS
+// 20. VALIDAR DATOS Y AVANZAR AL PAGO
 // ============================================
 
 formularioDatos.addEventListener("submit", function(event) {
@@ -866,6 +976,103 @@ formularioDatos.addEventListener("submit", function(event) {
 
     if (!formularioDatos.reportValidity()) return;
 
-    alert("¡Datos registrados! El siguiente paso será el pago.");
+    // Ocultar etapa 3
+    seccionDatos.classList.add("hidden");
+
+    // Mostrar etapa 4
+    seccionPago.classList.remove("hidden");
+
+    // Actualizar indicador
+    actualizarPaso(4);
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+// ============================================
+// 21. SELECCIONAR MÉTODO DE PAGO
+// ============================================
+
+const opcionesPago = document.querySelectorAll(
+    'input[name="metodo-pago"]'
+);
+
+opcionesPago.forEach(function(opcion) {
+
+    opcion.addEventListener("change", function() {
+
+        botonContinuarConfirmacion.disabled = false;
+
+        botonContinuarConfirmacion.classList.remove("opacity-50");
+
+    });
+
+});
+
+// ============================================
+// 22. VOLVER DE PAGO A DATOS
+// ============================================
+
+botonVolverDatos.addEventListener("click", function() {
+
+    seccionPago.classList.add("hidden");
+
+    seccionDatos.classList.remove("hidden");
+
+    actualizarPaso(3);
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}); 
+
+// ============================================
+// 23. CONFIRMAR RESERVA Y MOSTRAR COMPROBANTE
+// ============================================
+
+botonContinuarConfirmacion.addEventListener("click", function() {
+
+    // Verificar que exista un método de pago seleccionado
+    const metodoPagoSeleccionado = document.querySelector(
+        'input[name="metodo-pago"]:checked'
+    );
+
+    if (!metodoPagoSeleccionado) {
+        alert("Por favor, selecciona un método de pago.");
+        return;
+    }
+
+    // Generar y completar el comprobante
+    completarComprobante();
+
+    // Ocultar etapa 4
+    seccionPago.classList.add("hidden");
+
+    // Mostrar etapa 5
+    seccionConfirmacion.classList.remove("hidden");
+
+    // Actualizar indicador
+    actualizarPaso(5);
+
+    // Subir al inicio
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+// ============================================
+// 24. IMPRIMIR COMPROBANTE
+// ============================================
+
+botonImprimirReserva.addEventListener("click", function() {
+
+    window.print();
 
 });

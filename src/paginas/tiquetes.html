@@ -22,7 +22,7 @@
 
 
     <!-- ENCABEZADO -->
-    <header class="starfield border-b border-mustard/30 bg-gradient-to-b from-vintage-red/30 to-charcoal px-6 py-16 md:px-12">
+    <header class="starfield border-b border-mustard/30 bg-gradient-to-b from-vintage-red/30 to-charcoal px-6 py-16 md:px-12 print:hidden">
 
         <div class="mx-auto max-w-7xl">
 
@@ -45,10 +45,10 @@
 
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="mx-auto max-w-7xl px-6 py-10 md:px-12">
+    <main class="mx-auto max-w-7xl px-6 py-10 md:px-12 print:mx-0 print:max-w-none print:p-0">
 
         <!-- INDICADOR DE LOS CINCO PASOS -->
-        <section class="relative mb-12">
+        <section class="relative mb-12 print:hidden">
 
             <!-- Línea de conexión -->
             <div class="absolute left-[10%] right-[10%] top-5 hidden h-px bg-white/20 md:block"></div>
@@ -75,7 +75,7 @@
                         2
                     </div>
 
-                    <span id="etiqueta-paso-2 class="text-center text-xs font-bold text-white/50">
+                    <span id="etiqueta-paso-2" class="text-center text-xs font-bold text-white/50">
                         ESPACIO
                     </span>
 
@@ -96,7 +96,6 @@
 
                 <!-- PASO 4 -->
                 <div class="flex flex-col items-center gap-2">
-
                     <div id="paso-4" class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/20 bg-charcoal font-display text-sm text-white/50">
                         4
                     </div>
@@ -104,20 +103,18 @@
                     <span id="etiqueta-paso-4" class="text-center text-xs font-bold text-white/50">
                         PAGO
                     </span>
-
                 </div>
 
+              
                 <!-- PASO 5 -->
                 <div class="flex flex-col items-center gap-2">
-
                     <div id="paso-5" class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/20 bg-charcoal font-display text-sm text-white/50">
                         5
                     </div>
 
-                    <span id="etiqueta-paso-4" class="text-center text-xs font-bold text-white/50">
+                    <span id="etiqueta-paso-5" class="text-center text-xs font-bold text-white/50">
                         CONFIRMACIÓN
                     </span>
-
                 </div>
 
             </div>
@@ -384,16 +381,15 @@
             ← VOLVER
         </button>
 
-        <button
-            id="btn-continuar-datos"
-            type="button"
-            disabled
-            class="rounded-xl border-2 border-mustard/40 bg-vintage-red px-6 py-3 font-display text-sm opacity-50"
-        >
-            CONTINUAR →
-        </button>
-
-    </div>
+                    <button
+                id="btn-continuar-datos"
+                type="button"
+                disabled
+                class="flex items-center gap-3 rounded-xl border-2 border-mustard bg-vintage-red px-7 py-3 font-display text-sm text-cream transition-all duration-300 hover:-translate-y-1 hover:border-mustard hover:shadow-[0_0_20px_rgba(255,193,7,0.6)] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
+            >
+                CONTINUAR →
+            </button>
+                </div>
 
 </section>
 
@@ -700,10 +696,271 @@
 </section>
 
 
+<!-- ETAPA 4: MÉTODO DE PAGO -->
+<section
+    id="seccion-pago"
+    class="hidden rounded-3xl border border-white/10 bg-asphalt p-6 shadow-ticket md:p-8 lg:col-span-2"
+>
+    <h2 class="mb-3 font-display text-xl md:text-2xl">
+        4. Método de pago
+    </h2>
+
+    <p class="mb-8 text-sm text-cream/70">
+        Selecciona cómo deseas pagar tus entradas.
+    </p>
+
+    <!-- OPCIONES DE PAGO -->
+    <div class="space-y-4">
+
+        <!-- PSE -->
+        <label class="flex cursor-pointer items-center gap-4 rounded-2xl border-2 border-white/15 bg-charcoal p-5 transition-all hover:border-mustard">
+            <input
+                type="radio"
+                name="metodo-pago"
+                value="PSE"
+                class="h-5 w-5 accent-yellow-400"
+            >
+
+            <div class="flex-1">
+                <h3 class="font-display text-lg">PSE</h3>
+                <p class="text-sm text-cream/60">
+                    Paga directamente desde tu cuenta bancaria.
+                </p>
+            </div>
+
+            <span class="text-2xl">🏦</span>
+        </label>
+
+        <!-- TARJETA -->
+        <label class="flex cursor-pointer items-center gap-4 rounded-2xl border-2 border-white/15 bg-charcoal p-5 transition-all hover:border-mustard">
+            <input
+                type="radio"
+                name="metodo-pago"
+                value="Tarjeta"
+                class="h-5 w-5 accent-yellow-400"
+            >
+
+            <div class="flex-1">
+                <h3 class="font-display text-lg">Tarjeta débito o crédito</h3>
+                <p class="text-sm text-cream/60">
+                    Paga utilizando tu tarjeta bancaria.
+                </p>
+            </div>
+
+            <span class="text-2xl">💳</span>
+        </label>
+
+    </div>
+
+    <!-- BOTONES -->
+    <div class="mt-10 flex flex-wrap justify-between gap-3 border-t border-white/10 pt-6">
+
+        <button
+            id="btn-volver-datos"
+            type="button"
+            class="rounded-xl border-2 border-white/20 px-6 py-3 font-display text-sm transition-all hover:border-mustard hover:text-mustard"
+        >
+            ← VOLVER
+        </button>
+
+        <button
+            id="btn-continuar-confirmacion"
+            type="button"
+            disabled
+            class="rounded-xl border-2 border-mustard bg-vintage-red px-7 py-3 font-display text-sm text-cream opacity-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,193,7,0.6)] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
+        >
+            CONTINUAR →
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ETAPA 5: CONFIRMACIÓN DE COMPRA -->
+<section
+    id="seccion-confirmacion"
+    class="hidden rounded-3xl border border-mustard/40 bg-asphalt p-6 shadow-ticket md:p-8 lg:col-span-2 print:mx-auto print:w-full print:max-w-[190mm] print:border-0 print:bg-white print:p-0 print:shadow-none print:text-black"
+>
+
+    <!-- MENSAJE DE CONFIRMACIÓN -->
+    <div class="mb-8 text-center">
+
+        <div class="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full border-2 border-mustard bg-mustard/10 text-4xl">
+            ✓
+        </div>
+
+        <p class="mb-2 font-display text-sm tracking-[0.3em] text-mustard">
+            MONSTER'S CINEMA
+        </p>
+
+        <h2 class="font-display text-2xl text-mustard md:text-3xl">
+            ¡RESERVA CONFIRMADA!
+        </h2>
+
+        <p class="mt-3 text-sm text-cream/70">
+            Tu aventura está a punto de comenzar.
+            Gracias por elegir nuestro autocinema.
+        </p>
+
+    </div>
+
+    <!-- BOLETO DE CONFIRMACIÓN -->
+    <div class="rounded-2xl border-2 border-dashed border-mustard/60 bg-charcoal p-6 print:rounded-xl print:border-gray-400 print:bg-white print:p-5 print:text-black">
+
+        <div class="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-5">
+
+            <div>
+                <p class="text-xs text-cream/50">CÓDIGO DE RESERVA</p>
+
+                <h3
+                    id="codigo-reserva"
+                    class="mt-1 font-display text-xl tracking-widest text-mustard"
+                >
+                    MC-000000
+                </h3>
+            </div>
+
+            <span class="rounded-lg bg-mustard px-3 py-2 font-display text-xs text-charcoal">
+                PAGADO*
+            </span>
+
+        </div>
+
+        <!-- INFORMACIÓN DE LA PELÍCULA -->
+        <div class="mb-6">
+
+            <p class="mb-2 text-xs text-cream/50">
+                PELÍCULA
+            </p>
+
+            <h3
+                id="confirmacion-pelicula"
+                class="font-display text-lg text-cream"
+            >
+                Nombre de la película
+            </h3>
+
+        </div>
+
+        <!-- INFORMACIÓN DE LA FUNCIÓN -->
+        <div class="grid grid-cols-2 gap-5 border-b border-white/10 pb-6">
+
+            <div>
+                <p class="text-xs text-cream/50">SEDE</p>
+                <p id="confirmacion-sede" class="mt-1 font-semibold">
+                    —
+                </p>
+            </div>
+
+            <div>
+                <p class="text-xs text-cream/50">FECHA</p>
+                <p id="confirmacion-fecha" class="mt-1 font-semibold">
+                    —
+                </p>
+            </div>
+
+            <div>
+                <p class="text-xs text-cream/50">HORARIO</p>
+                <p id="confirmacion-hora" class="mt-1 font-semibold">
+                    —
+                </p>
+            </div>
+
+            <div>
+                <p class="text-xs text-cream/50">ESPACIO</p>
+                <p id="confirmacion-espacio-final" class="mt-1 font-semibold text-mustard">
+                    —
+                </p>
+            </div>
+
+        </div>
+
+        <!-- INFORMACIÓN DEL CLIENTE -->
+        <div class="mt-6">
+
+            <h3 class="mb-4 font-display text-sm text-mustard">
+                DATOS DEL CLIENTE
+            </h3>
+
+            <div class="space-y-3 text-sm">
+
+                <p>
+                    Nombre:
+                    <span id="confirmacion-cliente" class="text-cream/70">—</span>
+                </p>
+
+                <p>
+                    Documento:
+                    <span id="confirmacion-documento" class="text-cream/70">—</span>
+                </p>
+
+                <p>
+                    Teléfono:
+                    <span id="confirmacion-telefono" class="text-cream/70">—</span>
+                </p>
+
+                <p>
+                    Vehículo:
+                    <span id="confirmacion-vehiculo" class="text-cream/70">—</span>
+                </p>
+
+                <p>
+                    Placa:
+                    <span id="confirmacion-placa" class="text-cream/70">—</span>
+                </p>
+
+                <p>
+                    Método de pago:
+                    <span id="confirmacion-metodo-pago" class="text-cream/70">—</span>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TOTAL -->
+        <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+
+            <span class="font-display text-lg">
+                TOTAL
+            </span>
+
+            <span
+                id="confirmacion-total"
+                class="font-display text-2xl text-mustard"
+            >
+                $0
+            </span>
+
+        </div>
+
+    </div>
+
+    <p class="mt-4 text-center text-xs text-cream/50">
+        * Confirmación simulada para demostración académica.
+        No se ha realizado ningún cobro real.
+    </p>
+
+    <!-- BOTONES -->
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+
+        <button
+            id="btn-imprimir-reserva"
+            type="button"
+            class="rounded-xl border-2 border-mustard bg-vintage-red px-7 py-3 font-display text-sm text-cream transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,193,7,0.6)]"
+        >
+            IMPRIMIR COMPROBANTE
+        </button>
+
+    </div>
+
+</section>
+
+
 
 
             <!-- RESUMEN DEL TIQUETE -->
-<aside class="h-fit rounded-3xl border border-white/10 bg-asphalt p-6 shadow-ticket">
+<aside class="h-fit rounded-3xl border border-white/10 bg-asphalt p-6 shadow-ticket print:hidden">
 
     <h2 class="mb-5 font-display text-sm text-mustard">
         TU TIQUETE
