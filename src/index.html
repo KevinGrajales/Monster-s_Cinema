@@ -20,6 +20,78 @@
     <link rel="stylesheet" href="css/output.css">
 </head>
 
+
+    <header class="no-print sticky top-0 z-[1100] border-b-2 border-mustard/30 bg-charcoal/90 backdrop-blur-md">
+        <div class="h-1.5 checker opacity-80" aria-hidden="true"></div>
+        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
+            <a aria-label="Monster's Cinema — Inicio" class="group inline-flex items-center gap-2.5" href="/">
+                <span
+                    class="grid place-items-center rounded-full bg-marquee border-2 border-mustard glow-red transition-transform group-hover:rotate-12 h-11 w-11">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-film text-mustard h-5 w-5" aria-hidden="true">
+                        <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        <path d="M7 3v18"></path>
+                        <path d="M3 7.5h4"></path>
+                        <path d="M3 12h18"></path>
+                        <path d="M3 16.5h4"></path>
+                        <path d="M17 3v18"></path>
+                        <path d="M17 7.5h4"></path>
+                        <path d="M17 16.5h4"></path>
+                    </svg>
+                </span>
+                <span class="flex flex-col leading-none">
+                    <span class="font-script text-mustard neon-mustard -rotate-3 text-2xl">Monster's</span>
+                    <span class="font-display tracking-[0.3em] text-cream text-[0.7rem]">CINEMA</span>
+                </span>
+            </a>
+
+            <nav class="hidden items-center gap-1 lg:flex" aria-label="Navegación principal">
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
+                    href="/">Inicio</a>
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
+                    href="cartelera.html">Cartelera</a>
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
+                    href="tiquetes.html">Comprar tiquetes</a>
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
+                    href="menu.html">Menú</a>
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard !text-mustard neon-mustard"
+                    href="/ubicaciones" data-status="active" aria-current="page">Ubicaciones</a>
+            </nav>
+
+            <div class="flex items-center gap-2">
+
+                <a class="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-marquee text-primary-foreground font-display uppercase tracking-wide border-2 border-mustard/70 shadow-ticket hover:glow-red hover:-translate-y-0.5 transition-all h-9 px-4 py-2 hidden sm:inline-flex"
+                    href="tiquetes.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-ticket" aria-hidden="true">
+                        <path
+                            d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z">
+                        </path>
+                        <path d="M13 5v2"></path>
+                        <path d="M13 17v2"></path>
+                        <path d="M13 11v2"></path>
+                    </svg>
+                    Comprar ahora
+                </a>
+                <button
+                    class="grid h-10 w-10 place-items-center rounded-md border border-cream/20 text-cream transition-colors hover:border-mustard hover:text-mustard cursor-pointer lg:hidden"
+                    aria-label="Abrir menú" type="button" aria-haspopup="dialog" aria-expanded="false"
+                    data-state="closed">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-menu h-5 w-5" aria-hidden="true">
+                        <path d="M4 5h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 19h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
 <title>Monster's Cinema — Inicio</title>
 
 <body class="bg-background text-foreground font-sans">
@@ -37,7 +109,7 @@
             aria-labelledby="titulo-principal">
 
             <img
-                src=""
+                src="../img/APEX.jpeg"
                 alt="Autocine retro de noche con autos clásicos frente a una pantalla gigante"
                 width="1920"
                 height="1088"
@@ -52,14 +124,14 @@
                 <header class="max-w-3xl">
 
                     <p class="inline-flex items-center gap-2 rounded-full border border-mustard/50 bg-charcoal/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-mustard backdrop-blur">
-                        
+                        AUTOCINE - Desde el 67'
                     </p>
 
                     <h1 id="titulo-principal" class="mt-6 text-5xl leading-[0.95] text-cream sm:text-7xl lg:text-8xl">
-                        
+                        La magia del cine
 
                         <span class="block font-script text-6xl normal-case text-mustard neon-mustard sm:text-8xl lg:text-9xl">
-                          
+                          Bajo las estrellas 
                         </span>
                     </h1>
 
@@ -71,12 +143,12 @@
 
                         <a href="https://monsters-moonlit-drive-in.lovable.app/cartelera"
                            class="inline-flex items-center justify-center bg-mustard text-charcoal font-display uppercase tracking-wide border-2 border-charcoal shadow-ticket h-12 rounded-lg px-7 text-base">
-                            
+                            VER CARTELERA
                         </a>
 
                         <a href="https://monsters-moonlit-drive-in.lovable.app/comprar"
                            class="inline-flex items-center justify-center bg-marquee text-primary-foreground font-display uppercase tracking-wide border-2 border-mustard/70 shadow-ticket h-12 rounded-lg px-7 text-base">
-                           
+                           COMPRAR TIQUETES 
                         </a>
 
                     </nav>
@@ -97,14 +169,19 @@
 
                 <h2 class="text-mustard text-sm">
                     
+                    HOY EN CARTELERA: 
+
                 </h2>
 
                 <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2">
 
-                    <li>★ </li>
-                    <li>★ </li>
-                    <li>★ </li>
-                    <li>★</li>
+                    <li>★ La monja </li>
+                    <li>★ Backrooms </li>
+                    <li>★ Thor </li>
+                    <li>★ <strong> APEX LIVE EVENT </strong> </li>
+                    <li>★ Antes de ti </li>
+                    <li>★ Stray kids live event</li>
+                    <li>★ Tiera Errante </li>
 
                 </ul>
 
@@ -123,193 +200,365 @@
                 <div class="max-w-2xl">
 
                     <p class="font-script text-3xl text-mustard neon-mustard">
-                        
+                    Muy pronto
                     </p>
 
                     <h2 id="titulo-estrenos" class="mt-1 text-3xl text-cream sm:text-4xl">
-                        
+                        PRÓXIMOS ESTRENOS
                     </h2>
 
                     <p class="mt-4 text-muted-foreground">
                         
+                  Disfruta de los estrenos más recientes con una experiencia retro! 
+
                     </p>
 
                 </div>
 
                 <a href=""
                    class="inline-flex items-center justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
-                    
+                    VER TODA LA CARTELERA
                 </a>
 
             </header>
 
 
-            <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
-                <!-- Pelicula 1 -->
-                <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
-
-                    <figure class="relative aspect-[2/3] overflow-hidden">
-
-                        <img
-                            src="
-                            alt=""
-                            width="768"
-                            height="1152"
-                            loading="lazy"
-                            class="h-full w-full object-cover">
-
-                        <figcaption class="absolute inset-x-0 bottom-0 p-4">
-
-                            <p class="text-xs uppercase tracking-widest text-mustard">
-                                
-                            </p>
-
-                            <h3 class="mt-1 text-xl text-cream">
-                                
-                            </h3>
-
-                        </figcaption>
-
-                    </figure>
-
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-
-                        <p class="text-sm text-muted-foreground">
-                            Clasificación:
-                        </p>
-
-                        <p class="text-sm text-muted-foreground">
-                            Estreno:
-                            <time datetime="">
-                                
-                            </time>
-                        </p>
-
-                        <p class="text-sm text-muted-foreground">
-                            
-                        </p>
-
-                        <a href=""
-                           class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
-                            Ver detalles
-                        </a>
-
-                    </div>
-
-                </article>
+            
 
 
-                <!-- Pelicula 2 -->
-                <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
 
-                    <figure class="relative aspect-[2/3] overflow-hidden">
+<!-- Próximos estrenos: una sola grilla con las 6 películas -->
+<section class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+ 
+  <!-- Película 1 -->
+  <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+ 
+    <figure class="relative aspect-[2/3] overflow-hidden">
+      <img
+        src="../img/Lamonja.jpeg"
+        alt="La monja"
+        width="768"
+        height="1152"
+        loading="lazy"
+        class="h-full w-full object-cover">
+ 
+      <figcaption class="absolute inset-x-0 bottom-0 p-4">
+        <p class="text-xs uppercase tracking-widest text-mustard">
+          <!-- Género --> TERROR
+        </p>
+        <h3 class="mt-1 text-xl text-cream">
+          <!-- Título --> LA MONJA
+        </h3>
+      </figcaption>
+    </figure>
+ 
+    <div class="flex flex-1 flex-col gap-3 p-4">
+      <p class="text-sm text-muted-foreground">
+        Clasificación: +18
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Estreno:
+        <time datetime=""
+          <!-- Fecha -->
+           24/12/2026
+        </time>
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Duración: 2H y 30M
+      </p>
+ 
+      <a href=""
+         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+        Ver detalles
+      </a>
+    </div>
+ 
+  </article>
+ 
+  <!-- Película 2 -->
+  <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+ 
+    <figure class="relative aspect-[2/3] overflow-hidden">
+      <img
+        src="../img/apex.jpeg"
+        alt="APEX"
+        width="768"
+        height="1152"
+        loading="lazy"
+        class="h-full w-full object-cover">
+ 
+      <figcaption class="absolute inset-x-0 bottom-0 p-4">
+        <p class="text-xs uppercase tracking-widest text-mustard">
+          <!-- Género --> ACCION - PELEA
+        </p>
+        <h3 class="mt-1 text-xl text-cream">
+          <!-- Título --> APEX LIVE EVENT
+        </h3>
+      </figcaption>
+    </figure>
+ 
+    <div class="flex flex-1 flex-col gap-3 p-4">
+      <p class="text-sm text-muted-foreground">
+        Clasificación: +18
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Estreno:
+        <time datetime="">
+          <!-- Fecha --> 26/12/2026
+        </time>
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Duración: <strong>LIVE</strong>
+      </p>
+ 
+      <a href=""
+         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+        Ver detalles
+      </a>
+    </div>
+ 
+  </article>
+ 
+  <!-- Película 3 -->
+  <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+ 
+    <figure class="relative aspect-[2/3] overflow-hidden">
+      <img
+        src="../img/Thor3.jpg"
+        alt="Thor"
+        width="768"
+        height="1152"
+        loading="lazy"
+        class="h-full w-full object-cover">
+ 
+      <figcaption class="absolute inset-x-0 bottom-0 p-4">
+        <p class="text-xs uppercase tracking-widest text-mustard">
+          <!-- Género --> ACCION
+        </p>
+        <h3 class="mt-1 text-xl text-cream">
+          <!-- Título --> THOR
+        </h3>
+      </figcaption>
+    </figure>
+ 
+    <div class="flex flex-1 flex-col gap-3 p-4">
+      <p class="text-sm text-muted-foreground">
+        Clasificación: +15
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Estreno: 8/12/2026
+        <time datetime="">
+          <!-- Fecha -->
+        </time>
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Duración: 2H
+      </p>
+ 
+      <a href=""
+         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+        Ver detalles
+      </a>
+    </div>
+ 
+  </article>
+ 
+  <!-- Película 4 -->
+  <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+ 
+    <figure class="relative aspect-[2/3] overflow-hidden">
+      <img
+        src="../img/Tierra-errante.jpeg"
+        alt="Tierra errante"
+        width="768"
+        height="1152"
+        loading="lazy"
+        class="h-full w-full object-cover">
+ 
+      <figcaption class="absolute inset-x-0 bottom-0 p-4">
+        <p class="text-xs uppercase tracking-widest text-mustard">
+          <!-- Género --> SUSPENSO - CIENCIA FICCION
+        </p>
+        <h3 class="mt-1 text-xl text-cream">
+          <!-- Título --> TIERRA ERRANTE
+        </h3>
+      </figcaption>
+    </figure>
+ 
+    <div class="flex flex-1 flex-col gap-3 p-4">
+      <p class="text-sm text-muted-foreground">
+        Clasificación: +16
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Estreno: 1/12/2026
+        <time datetime="">
+          <!-- Fecha -->
+        </time>
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Duración:1H y 45M
+      </p>
+ 
+      <a href=""
+         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+        Ver detalles
+      </a>
+    </div>
+ 
+  </article>
+ 
+  <!-- Película 5 -->
+  <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+ 
+    <figure class="relative aspect-[2/3] overflow-hidden">
+      <img
+        src="../img/Backrooms.jpeg"
+        alt="Backrooms"
+        width="768"
+        height="1152"
+        loading="lazy"
+        class="h-full w-full object-cover">
+ 
+      <figcaption class="absolute inset-x-0 bottom-0 p-4">
+        <p class="text-xs uppercase tracking-widest text-mustard">
+          <!-- Género --> TERROR
+        </p>
+        <h3 class="mt-1 text-xl text-cream">
+          <!-- Título --> BACKROOMS
+        </h3>
+      </figcaption>
+    </figure>
+ 
+    <div class="flex flex-1 flex-col gap-3 p-4">
+      <p class="text-sm text-muted-foreground">
+        Clasificación: +12
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Estreno:20/12/2026
+        <time datetime="">
+          <!-- Fecha -->
+        </time>
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Duración: 2H
+      </p>
+ 
+      <a href=""
+         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+        Ver detalles
+      </a>
+    </div>
+ 
+  </article>
+ 
+  <!-- Película 6 -->
+  <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+ 
+    <figure class="relative aspect-[2/3] overflow-hidden">
+      <img
+        src="../img/Stray.jpeg"
+        alt="Stray Kids Live Event"
+        width="768"
+        height="1152"
+        loading="lazy"
+        class="h-full w-full object-cover">
+ 
+      <figcaption class="absolute inset-x-0 bottom-0 p-4">
+        <p class="text-xs uppercase tracking-widest text-mustard">
+          <!-- Género --> POP - DRAMA
+        </p>
+        <h3 class="mt-1 text-xl text-cream">
+          <!-- Título --> STRAY KIDS 
+        </h3>
+      </figcaption>
+    </figure>
+ 
+    <div class="flex flex-1 flex-col gap-3 p-4">
+      <p class="text-sm text-muted-foreground">
+        Clasificación: +12
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Estreno: 18/12/2026
+        <time datetime="">
+          <!-- Fecha -->
+        </time>
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Duración:1H y 50M
+      </p>
+ 
+      <a href=""
+         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+        Ver detalles
+      </a>
+    </div>
+ 
+  </article>
+ 
+<!-- Pelicula 7 -->
 
-                        <img
-                            src=""
-                            alt=""
-                            width="768"
-                            height="1152"
-                            loading="lazy"
-                            class="h-full w-full object-cover">
-
-                        <figcaption class="absolute inset-x-0 bottom-0 p-4">
-
-                            <p class="text-xs uppercase tracking-widest text-mustard">
-                                
-                            </p>
-
-                            <h3 class="mt-1 text-xl text-cream">
-                                
-                            </h3>
-
-                        </figcaption>
-
-                    </figure>
-
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-
-                        <p class="text-sm text-muted-foreground">
-                            Clasificación: 
-
-                        <p class="text-sm text-muted-foreground">
-                            Estreno:
-
-                            <time datetime="">
-                                
-                            </time>
-                        </p>
-
-                        <p class="text-sm text-muted-foreground">
-                          
-                        </p>
-
-                        <a href=""
-                           class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
-                            Ver detalles
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- Pelicula 3 -->
-                <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
-
-                    <figure class="relative aspect-[2/3] overflow-hidden">
-
-                        <img
-                            src=""
-                            alt=""
-                            width="768"
-                            height="1152"
-                            loading="lazy"
-                            class="h-full w-full object-cover">
-
-                        <figcaption class="absolute inset-x-0 bottom-0 p-4">
-
-                            <p class="text-xs uppercase tracking-widest text-mustard">
-                                
-                            </p>
-
-                            <h3 class="mt-1 text-xl text-cream">
-                                
-                            </h3>
-
-                        </figcaption>
-
-                    </figure>
-
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-
-                        <p class="text-sm text-muted-foreground">
-                            Clasificación:
-                        </p>
-
-                        <p class="text-sm text-muted-foreground">
-                            Estreno:
-                            <time datetime=">
-                                
-                            </time>
-                        </p>
-
-                        <p class="text-sm text-muted-foreground">
-                            Duración: 
-                        </p>
-
-                        <a href=""
-                           class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
-                            Ver detalles
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
+<article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+ 
+    <figure class="relative aspect-[2/3] overflow-hidden">
+      <img
+        src="../img/Antes-nuevo.jpeg"
+        alt="Antes de ti"
+        width="768"
+        height="1152"
+        loading="lazy"
+        class="h-full w-full object-cover">
+ 
+      <figcaption class="absolute inset-x-0 bottom-0 p-4">
+        <p class="text-xs uppercase tracking-widest text-mustard">
+          <!-- Género --> DRAMA - ROMANCE
+        </p>
+        <h3 class="mt-1 text-xl text-cream">
+          <!-- Título -->
+           ANTES DE TI
+        </h3>
+      </figcaption>
+    </figure>
+ 
+    <div class="flex flex-1 flex-col gap-3 p-4">
+      <p class="text-sm text-muted-foreground">
+        Clasificación: +18
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Estreno:
+        <time datetime="">
+          <!-- Fecha --> 26/12/2026
+        </time>
+      </p>
+ 
+      <p class="text-sm text-muted-foreground">
+        Duración: 1H y 30M
+      </p>
+ 
+      <a href=""
+         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+        Ver detalles
+      </a>
+    </div>
+ 
+  </article>
+ 
         </section>
 
+
+ 
 
         <!-- 04. Experiencia -->
         <section
@@ -377,6 +626,8 @@
             </div>
         </section>
 
+        
+
 
         <!-- 05 Ubicacione -->
         <section
@@ -409,7 +660,7 @@
                     <figure class="relative aspect-[4/3] overflow-hidden">
 
                         <img
-                            src=""
+                            src="../img/CC-norte1.jpg"
                             alt="Fotografía representativa de Monster's Cinema Norte"
                             width="1024"
                             height="768"
@@ -450,7 +701,7 @@
                     <figure class="relative aspect-[4/3] overflow-hidden">
 
                         <img
-                            src=""
+                            src="../img/Centro.jpg"
                             alt="Fotografía representativa de Monster's Cinema Centro"
                             width="1024"
                             height="768"
@@ -491,7 +742,7 @@
                     <figure class="relative aspect-[4/3] overflow-hidden">
 
                         <img
-                            src=""
+                            src="../img/Sue.jpg"
                             alt="Fotografía representativa de Monster's Cinema Sur"
                             width="1024"
                             height="768"
@@ -530,5 +781,163 @@
 
 
         <!-- 06. Recuadro que te redirecciona a la cartelera -->
-        <section
-            id="06
+          <section class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="marquee-bulbs relative overflow-hidden rounded-3xl border-4 border-mustard bg-marquee px-6 py-16 text-center shadow-ticket sm:px-12">
+      <p class="font-script text-3xl text-mustard neon-mustard sm:text-4xl">¡Luces, cámara, motor!</p>
+      <h2 class="mx-auto mt-3 max-w-3xl text-3xl leading-tight text-cream sm:text-5xl">
+        ¡Prepara tu vehículo, nosotros ponemos la película!
+      </h2>
+      <a href="paginas/cartelera.html"
+         class="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-lg border-2 border-charcoal bg-mustard px-7 font-display text-base uppercase tracking-wide text-charcoal shadow-ticket transition-all hover:-translate-y-0.5 hover-glow-mustard">
+        <svg aria-hidden="true" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18M3 7.5h4M3 12h18M3 16.5h4"/></svg>
+        Consultar la cartelera
+      </a>
+    </div>
+  </section>
+
+
+
+        
+            <!-- fOOTER -->
+
+            <footer class="no-print relative mt-24 border-t-2 border-mustard/30 bg-asphalt">
+   <div class="h-2 checker opacity-70" aria-hidden="true"></div>
+   <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:flex lg:justify-between">
+    <div class="space-y-4">
+        <a aria-label="Monster's Cinema — Inicio" class="group inline-flex items-center gap-2.5" href="/">
+            <span class="grid place-items-center rounded-full bg-marquee border-2 border-mustard glow-red transition-transform group-hover:rotate-12 h-14 w-14">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film text-mustard h-7 w-7" aria-hidden="true">
+                    <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                    <path d="M7 3v18"></path>
+                    <path d="M3 7.5h4"></path>
+                    <path d="M3 12h18"></path>
+                    <path d="M3 16.5h4"></path>
+                    <path d="M17 3v18"></path>
+                    <path d="M17 7.5h4"></path>
+                    <path d="M17 16.5h4"></path>
+                </svg>
+            </span>
+            <span class="flex flex-col leading-none">
+                <span class="font-script text-mustard neon-mustard -rotate-3 text-4xl">Monster's</span>
+                <span class="font-display tracking-[0.3em] text-cream text-base">CINEMA</span>
+            </span>
+        </a>
+        <p class="text-sm leading-relaxed text-muted-foreground">
+        El autocine retro de la ciudad. Clásicos y estrenos en pantalla gigante, crispetas recién hechas y la noche estrellada como techo.
+        </p>
+
+        <div class="flex gap-2">
+            <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram (enlace de ejemplo a la plataforma)">
+          <svg class="lucide lucide-instagram h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+        </svg>
+    </a>
+
+    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook (enlace de ejemplo a la plataforma)">
+       <svg class="lucide lucide-facebook h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path> 
+       </svg>
+    </a>
+
+    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard" href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube (enlace de ejemplo a la plataforma)">
+        <svg class="lucide lucide-youtube h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>    
+        <path d="m10 15 5-3-5-3z"></path>
+        </svg>
+        </a>
+    </div>
+    </div>
+
+<div>
+<h3 class="mb-4 text-sm text-mustard">Navega</h3>
+<ul class="space-y-2 text-sm">
+    <li>
+        <a class="text-cream/80 transition-colors hover:text-mustard" href="/">Inicio</a>
+    </li>
+        
+        <li>
+            <a class="text-cream/80 transition-colors hover:text-mustard" href="/cartelera">Cartelera</a>
+        </li>
+        
+        <li>
+            <a class="text-cream/80 transition-colors hover:text-mustard" href="/comprar">Comprar tiquetes</a>
+        </li>
+        
+        <li>
+            <a class="text-cream/80 transition-colors hover:text-mustard" href="/menu">Menú</a>
+        </li>
+
+        <li>
+            <a class="text-cream/80 transition-colors hover:text-mustard active" href="/ubicaciones" data-status="active" aria-current="page">Ubicaciones</a>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <h3 class="mb-4 text-sm text-mustard">Contacto</h3>
+    <ul class="space-y-3 text-sm text-cream/80">
+        <li class="flex items-start gap-2">
+            <svg class="lucide lucide-phone mt-0.5 h-4 w-4 shrink-0 text-mustard" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+            </svg>
+            <span>+57 300 000 0000 </span>
+        </li>
+        <li class="flex items-start gap-2">
+            <svg class="lucide lucide-mail mt-0.5 h-4 w-4 shrink-0 text-mustard" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            </svg>
+            <span>hola@monsterscinema.example</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div>
+    <h3 class="mb-4 text-sm text-mustard">Horarios</h3>
+    <ul class="space-y-3 text-sm text-cream/80">
+        <li class="flex items-start gap-2">
+            <svg class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+            </svg>
+            <span>
+                Lunes a jueves
+                <br>
+                <span class="text-muted-foreground">5:30 p. m. - 11:30 p. m.</span>
+            </span>
+        </li>
+        <li class="flex items-start gap-2">
+            <svg class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard"xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+            </svg>
+            <span>
+                Viernes a domingo y festivos
+                <br>
+                <span class="text-muted-foreground">4:30 p. m. - 1:00 a. m.</span>
+            </span>
+        </li>
+    </ul>
+</div>
+</div>
+
+<div class="border-t border-border">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:px-6">
+        <p>
+            © 2026 Monster's Cinema. Todos los derechos reservados. Sitio demostrativo.
+        </p>
+        <div class="flex gap-4">
+            <a class="hover:text-mustard" href="/privacidad">
+                Política de privacidad</a>
+                <a class="hover:text-mustard" href="/terminos">
+                    Términos y condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+            
