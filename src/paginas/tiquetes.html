@@ -1,0 +1,1066 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comprar tiquetes | Monster's Cinema</title>
+
+    <!-- Tipografías de la marca -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Bungee&family=Yellowtail&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS compilado -->
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+
+<body class="min-h-screen bg-charcoal font-sans text-cream">
+
+
+    <!-- ENCABEZADO -->
+    <header class="starfield border-b border-mustard/30 bg-gradient-to-b from-vintage-red/30 to-charcoal px-6 py-16 md:px-12 print:hidden">
+
+        <div class="mx-auto max-w-7xl">
+
+            <p class="font-script text-3xl text-mustard md:text-4xl">
+                Tu noche de cine
+            </p>
+
+            <h1 class="mt-2 font-display text-4xl uppercase leading-tight md:text-6xl">
+                Comprar tiquetes
+            </h1>
+
+            <p class="mt-5 max-w-3xl text-base leading-relaxed text-cream/80 md:text-lg">
+                El tiquete es por vehículo, sin importar cuántas personas vayan.
+                Capacidad máxima: 80 vehículos por función.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="mx-auto max-w-7xl px-6 py-10 md:px-12 print:mx-0 print:max-w-none print:p-0">
+
+        <!-- INDICADOR DE LOS CINCO PASOS -->
+        <section class="relative mb-12 print:hidden">
+
+            <!-- Línea de conexión -->
+            <div class="absolute left-[10%] right-[10%] top-5 hidden h-px bg-white/20 md:block"></div>
+
+            <div class="relative z-10 grid grid-cols-5 gap-2">
+
+                <!-- PASO 1 -->
+                <div class="flex flex-col items-center gap-2">
+
+                    <div id="paso-1" class="glow-red flex h-11 w-11 items-center justify-center rounded-full border-2 border-mustard bg-vintage-red font-display text-sm">
+                        1
+                    </div>
+
+                    <span id="etiqueta-paso-1" class="text-center text-xs font-bold text-mustard">
+                        FUNCIÓN
+                    </span>
+
+                </div>
+
+                <!-- PASO 2 -->
+                <div class="flex flex-col items-center gap-2">
+
+                    <div id="paso-2" class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/20 bg-charcoal font-display text-sm text-white/50">
+                        2
+                    </div>
+
+                    <span id="etiqueta-paso-2" class="text-center text-xs font-bold text-white/50">
+                        ESPACIO
+                    </span>
+
+                </div>
+
+                <!-- PASO 3 -->
+                <div class="flex flex-col items-center gap-2">
+
+                    <div id="paso-3" class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/20 bg-charcoal font-display text-sm text-white/50">
+                        3
+                    </div>
+
+                    <span id="etiqueta-paso-3" class="text-center text-xs font-bold text-white/50">
+                        DATOS
+                    </span>
+
+                </div>
+
+                <!-- PASO 4 -->
+                <div class="flex flex-col items-center gap-2">
+                    <div id="paso-4" class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/20 bg-charcoal font-display text-sm text-white/50">
+                        4
+                    </div>
+
+                    <span id="etiqueta-paso-4" class="text-center text-xs font-bold text-white/50">
+                        PAGO
+                    </span>
+                </div>
+
+              
+                <!-- PASO 5 -->
+                <div class="flex flex-col items-center gap-2">
+                    <div id="paso-5" class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/20 bg-charcoal font-display text-sm text-white/50">
+                        5
+                    </div>
+
+                    <span id="etiqueta-paso-5" class="text-center text-xs font-bold text-white/50">
+                        CONFIRMACIÓN
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO Y RESUMEN -->
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+
+            <!-- SECCIÓN DE SELECCIÓN -->
+            <section id="seccion-funcion" class="rounded-3xl border border-white/10 bg-asphalt p-6 shadow-ticket md:p-8 lg:col-span-2">
+
+                <h2 class="mb-8 font-display text-xl md:text-2xl">
+                    1. Selecciona la función
+                </h2>
+
+                <form>
+
+                    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+
+                        <!-- PELÍCULA -->
+                        <div class="flex flex-col gap-2">
+
+                            <label for="pelicula" class="font-semibold">
+                                Película
+                            </label>
+
+                            <select
+                                id="pelicula"
+                                name="pelicula"
+                                class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-3 py-3 text-cream outline-none transition focus:border-mustard"
+                            >
+
+                                <option value="">Elige una película...</option>
+                                <option value="pelicula1">Jurassic Park</option>
+                                <option value="pelicula2">Vaselina (Grease)</option>
+                                <option value="pelicula3">E.T. El extraterrestre</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SEDE -->
+                        <div class="flex flex-col gap-2">
+
+                            <label for="sede" class="font-semibold">
+                                Sede
+                            </label>
+
+                            <select
+                                id="sede"
+                                name="sede"
+                                disabled
+                                class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-3 py-3 text-cream outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                            >
+
+                                <option value="">
+                                    Primero elige la película
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                        
+                        <!-- SELECCIÓN DE FECHA -->
+                        <div class="mt-6">
+                            <label class="mb-3 flex items-center gap-2 font-semibold">
+                                <span class="text-mustard">▦</span>
+                                Fecha
+                            </label>
+
+                            <div id="contenedor-fechas" class="flex flex-wrap gap-2">
+                                <p class="text-sm text-cream/50">
+                                    Primero selecciona una película y una sede.
+                                </p>
+                            </div>
+                        </div>
+
+
+
+
+                    <!-- BOTÓN -->
+
+                    
+                    <!-- FUNCIONES DISPONIBLES -->
+                    <div id="seccion-funciones" class="mt-6 hidden">
+
+                        <label class="mb-3 flex items-center gap-2 font-semibold">
+                            <span class="text-mustard">◷</span>
+                            Funciones disponibles
+                        </label>
+
+                        <div id="contenedor-funciones" class="flex flex-wrap gap-3">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mt-8 flex justify-end">
+
+                        <button
+                            id="btn-elegir-espacio"
+                            type="button"
+                            disabled
+                            class="flex items-center gap-3 rounded-xl border-2 border-mustard/40 bg-vintage-red px-7 py-3 font-display text-sm text-cream opacity-50"
+                        >
+
+                            ELEGIR ESPACIO
+
+                            <span class="text-xl">→</span>
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            
+<!-- ========================================= -->
+<!-- ETAPA 2: SELECCIÓN DE ESPACIOS -->
+<!-- ========================================= -->
+
+<section
+    id="seccion-espacios"
+    class="hidden rounded-3xl border border-white/10 bg-asphalt p-6 shadow-ticket md:p-8 lg:col-span-2"
+>
+
+    <h2 class="mb-3 font-display text-xl md:text-2xl">
+        2. Selecciona tu espacio
+    </h2>
+
+    <p class="mb-6 text-sm text-cream/70">
+        Elige dónde estacionar tu vehículo.
+        Los espacios verdes están disponibles.
+    </p>
+
+    <!-- PANTALLA GIGANTE -->
+    <div class="mb-10">
+
+        <div class="rounded-t-[50%] border-x-4 border-t-4 border-cream/80 bg-gradient-to-b from-cream to-cream/40 px-4 py-5 text-center shadow-[0_0_25px_rgba(255,245,210,0.25)]">
+
+            <p class="font-display text-sm tracking-[0.4em] text-charcoal">
+                PANTALLA GIGANTE
+            </p>
+
+        </div>
+
+        <div class="mx-auto h-10 w-4/5 bg-gradient-to-b from-cream/20 to-transparent"></div>
+
+    </div>
+
+    <!-- MAPA DE ESTACIONAMIENTO -->
+    <div id="contenedor-espacios" class="space-y-6">
+
+    </div>
+
+    <!-- LEYENDA -->
+    <div class="mt-8 flex flex-wrap gap-4 text-xs">
+
+        <span class="text-green-400">● Disponible</span>
+
+        <span class="text-red-400">● Ocupado</span>
+
+        <span class="text-gray-400">● No disponible</span>
+
+        <span class="text-mustard">● Seleccionado</span>
+
+    </div>
+
+    
+<!-- CONFIRMACIÓN DEL ESPACIO SELECCIONADO -->
+<div
+    id="confirmacion-espacio"
+    class="mt-8 hidden rounded-2xl border-2 border-mustard bg-mustard/10 p-4 transition-all duration-300"
+>
+    <div class="flex flex-wrap items-center justify-between gap-4">
+
+        <div>
+            <p class="text-sm text-cream/70">
+                Espacio seleccionado
+            </p>
+
+            <h3
+                id="confirmacion-codigo"
+                class="font-display text-2xl text-mustard"
+            >
+                V01 · ZONA VIP
+            </h3>
+
+            <p
+                id="confirmacion-descripcion"
+                class="mt-1 text-sm text-cream/80"
+            >
+                $45.000 por vehículo
+            </p>
+        </div>
+
+        <button
+            id="btn-cambiar-seleccion"
+            type="button"
+            class="rounded-xl border-2 border-cream/60 px-4 py-3 font-display text-xs transition-all duration-300 hover:border-mustard hover:text-mustard hover:shadow-[0_0_18px_rgba(255,193,7,0.5)]"
+        >
+            ↶ CAMBIAR SELECCIÓN
+        </button>
+<!-- CONFIRMACIÓN DEL ESPACIO SELECCIONADO -->
+<div
+    id="confirmacion-espacio"
+    class="mt-8 hidden rounded-2xl border-2 border-mustard bg-mustard/10 p-4 transition-all duration-300"
+>
+    <div class="flex flex-wrap items-center justify-between gap-4">
+
+        <div>
+            <p class="text-sm text-cream/70">
+                Espacio seleccionado
+            </p>
+
+            <h3
+                id="confirmacion-codigo"
+                class="font-display text-2xl text-mustard"
+            >
+                V01 · ZONA VIP
+            </h3>
+
+            <p
+                id="confirmacion-descripcion"
+                class="mt-1 text-sm text-cream/80"
+            >
+                $45.000 por vehículo
+            </p>
+        </div>
+
+        <button
+            id="btn-cambiar-seleccion"
+            type="button"
+            class="rounded-xl border-2 border-cream/60 px-4 py-3 font-display text-xs transition-all duration-300 hover:border-mustard hover:text-mustard hover:shadow-[0_0_18px_rgba(255,193,7,0.5)]"
+        >
+            ↶ CAMBIAR SELECCIÓN
+        </button>
+
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+
+    <!-- BOTONES DE NAVEGACIÓN -->
+    <div class="mt-8 flex flex-wrap justify-between gap-3">
+
+        <button
+            id="btn-volver-funcion"
+            type="button"
+            class="rounded-xl border-2 border-white/20 px-6 py-3 font-display text-sm transition hover:border-mustard"
+        >
+            ← VOLVER
+        </button>
+
+                    <button
+                id="btn-continuar-datos"
+                type="button"
+                disabled
+                class="flex items-center gap-3 rounded-xl border-2 border-mustard bg-vintage-red px-7 py-3 font-display text-sm text-cream transition-all duration-300 hover:-translate-y-1 hover:border-mustard hover:shadow-[0_0_20px_rgba(255,193,7,0.6)] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
+            >
+                CONTINUAR →
+            </button>
+                </div>
+
+</section>
+
+
+<!-- ETAPA 3: DATOS DEL CLIENTE Y VEHÍCULO -->
+<section
+    id="seccion-datos"
+    class="hidden rounded-3xl border border-white/10 bg-asphalt p-6 shadow-ticket md:p-8 lg:col-span-2"
+>
+    <h2 class="mb-8 font-display text-xl md:text-2xl">
+        3. Datos del cliente y del vehículo
+    </h2>
+
+    <form id="formulario-datos" class="space-y-5">
+
+        <div class="flex flex-col gap-2">
+            <label for="nombre-cliente" class="font-semibold">
+                Nombre completo <span class="text-red-500">*</span>
+            </label>
+            <input
+                id="nombre-cliente"
+                name="nombre"
+                type="text"
+                required
+                placeholder="Ej.: Ana María Pérez"
+                class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+            />
+        </div>
+
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <div class="flex flex-col gap-2">
+                <label for="tipo-documento" class="font-semibold">
+                    Tipo de documento *
+                </label>
+                <select
+                    id="tipo-documento"
+                    name="tipoDocumento"
+                    required
+                    class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+                >
+                    <option value="">Selecciona...</option>
+                    <option value="CC">Cédula de ciudadanía</option>
+                    <option value="CE">Cédula de extranjería</option>
+                    <option value="TI">Tarjeta de identidad</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="numero-documento" class="font-semibold">
+                    Número de documento *
+                </label>
+                <input
+                    id="numero-documento"
+                    name="documento"
+                    type="text"
+                    required
+                    placeholder="Número de documento"
+                    class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+                />
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <div class="flex flex-col gap-2">
+                <label for="telefono-cliente" class="font-semibold">
+                    Teléfono *
+                </label>
+                <input
+                    id="telefono-cliente"
+                    name="telefono"
+                    type="tel"
+                    required
+                    placeholder="300 000 0000"
+                    class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="correo-cliente" class="font-semibold">
+                    Correo electrónico *
+                </label>
+                <input
+                    id="correo-cliente"
+                    name="correo"
+                    type="email"
+                    required
+                    placeholder="correo@ejemplo.com"
+                    class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+                />
+            </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-5">
+            <h3 class="mb-5 font-display text-lg text-mustard">
+                Datos del vehículo
+            </h3>
+
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                <div class="flex flex-col gap-2">
+                    <label for="placa-vehiculo" class="font-semibold">
+                        Placa del vehículo *
+                    </label>
+                    <input
+                        id="placa-vehiculo"
+                        name="placa"
+                        type="text"
+                        required
+                        placeholder="ABC123"
+                        class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+                    />
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label for="tipo-vehiculo" class="font-semibold">
+                        Tipo de vehículo *
+                    </label>
+                    <select
+                        id="tipo-vehiculo"
+                        name="tipoVehiculo"
+                        required
+                        class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+                    >
+                        <option value="">Selecciona...</option>
+                        <option value="Automóvil">Automóvil</option>
+                        <option value="Camioneta">Camioneta</option>
+                        <option value="Campero">Campero</option>
+                        <option value="Motocicleta">Motocicleta</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap justify-between gap-3 pt-5">
+            <button
+                id="btn-volver-espacios"
+                type="button"
+                class="rounded-xl border-2 border-white/20 px-6 py-3 font-display text-sm transition hover:border-mustard hover:text-mustard"
+            >
+                ← VOLVER
+            </button>
+
+            <button
+                type="submit"
+                class="rounded-xl border-2 border-mustard bg-vintage-red px-6 py-3 font-display text-sm transition-all hover:shadow-[0_0_20px_rgba(255,193,7,0.5)]"
+            >
+                CONTINUAR AL PAGO →
+            </button>
+        </div>
+
+    </form>
+</section>
+
+
+<!-- ETAPA 3: DATOS DEL CLIENTE Y VEHÍCULO -->
+<section
+    id="seccion-datos"
+    class="hidden rounded-3xl border border-white/10 bg-asphalt p-6 shadow-ticket md:p-8 lg:col-span-2"
+>
+    <h2 class="mb-8 font-display text-xl md:text-2xl">
+        3. Datos del cliente y del vehículo
+    </h2>
+
+    <form id="formulario-datos" class="space-y-5">
+
+        <!-- DATOS DEL CLIENTE -->
+        <div class="flex flex-col gap-2">
+            <label for="nombre-cliente" class="font-semibold">
+                Nombre completo *
+            </label>
+            <input
+                id="nombre-cliente"
+                name="nombre"
+                type="text"
+                required
+                placeholder="Ej.: Ana María Pérez"
+                class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+            />
+        </div>
+
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <div class="flex flex-col gap-2">
+                <label for="tipo-documento" class="font-semibold">
+                    Tipo de documento *
+                </label>
+                <select
+                    id="tipo-documento"
+                    name="tipoDocumento"
+                    required
+                    class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+                >
+                    <option value="">Selecciona...</option>
+                    <option value="CC">Cédula de ciudadanía</option>
+                    <option value="CE">Cédula de extranjería</option>
+                    <option value="TI">Tarjeta de identidad</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="numero-documento" class="font-semibold">
+                    Número de documento *
+                </label>
+                <input
+                    id="numero-documento"
+                    name="documento"
+                    type="text"
+                    required
+                    placeholder="Número de documento"
+                    class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+                />
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <div class="flex flex-col gap-2">
+                <label for="telefono-cliente" class="font-semibold">
+                    Teléfono *
+                </label>
+                <input
+                    id="telefono-cliente"
+                    name="telefono"
+                    type="tel"
+                    required
+                    placeholder="300 000 0000"
+                    class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="correo-cliente" class="font-semibold">
+                    Correo electrónico *
+                </label>
+                <input
+                    id="correo-cliente"
+                    name="correo"
+                    type="email"
+                    required
+                    placeholder="correo@ejemplo.com"
+                    class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+                />
+            </div>
+        </div>
+
+        <!-- DATOS DEL VEHÍCULO -->
+        <div class="border-t border-white/10 pt-5">
+            <h3 class="mb-5 font-display text-lg text-mustard">
+                Datos del vehículo
+            </h3>
+
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                <div class="flex flex-col gap-2">
+                    <label for="placa-vehiculo" class="font-semibold">
+                        Placa del vehículo *
+                    </label>
+                    <input
+                        id="placa-vehiculo"
+                        name="placa"
+                        type="text"
+                        required
+                        placeholder="ABC123"
+                        class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+                    />
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label for="tipo-vehiculo" class="font-semibold">
+                        Tipo de vehículo *
+                    </label>
+                    <select
+                        id="tipo-vehiculo"
+                        name="tipoVehiculo"
+                        required
+                        class="w-full rounded-xl border-2 border-white/15 bg-charcoal px-4 py-3 text-cream outline-none focus:border-mustard"
+                    >
+                        <option value="">Selecciona...</option>
+                        <option value="Automóvil">Automóvil</option>
+                        <option value="Camioneta">Camioneta</option>
+                        <option value="Campero">Campero</option>
+                        <option value="Motocicleta">Motocicleta</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVEGACIÓN -->
+        <div class="flex flex-wrap justify-between gap-3 border-t border-white/10 pt-5">
+            <button
+                id="btn-volver-espacios"
+                type="button"
+                class="rounded-xl border-2 border-white/20 px-6 py-3 font-display text-sm transition hover:border-mustard hover:text-mustard"
+            >
+                ← VOLVER
+            </button>
+
+            <button
+                type="submit"
+                class="rounded-xl border-2 border-mustard bg-vintage-red px-6 py-3 font-display text-sm transition-all hover:shadow-[0_0_20px_rgba(255,193,7,0.5)]"
+            >
+                CONTINUAR AL PAGO →
+            </button>
+        </div>
+    </form>
+</section>
+
+
+<!-- ETAPA 4: MÉTODO DE PAGO -->
+<section
+    id="seccion-pago"
+    class="hidden rounded-3xl border border-white/10 bg-asphalt p-6 shadow-ticket md:p-8 lg:col-span-2"
+>
+    <h2 class="mb-3 font-display text-xl md:text-2xl">
+        4. Método de pago
+    </h2>
+
+    <p class="mb-8 text-sm text-cream/70">
+        Selecciona cómo deseas pagar tus entradas.
+    </p>
+
+    <!-- OPCIONES DE PAGO -->
+    <div class="space-y-4">
+
+        <!-- PSE -->
+        <label class="flex cursor-pointer items-center gap-4 rounded-2xl border-2 border-white/15 bg-charcoal p-5 transition-all hover:border-mustard">
+            <input
+                type="radio"
+                name="metodo-pago"
+                value="PSE"
+                class="h-5 w-5 accent-yellow-400"
+            >
+
+            <div class="flex-1">
+                <h3 class="font-display text-lg">PSE</h3>
+                <p class="text-sm text-cream/60">
+                    Paga directamente desde tu cuenta bancaria.
+                </p>
+            </div>
+
+            <span class="text-2xl">🏦</span>
+        </label>
+
+        <!-- TARJETA -->
+        <label class="flex cursor-pointer items-center gap-4 rounded-2xl border-2 border-white/15 bg-charcoal p-5 transition-all hover:border-mustard">
+            <input
+                type="radio"
+                name="metodo-pago"
+                value="Tarjeta"
+                class="h-5 w-5 accent-yellow-400"
+            >
+
+            <div class="flex-1">
+                <h3 class="font-display text-lg">Tarjeta débito o crédito</h3>
+                <p class="text-sm text-cream/60">
+                    Paga utilizando tu tarjeta bancaria.
+                </p>
+            </div>
+
+            <span class="text-2xl">💳</span>
+        </label>
+
+    </div>
+
+    <!-- BOTONES -->
+    <div class="mt-10 flex flex-wrap justify-between gap-3 border-t border-white/10 pt-6">
+
+        <button
+            id="btn-volver-datos"
+            type="button"
+            class="rounded-xl border-2 border-white/20 px-6 py-3 font-display text-sm transition-all hover:border-mustard hover:text-mustard"
+        >
+            ← VOLVER
+        </button>
+
+        <button
+            id="btn-continuar-confirmacion"
+            type="button"
+            disabled
+            class="rounded-xl border-2 border-mustard bg-vintage-red px-7 py-3 font-display text-sm text-cream opacity-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,193,7,0.6)] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
+        >
+            CONTINUAR →
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ETAPA 5: CONFIRMACIÓN DE COMPRA -->
+<section
+    id="seccion-confirmacion"
+    class="hidden rounded-3xl border border-mustard/40 bg-asphalt p-6 shadow-ticket md:p-8 lg:col-span-2 print:mx-auto print:w-full print:max-w-[190mm] print:border-0 print:bg-white print:p-0 print:shadow-none print:text-black"
+>
+
+    <!-- MENSAJE DE CONFIRMACIÓN -->
+    <div class="mb-8 text-center">
+
+        <div class="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full border-2 border-mustard bg-mustard/10 text-4xl">
+            ✓
+        </div>
+
+        <p class="mb-2 font-display text-sm tracking-[0.3em] text-mustard">
+            MONSTER'S CINEMA
+        </p>
+
+        <h2 class="font-display text-2xl text-mustard md:text-3xl">
+            ¡RESERVA CONFIRMADA!
+        </h2>
+
+        <p class="mt-3 text-sm text-cream/70">
+            Tu aventura está a punto de comenzar.
+            Gracias por elegir nuestro autocinema.
+        </p>
+
+    </div>
+
+    <!-- BOLETO DE CONFIRMACIÓN -->
+    <div class="rounded-2xl border-2 border-dashed border-mustard/60 bg-charcoal p-6 print:rounded-xl print:border-gray-400 print:bg-white print:p-5 print:text-black">
+
+        <div class="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-5">
+
+            <div>
+                <p class="text-xs text-cream/50">CÓDIGO DE RESERVA</p>
+
+                <h3
+                    id="codigo-reserva"
+                    class="mt-1 font-display text-xl tracking-widest text-mustard"
+                >
+                    MC-000000
+                </h3>
+            </div>
+
+            <span class="rounded-lg bg-mustard px-3 py-2 font-display text-xs text-charcoal">
+                PAGADO*
+            </span>
+
+        </div>
+
+        <!-- INFORMACIÓN DE LA PELÍCULA -->
+        <div class="mb-6">
+
+            <p class="mb-2 text-xs text-cream/50">
+                PELÍCULA
+            </p>
+
+            <h3
+                id="confirmacion-pelicula"
+                class="font-display text-lg text-cream"
+            >
+                Nombre de la película
+            </h3>
+
+        </div>
+
+        <!-- INFORMACIÓN DE LA FUNCIÓN -->
+        <div class="grid grid-cols-2 gap-5 border-b border-white/10 pb-6">
+
+            <div>
+                <p class="text-xs text-cream/50">SEDE</p>
+                <p id="confirmacion-sede" class="mt-1 font-semibold">
+                    —
+                </p>
+            </div>
+
+            <div>
+                <p class="text-xs text-cream/50">FECHA</p>
+                <p id="confirmacion-fecha" class="mt-1 font-semibold">
+                    —
+                </p>
+            </div>
+
+            <div>
+                <p class="text-xs text-cream/50">HORARIO</p>
+                <p id="confirmacion-hora" class="mt-1 font-semibold">
+                    —
+                </p>
+            </div>
+
+            <div>
+                <p class="text-xs text-cream/50">ESPACIO</p>
+                <p id="confirmacion-espacio-final" class="mt-1 font-semibold text-mustard">
+                    —
+                </p>
+            </div>
+
+        </div>
+
+        <!-- INFORMACIÓN DEL CLIENTE -->
+        <div class="mt-6">
+
+            <h3 class="mb-4 font-display text-sm text-mustard">
+                DATOS DEL CLIENTE
+            </h3>
+
+            <div class="space-y-3 text-sm">
+
+                <p>
+                    Nombre:
+                    <span id="confirmacion-cliente" class="text-cream/70">—</span>
+                </p>
+
+                <p>
+                    Documento:
+                    <span id="confirmacion-documento" class="text-cream/70">—</span>
+                </p>
+
+                <p>
+                    Teléfono:
+                    <span id="confirmacion-telefono" class="text-cream/70">—</span>
+                </p>
+
+                <p>
+                    Vehículo:
+                    <span id="confirmacion-vehiculo" class="text-cream/70">—</span>
+                </p>
+
+                <p>
+                    Placa:
+                    <span id="confirmacion-placa" class="text-cream/70">—</span>
+                </p>
+
+                <p>
+                    Método de pago:
+                    <span id="confirmacion-metodo-pago" class="text-cream/70">—</span>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TOTAL -->
+        <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+
+            <span class="font-display text-lg">
+                TOTAL
+            </span>
+
+            <span
+                id="confirmacion-total"
+                class="font-display text-2xl text-mustard"
+            >
+                $0
+            </span>
+
+        </div>
+
+    </div>
+
+    <p class="mt-4 text-center text-xs text-cream/50">
+        * Confirmación simulada para demostración académica.
+        No se ha realizado ningún cobro real.
+    </p>
+
+    <!-- BOTONES -->
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+
+        <button
+            id="btn-imprimir-reserva"
+            type="button"
+            class="rounded-xl border-2 border-mustard bg-vintage-red px-7 py-3 font-display text-sm text-cream transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,193,7,0.6)]"
+        >
+            IMPRIMIR COMPROBANTE
+        </button>
+
+    </div>
+
+</section>
+
+
+
+
+            <!-- RESUMEN DEL TIQUETE -->
+<aside class="h-fit rounded-3xl border border-white/10 bg-asphalt p-6 shadow-ticket print:hidden">
+
+    <h2 class="mb-5 font-display text-sm text-mustard">
+        TU TIQUETE
+    </h2>
+
+    <!-- INFORMACIÓN DE LA PELÍCULA -->
+    <div class="mb-5 flex items-start gap-4">
+
+        <img
+            id="imagen-pelicula"
+            src=""
+            alt="Imagen de la película seleccionada"
+            class="hidden h-28 w-20 shrink-0 rounded-xl object-cover"
+        />
+
+          <div class="min-w-0 flex flex-col gap-2">
+
+            <h3
+                id="nombre-pelicula"
+                class="font-display text-base text-cream"
+            >
+                Aún no has elegido película
+            </h3>
+
+            <span
+                id="clasificacion-pelicula"
+                class="text-xs text-mustard"
+            ></span>
+
+            <span
+                id="duracion-pelicula"
+                class="text-xs text-cream/60"
+            ></span>
+
+        </div>
+
+    </div>
+
+    <!-- INFORMACIÓN DE LA RESERVA -->
+    <div class="space-y-4 border-y border-white/10 py-5">
+
+        <div class="flex justify-between gap-3 text-sm">
+            <span class="text-cream/70">⌖ Sede:</span>
+            <span id="resumen-sede" class="text-cream/50">
+                Pendiente
+            </span>
+        </div>
+
+        <div class="flex justify-between gap-3 text-sm">
+            <span class="text-cream/70">▦ Fecha:</span>
+            <span id="resumen-fecha" class="text-cream/50">Pendiente</span>
+        </div>
+
+        <div class="flex justify-between gap-3 text-sm">
+            <span class="text-cream/70">◷ Hora:</span>
+            <span id="resumen-hora" class="text-cream/50">Pendiente</span>
+        </div>
+
+        <div class="flex justify-between gap-3 text-sm">
+            <span class="text-cream/70">▱ Espacio:</span>
+            <span id="resumen-espacio" class="text-cream/50">Pendiente</span>
+        </div>
+
+    </div>
+
+
+                <!-- TOTAL -->
+                <div class="mt-5 flex items-center justify-between">
+
+                    <span class="text-sm text-cream/70">
+                        Total
+                    </span>
+
+                    <span id="resumen-total" class="font-display text-2xl text-mustard">
+                        —
+                    </span>
+
+                </div>
+
+
+                <!-- TARIFAS -->
+                <div class="mt-10 text-xs leading-relaxed text-cream/60">
+
+                    <p>
+                        VIP: $45.000 - Preferencial: $35.000 - General: $25.000
+                    </p>
+
+                    <p class="mt-1">
+                        Precios por vehículo.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/tiquetes.js"></script>
+</body>
+</html>
