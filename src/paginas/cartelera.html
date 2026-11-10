@@ -1,23 +1,273 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="icon" type="image/png" href="../../img/Gemini_Generated_Image_ga3jgzga3jgzga3j.png" width="16" height="16">
-        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Bungee&family=Yellowtail&display=swap" rel="stylesheet">
-        <link href="../css/output.css" rel="stylesheet">
-        <title>cartelera</title>
 
-    </head>
-    <body>
-        <header class="no-print sticky top-0 z-[1100] border-b-2 border-mustard/30 bg-charcoal/90 backdrop-blur-md">
-            <div class="h-1.5 checker opacity-80" aria-hidden="true"></div>
-            <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="../../img/Gemini_Generated_Image_ga3jgzga3jgzga3j.png" width="16"
+        height="16">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Bungee&family=Yellowtail&display=swap"
+        rel="stylesheet">
+    <link href="../css/output.css" rel="stylesheet">
+    <title>cartelera</title>
+
+</head>
+
+<body>
+    <header class="no-print sticky top-0 z-[1100] border-b-2 border-mustard/30 bg-charcoal/90 backdrop-blur-md">
+        <div class="h-1.5 checker opacity-80" aria-hidden="true"></div>
+        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
+            <a aria-label="Monster's Cinema — Inicio" class="group inline-flex items-center gap-2.5" href="/">
+                <span
+                    class="grid place-items-center rounded-full bg-marquee border-2 border-mustard glow-red transition-transform group-hover:rotate-12 h-11 w-11">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-film text-mustard h-5 w-5" aria-hidden="true">
+                        <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        <path d="M7 3v18"></path>
+                        <path d="M3 7.5h4"></path>
+                        <path d="M3 12h18"></path>
+                        <path d="M3 16.5h4"></path>
+                        <path d="M17 3v18"></path>
+                        <path d="M17 7.5h4"></path>
+                        <path d="M17 16.5h4"></path>
+                    </svg>
+                </span>
+                <span class="flex flex-col leading-none">
+                    <span class="font-script text-mustard neon-mustard -rotate-3 text-2xl">Monster's</span>
+                    <span class="font-display tracking-[0.3em] text-cream text-[0.7rem]">CINEMA</span>
+                </span>
+            </a>
+
+            <nav class="hidden items-center gap-1 lg:flex" aria-label="Navegación principal">
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
+                    href="/">Inicio</a>
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
+                    href="cartelera.html">Cartelera</a>
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
+                    href="tiquetes.html">Comprar tiquetes</a>
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
+                    href="menu.html">Menú</a>
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard !text-mustard neon-mustard"
+                    href="/ubicaciones" data-status="active" aria-current="page">Ubicaciones</a>
+            </nav>
+
+            <div class="flex items-center gap-2">
+
+                <a class="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-marquee text-primary-foreground font-display uppercase tracking-wide border-2 border-mustard/70 shadow-ticket hover:glow-red hover:-translate-y-0.5 transition-all h-9 px-4 py-2 hidden sm:inline-flex"
+                    href="tiquetes.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-ticket" aria-hidden="true">
+                        <path
+                            d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z">
+                        </path>
+                        <path d="M13 5v2"></path>
+                        <path d="M13 17v2"></path>
+                        <path d="M13 11v2"></path>
+                    </svg>
+                    Comprar ahora
+                </a>
+                <button
+                    class="grid h-10 w-10 place-items-center rounded-md border border-cream/20 text-cream transition-colors hover:border-mustard hover:text-mustard cursor-pointer lg:hidden"
+                    aria-label="Abrir menú" type="button" aria-haspopup="dialog" aria-expanded="false"
+                    data-state="closed">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-menu h-5 w-5" aria-hidden="true">
+                        <path d="M4 5h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 19h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <hr class="border-yellow-400">
+    <section class="w-full py-12 bg-gradient-to-b from-vintage-red/25">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-mustard neon-mustard text-3xl font-script">Esta temporada</p>
+            <br>
+            <h1 class="text-5xl">Cartelera</h1>
+            <br>
+            <p class="font-bol">Clásicos inolvidables y reestrenos en pantalla gigante. Elige tu película, revisa
+                horarios y compra el tiquete para tu vehículo.</p>
+        </div>
+    </section>
+    <hr class="border-yellow-400">
+    <br>
+    <div class="max-w-4xl mx-auto px-6">
+        <button id="btnCartelera"
+            class="btn-estado inline-block px-6 py-2 bg-mustard text-charcoal font-display rounded-full glow-mustard transition-transform">En
+            cartelera</button>
+        <button id="btnProximamente"
+            class="btn-estado inline-block px-6 py-2 bg-charcoal text-white font-display rounded-full border-2 border-gray-500 hover:text-mustard hover:border-mustard">Próximamente</button>
+        <button id="btnTodas"
+            class="btn-estado inline-block px-6 py-2 bg-charcoal text-white font-display rounded-full border-2 border-gray-500 hover:text-mustard hover:border-mustard">Todas</button>
+    </div>
+
+    <section class="max-w-6xl mx-auto px-6 py-12">
+        <div class="bg-[var(--asphalt)] border border-[var(--border)] rounded-2xl p-6 mb-10 shadow-lg">
+            <div class="flex justify-between items-center mb-6">
+                <div class="flex items-center gap-2 text-[var(--mustard)] text-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                    </svg>
+                </div>
+                <button id="btnLimpiar"
+                    class="flex items-center gap-2 text-sm text-[var(--cream)] hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="flex flex-col">
+                    <label
+                        class="text-xs text-[var(--muted-foreground)] mb-2 font-semibold tracking-wide">Género</label>
+                    <select id="filtroGenero"
+                        class="bg-[var(--charcoal)] border border-[var(--border)] text-[var(--cream)] rounded-lg p-3 outline-none focus:border-[var(--mustard)] appearance-none cursor-pointer">
+                        <option value="todos">Todos los géneros</option>
+                        <option value="terror">Terror</option>
+                        <option value="sci-fi">Ciencia Ficción</option>
+                        <option value="suspenso">Suspenso</option>
+                        <option value="Accion">Accion</option>
+                        <option value="Vivo">En vivo</option>
+                        <option value="Romance">Romance</option>
+                    </select>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-xs text-[var(--muted-foreground)] mb-2 font-semibold tracking-wide">Clasificación
+                        por edad</label>
+                    <select id="filtroEdad"
+                        class="bg-[var(--charcoal)] border border-[var(--border)] text-[var(--cream)] rounded-lg p-3 outline-none focus:border-[var(--mustard)] appearance-none cursor-pointer">
+                        <option value="todos">Todas las clasificaciones</option>
+                        <option value="7">+7</option>
+                        <option value="12">+12</option>
+                        <option value="15">+15</option>
+                        <option value="18">+18</option>
+                    </select>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-xs text-[var(--muted-foreground)] mb-2 font-semibold tracking-wide">Sede</label>
+                    <select id="filtroSede"
+                        class="bg-[var(--charcoal)] border border-[var(--border)] text-[var(--cream)] rounded-lg p-3 outline-none focus:border-[var(--mustard)] appearance-none cursor-pointer">
+                        <option value="todos">Todas las sedes</option>
+                        <option value="norte">Autocine Norte</option>
+                        <option value="sur">Autocine Sur</option>
+                        <option value="centro">Drive-in Central</option>
+                    </select>
+                </div>
+            </div>
+            <div
+                class="mt-6 flex items-start gap-2 text-[var(--muted-foreground)] text-xs border-t border-[var(--border)] pt-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p>La etiqueta «CLASIF.» indica la clasificación por edad: es una restricción de acceso (edad mínima
+                    para ver la película), no una recomendación. Clasificaciones son datos de demostración.</p>
+            </div>
+        </div>
+        <div id="contenedorPeliculas" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+            <div class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-[var(--border)] shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
+                data-genero="terror" data-edad="18" data-sede="norte" data-estado="Proximamente">
+                <img src="../../img/movie.jpeg" alt="La monja" class="w-full h-full object-cover">
+
+                <div
+                    class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
+                    CLASIF. +18
+                </div>
+                <div
+                    class="absolute top-3 right-3 bg-[var(--mustard)] text-[var(--charcoal)] text-[10px] font-bold px-2 py-1 rounded-full font-display">
+                    PRÓXIMAMENTE
+                </div>
+            </div>
+            <div class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-[var(--border)] shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
+                data-genero="Romance" data-edad="18" data-sede="centro" data-estado="Cartelera">
+                <img src="../../img/movi5.jpeg" alt="Antes de ti" class="w-full h-full object-cover">
+                <div
+                    class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
+                    CLASIF. +18
+                </div>
+                <div
+                    class="absolute top-3 right-3 bg-[var(--vintage-red)] text-white text-[10px] font-bold px-2 py-1 rounded-full font-display">
+                    ESTRENO
+                </div>
+            </div>
+            <div class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-red-500 shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
+                data-genero="Vivo" data-edad="12" data-sede="centro" data-estado="Cartelera">
+                <img src="../../img/apex.webp" alt="Apex live event" class="w-full h-full object-cover">
+                <div
+                    class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
+                    CLASIF. +12
+                </div>
+                <div
+                    class="absolute top-3 right-3 bg-[var(--vintage-red)] text-white text-[10px] font-bold px-2 py-1 rounded-full font-display">
+                    EN VIVO
+                </div>
+            </div>
+            <div class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-[var(--border)] shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
+                data-genero="suspenso" data-edad="15" data-sede="sur" data-estado="Cartelera">
+                <img src="../../img/movi2.jpeg" alt="Backrooms" class="w-full h-full object-cover">
+                <div
+                    class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
+                    CLASIF. +15
+                </div>
+            </div>
+            <div class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-[var(--border)] shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
+                data-genero="Vivo" data-edad="7" data-sede="sur" data-estado="Cartelera">
+                <img src="../../img/viv1.jpeg" alt="Stray kids live event" class="w-full h-full object-cover">
+                <div
+                    class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
+                    CLASIF. +7
+                </div>
+            </div>
+            <div class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-[var(--border)] shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
+                data-genero="Accion" data-edad="7" data-sede="centro" data-estado="Cartelera">
+                <img src="../../img/movi3.jpeg" alt="Thor" class="w-full h-full object-cover">
+                <div
+                    class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
+                    CLASIF. +7
+                </div>
+                <div
+                    class="absolute top-3 right-3 bg-[var(--vintage-red)] text-white text-[10px] font-bold px-2 py-1 rounded-full font-display">
+                    ESTRENO
+                </div>
+            </div>
+            <div class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-[var(--border)] shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
+                data-genero="sci-fi" data-edad="12" data-sede="norte" data-estado="Cartelera">
+                <img src="../../img/movi4.jpeg" alt="Tierra errante" class="w-full h-full object-cover">
+                <div
+                    class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
+                    CLASIF. +12
+                </div>
+            </div>
+        </div>
+        <div id="mensajeVacio" class="hidden text-center py-12 text-[var(--muted-foreground)]">
+            <h3 class="text-xl font-display text-[var(--cream)] mb-2">No se encontraron películas</h3>
+            <p>Intenta cambiar los filtros de búsqueda.</p>
+        </div>
+    </section>
+    <footer class="no-print relative mt-24 border-t-2 border-mustard/30 bg-asphalt">
+        <div class="h-2 checker opacity-70" aria-hidden="true"></div>
+        <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:flex lg:justify-between">
+            <div class="space-y-4">
                 <a aria-label="Monster's Cinema — Inicio" class="group inline-flex items-center gap-2.5" href="/">
-                    <span class="grid place-items-center rounded-full bg-marquee border-2 border-mustard glow-red transition-transform group-hover:rotate-12 h-11 w-11">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film text-mustard h-5 w-5" aria-hidden="true">
+                    <span
+                        class="grid place-items-center rounded-full bg-marquee border-2 border-mustard glow-red transition-transform group-hover:rotate-12 h-14 w-14">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-film text-mustard h-7 w-7" aria-hidden="true">
                             <rect width="18" height="18" x="3" y="3" rx="2"></rect>
                             <path d="M7 3v18"></path>
                             <path d="M3 7.5h4"></path>
@@ -29,322 +279,264 @@
                         </svg>
                     </span>
                     <span class="flex flex-col leading-none">
-                        <span class="font-script text-mustard neon-mustard -rotate-3 text-2xl">Monster's</span>
-                        <span class="font-display tracking-[0.3em] text-cream text-[0.7rem]">CINEMA</span>
+                        <span class="font-script text-mustard neon-mustard -rotate-3 text-4xl">Monster's</span>
+                        <span class="font-display tracking-[0.3em] text-cream text-base">CINEMA</span>
                     </span>
                 </a>
-        
-                <nav class="hidden items-center gap-1 lg:flex" aria-label="Navegación principal">
-                    <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard" href="/">Inicio</a>
-                    <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard" href="cartelera.html">Cartelera</a>
-                    <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard" href="tiquetes.html">Comprar tiquetes</a>
-                    <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard" href="menu.html">Menú</a>
-                    <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard !text-mustard neon-mustard" href="/ubicaciones" data-status="active" aria-current="page">Ubicaciones</a>
-                </nav>
+                <p class="text-sm leading-relaxed text-muted-foreground">
+                    El autocine retro de la ciudad. Clásicos y estrenos en pantalla gigante, crispetas recién hechas y
+                    la noche estrellada como techo.
+                </p>
 
-                <div class="flex items-center gap-2">
-                
-                    <a class="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-marquee text-primary-foreground font-display uppercase tracking-wide border-2 border-mustard/70 shadow-ticket hover:glow-red hover:-translate-y-0.5 transition-all h-9 px-4 py-2 hidden sm:inline-flex" href="tiquetes.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ticket" aria-hidden="true">
-                            <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
-                            <path d="M13 5v2"></path>
-                            <path d="M13 17v2"></path>
-                            <path d="M13 11v2"></path>
-                        </svg> 
-                        Comprar ahora
-                    </a>
-                    <button class="grid h-10 w-10 place-items-center rounded-md border border-cream/20 text-cream transition-colors hover:border-mustard hover:text-mustard cursor-pointer lg:hidden" aria-label="Abrir menú" type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-5 w-5" aria-hidden="true">
-                            <path d="M4 5h16"></path>
-                            <path d="M4 12h16"></path>
-                            <path d="M4 19h16"></path>
+                <div class="flex gap-2">
+                    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard"
+                        href="https://www.instagram.com/" target="_blank" rel="noreferrer"
+                        aria-label="Instagram (enlace de ejemplo a la plataforma)">
+                        <svg class="lucide lucide-instagram h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
                         </svg>
-                    </button>
+                    </a>
+
+                    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard"
+                        href="https://www.facebook.com/" target="_blank" rel="noreferrer"
+                        aria-label="Facebook (enlace de ejemplo a la plataforma)">
+                        <svg class="lucide lucide-facebook h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+
+                    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard"
+                        href="https://www.youtube.com/" target="_blank" rel="noreferrer"
+                        aria-label="YouTube (enlace de ejemplo a la plataforma)">
+                        <svg class="lucide lucide-youtube h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path
+                                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17">
+                            </path>
+                            <path d="m10 15 5-3-5-3z"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
-        </header>
-        <hr class="border-yellow-400">
-        <section class="w-full py-12 bg-gradient-to-b from-vintage-red/25">
-            <div class="max-w-4xl mx-auto px-6">
-                <p class="text-mustard neon-mustard text-3xl font-script">Esta temporada</p>
-                <br>
-                <h1 class="text-5xl">Cartelera</h1>
-                <br>
-                <p class="font-bol">Clásicos inolvidables y reestrenos en pantalla gigante. Elige tu película, revisa horarios y compra el tiquete para tu vehículo.</p>
+
+            <div>
+                <h3 class="mb-4 text-sm text-mustard">Navega</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>
+                        <a class="text-cream/80 transition-colors hover:text-mustard" href="/">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a class="text-cream/80 transition-colors hover:text-mustard" href="/cartelera">Cartelera</a>
+                    </li>
+
+                    <li>
+                        <a class="text-cream/80 transition-colors hover:text-mustard" href="/comprar">Comprar
+                            tiquetes</a>
+                    </li>
+
+                    <li>
+                        <a class="text-cream/80 transition-colors hover:text-mustard" href="/menu">Menú</a>
+                    </li>
+
+                    <li>
+                        <a class="text-cream/80 transition-colors hover:text-mustard active" href="/ubicaciones"
+                            data-status="active" aria-current="page">Ubicaciones</a>
+                    </li>
+                </ul>
             </div>
-        </section>
-        <hr class="border-yellow-400">
-        <br>
-        <div class="max-w-4xl mx-auto px-6">
-            <button id="btnCartelera" class="btn-estado inline-block px-6 py-2 bg-mustard text-charcoal font-display rounded-full glow-mustard transition-transform">En cartelera</button>
-            <button id="btnProximamente" class="btn-estado inline-block px-6 py-2 bg-charcoal text-white font-display rounded-full border-2 border-gray-500 hover:text-mustard hover:border-mustard">Próximamente</button>
-            <button id="btnTodas" class="btn-estado inline-block px-6 py-2 bg-charcoal text-white font-display rounded-full border-2 border-gray-500 hover:text-mustard hover:border-mustard">Todas</button>
+
+            <div>
+                <h3 class="mb-4 text-sm text-mustard">Contacto</h3>
+                <ul class="space-y-3 text-sm text-cream/80">
+                    <li class="flex items-start gap-2">
+                        <svg class="lucide lucide-phone mt-0.5 h-4 w-4 shrink-0 text-mustard"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path
+                                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                            </path>
+                        </svg>
+                        <span>+57 300 000 0000 </span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="lucide lucide-mail mt-0.5 h-4 w-4 shrink-0 text-mustard"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        </svg>
+                        <span>hola@monsterscinema.example</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="mb-4 text-sm text-mustard">Horarios</h3>
+                <ul class="space-y-3 text-sm text-cream/80">
+                    <li class="flex items-start gap-2">
+                        <svg class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                        <span>
+                            Lunes a jueves
+                            <br>
+                            <span class="text-muted-foreground">5:30 p. m. - 11:30 p. m.</span>
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                        <span>
+                            Viernes a domingo y festivos
+                            <br>
+                            <span class="text-muted-foreground">4:30 p. m. - 1:00 a. m.</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <section class="max-w-6xl mx-auto px-6 py-12">
-            <div class="bg-[var(--asphalt)] border border-[var(--border)] rounded-2xl p-6 mb-10 shadow-lg">
-                <div class="flex justify-between items-center mb-6">
-                    <div class="flex items-center gap-2 text-[var(--mustard)] text-xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-                        </svg>
-                    </div>
-                    <button id="btnLimpiar" class="flex items-center gap-2 text-sm text-[var(--cream)] hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg> 
-                    </button>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="flex flex-col">
-                        <label class="text-xs text-[var(--muted-foreground)] mb-2 font-semibold tracking-wide">Género</label>
-                        <select id="filtroGenero" class="bg-[var(--charcoal)] border border-[var(--border)] text-[var(--cream)] rounded-lg p-3 outline-none focus:border-[var(--mustard)] appearance-none cursor-pointer">
-                            <option value="todos">Todos los géneros</option>
-                            <option value="terror">Terror</option>
-                            <option value="sci-fi">Ciencia Ficción</option>
-                            <option value="suspenso">Suspenso</option>
-                            <option value="Accion">Accion</option>
-                            <option value="Vivo">En vivo</option>
-                            <option value="Romance">Romance</option>
-                        </select>
-                    </div>
-                    <div class="flex flex-col">
-                        <label class="text-xs text-[var(--muted-foreground)] mb-2 font-semibold tracking-wide">Clasificación por edad</label>
-                        <select id="filtroEdad" class="bg-[var(--charcoal)] border border-[var(--border)] text-[var(--cream)] rounded-lg p-3 outline-none focus:border-[var(--mustard)] appearance-none cursor-pointer">
-                            <option value="todos">Todas las clasificaciones</option>
-                            <option value="7">+7</option>
-                            <option value="12">+12</option>
-                            <option value="15">+15</option>
-                            <option value="18">+18</option>
-                        </select>
-                    </div>
-                    <div class="flex flex-col">
-                        <label class="text-xs text-[var(--muted-foreground)] mb-2 font-semibold tracking-wide">Sede</label>
-                        <select id="filtroSede" class="bg-[var(--charcoal)] border border-[var(--border)] text-[var(--cream)] rounded-lg p-3 outline-none focus:border-[var(--mustard)] appearance-none cursor-pointer">
-                            <option value="todos">Todas las sedes</option>
-                            <option value="norte">Autocine Norte</option>
-                            <option value="sur">Autocine Sur</option>
-                            <option value="centro">Drive-in Central</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="mt-6 flex items-start gap-2 text-[var(--muted-foreground)] text-xs border-t border-[var(--border)] pt-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    <p>La etiqueta «CLASIF.» indica la clasificación por edad: es una restricción de acceso (edad mínima para ver la película), no una recomendación. Clasificaciones son datos de demostración.</p>
+        <div class="border-t border-border">
+            <div
+                class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:px-6">
+                <p>
+                    © 2026 Monster's Cinema. Todos los derechos reservados. Sitio demostrativo.
+                </p>
+                <div class="flex gap-4">
+                    <a class="hover:text-mustard" href="/privacidad">
+                        Política de privacidad</a>
+                    <a class="hover:text-mustard" href="/terminos">
+                        Términos y condiciones</a>
                 </div>
             </div>
-            <div id="contenedorPeliculas" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Selectores
+            const filtroGenero = document.getElementById("filtroGenero");
+            const filtroEdad = document.getElementById("filtroEdad");
+            const filtroSede = document.getElementById("filtroSede");
+            const btnLimpiar = document.getElementById("btnLimpiar");
 
-                <div
-                    class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-[var(--border)] shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
-                    data-genero="terror"
-                    data-edad="18"
-                    data-sede="norte"
-                    data-estado="Proximamente"
-                >
-                    <img src="../../img/movie.jpeg" alt="La monja" class="w-full h-full object-cover">
+            // Botones de estado
+            const btnCartelera = document.getElementById("btnCartelera");
+            const btnProximamente = document.getElementById("btnProximamente");
+            const btnTodas = document.getElementById("btnTodas");
+            const todosLosBotones = [btnCartelera, btnProximamente, btnTodas];
 
-                    <div class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
-                        CLASIF. +18
-                    </div>
-                    <div class="absolute top-3 right-3 bg-[var(--mustard)] text-[var(--charcoal)] text-[10px] font-bold px-2 py-1 rounded-full font-display">
-                        PRÓXIMAMENTE
-                    </div>
-                </div>
-                <div
-                    class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-[var(--border)] shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
-                    data-genero="Romance"
-                    data-edad="18"
-                    data-sede="centro"
-                    data-estado="Cartelera"
-                >
-                    <img src="../../img/movi5.jpeg" alt="Antes de ti" class="w-full h-full object-cover">
-                    <div class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
-                        CLASIF. +18
-                    </div>
-                    <div class="absolute top-3 right-3 bg-[var(--vintage-red)] text-white text-[10px] font-bold px-2 py-1 rounded-full font-display">
-                        ESTRENO
-                    </div>
-                </div>
-                <div
-                    class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-red-500 shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
-                    data-genero="Vivo"
-                    data-edad="12"
-                    data-sede="centro"
-                    data-estado="Cartelera"
-                >
-                    <img src="../../img/apex.webp" alt="Apex live event" class="w-full h-full object-cover">
-                    <div class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
-                        CLASIF. +12
-                    </div>
-                    <div class="absolute top-3 right-3 bg-[var(--vintage-red)] text-white text-[10px] font-bold px-2 py-1 rounded-full font-display">
-                        EN VIVO
-                    </div>
-                </div>
-                <div
-                    class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-[var(--border)] shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
-                    data-genero="suspenso"
-                    data-edad="15"
-                    data-sede="sur"
-                    data-estado="Cartelera"
-                >
-                    <img src="../../img/movi2.jpeg" alt="Backrooms" class="w-full h-full object-cover">
-                    <div class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
-                        CLASIF. +15
-                    </div>
-                </div>
-                <div
-                    class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-[var(--border)] shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
-                    data-genero="Vivo"
-                    data-edad="7"
-                    data-sede="sur"
-                    data-estado="Cartelera"
-                >
-                    <img src="../../img/viv1.jpeg" alt="Stray kids live event" class="w-full h-full object-cover">
-                    <div class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
-                        CLASIF. +7
-                    </div>
-                </div>
-                <div
-                    class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-[var(--border)] shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
-                    data-genero="Accion"
-                    data-edad="7"
-                    data-sede="centro"
-                    data-estado="Cartelera"
-                >
-                    <img src="../../img/movi3.jpeg" alt="Thor" class="w-full h-full object-cover">
-                    <div class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
-                        CLASIF. +7
-                    </div>
-                    <div class="absolute top-3 right-3 bg-[var(--vintage-red)] text-white text-[10px] font-bold px-2 py-1 rounded-full font-display">
-                        ESTRENO
-                    </div>
-                </div>
-                <div
-                    class="tarjeta-pelicula relative rounded-xl overflow-hidden border border-[var(--border)] shadow-lg hover:scale-105 transition-transform cursor-pointer h-80"
-                    data-genero="sci-fi"
-                    data-edad="12"
-                    data-sede="norte"
-                    data-estado="Cartelera"
-                >
-                    <img src="../../img/movi4.jpeg" alt="Tierra errante" class="w-full h-full object-cover">
-                    <div class="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white backdrop-blur-sm">
-                        CLASIF. +12
-                    </div>
-                </div>
-            </div>
-            <div id="mensajeVacio" class="hidden text-center py-12 text-[var(--muted-foreground)]">
-                <h3 class="text-xl font-display text-[var(--cream)] mb-2">No se encontraron películas</h3>
-                <p>Intenta cambiar los filtros de búsqueda.</p>
-            </div>
-        </section>
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                // Selectores
-                const filtroGenero = document.getElementById("filtroGenero");
-                const filtroEdad = document.getElementById("filtroEdad");
-                const filtroSede = document.getElementById("filtroSede");
-                const btnLimpiar = document.getElementById("btnLimpiar");
+            // Tarjetas y mensajes
+            const tarjetasPeliculas = document.querySelectorAll(".tarjeta-pelicula");
+            const mensajeVacio = document.getElementById("mensajeVacio");
 
-                // Botones de estado
-                const btnCartelera = document.getElementById("btnCartelera");
-                const btnProximamente = document.getElementById("btnProximamente");
-                const btnTodas = document.getElementById("btnTodas");
-                const todosLosBotones = [btnCartelera, btnProximamente, btnTodas];
+            // Estado inicial (arranca mostrando la cartelera)
+            let estadoActual = "Cartelera";
 
-                // Tarjetas y mensajes
-                const tarjetasPeliculas = document.querySelectorAll(".tarjeta-pelicula");
-                const mensajeVacio = document.getElementById("mensajeVacio");
+            // Función principal de filtrado
+            function aplicarFiltros() {
+                const genero = filtroGenero.value;
+                const edad = filtroEdad.value;
+                const sede = filtroSede.value;
+                let peliculasVisibles = 0;
 
-                // Estado inicial (arranca mostrando la cartelera)
-                let estadoActual = "Cartelera";
+                tarjetasPeliculas.forEach((tarjeta) => {
+                    const datoGenero = tarjeta.getAttribute("data-genero");
+                    const datoEdad = tarjeta.getAttribute("data-edad");
+                    const datoSede = tarjeta.getAttribute("data-sede");
+                    const datoEstado = tarjeta.getAttribute("data-estado");
 
-                // Función principal de filtrado
-                function aplicarFiltros() {
-                    const genero = filtroGenero.value;
-                    const edad = filtroEdad.value;
-                    const sede = filtroSede.value;
-                    let peliculasVisibles = 0;
+                    const coincideGenero = genero === "todos" || datoGenero === genero;
+                    const coincideEdad = edad === "todos" || datoEdad === edad;
+                    const coincideSede = sede === "todos" || datoSede === sede;
+                    const coincideEstado =
+                        estadoActual === "todas" || datoEstado === estadoActual;
 
-                    tarjetasPeliculas.forEach((tarjeta) => {
-                        const datoGenero = tarjeta.getAttribute("data-genero");
-                        const datoEdad = tarjeta.getAttribute("data-edad");
-                        const datoSede = tarjeta.getAttribute("data-sede");
-                        const datoEstado = tarjeta.getAttribute("data-estado");
-
-                        const coincideGenero = genero === "todos" || datoGenero === genero;
-                        const coincideEdad = edad === "todos" || datoEdad === edad;
-                        const coincideSede = sede === "todos" || datoSede === sede;
-                        const coincideEstado =
-                            estadoActual === "todas" || datoEstado === estadoActual;
-
-                        // Si cumple TODOS los filtros (incluyendo el botón presionado), se muestra
-                        if (
-                            coincideGenero &&
-                            coincideEdad &&
-                            coincideSede &&
-                            coincideEstado
-                        ) {
-                            tarjeta.style.display = "block";
-                            peliculasVisibles++;
-                        } else {
-                            tarjeta.style.display = "none";
-                        }
-                    });
-
-                    if (peliculasVisibles === 0) {
-                        mensajeVacio.classList.remove("hidden");
+                    // Si cumple TODOS los filtros (incluyendo el botón presionado), se muestra
+                    if (
+                        coincideGenero &&
+                        coincideEdad &&
+                        coincideSede &&
+                        coincideEstado
+                    ) {
+                        tarjeta.style.display = "block";
+                        peliculasVisibles++;
                     } else {
-                        mensajeVacio.classList.add("hidden");
+                        tarjeta.style.display = "none";
                     }
-                }
-
-                // Función para cambiar el diseño visual del botón activo
-                function actualizarBotones(botonActivo, nuevoEstado) {
-                    estadoActual = nuevoEstado;
-
-                    // Reiniciamos todos los botones al estilo "inactivo" oscuro
-                    todosLosBotones.forEach((btn) => {
-                        btn.className =
-                            "btn-estado px-6 py-2 bg-[var(--charcoal)] text-[var(--cream)] font-display rounded-full border border-[var(--border)] hover:bg-[var(--asphalt)] transition-colors";
-                    });
-
-                    // Le damos el estilo "brillante/activo" solo al botón clickeado
-                    botonActivo.className =
-                        "btn-estado px-6 py-2 bg-[var(--mustard)] text-[var(--charcoal)] font-display rounded-full border border-[var(--mustard)] glow-mustard transition-colors";
-
-                    aplicarFiltros();
-                }
-
-                // Eventos de los botones de estado
-                btnCartelera.addEventListener("click", () =>
-                    actualizarBotones(btnCartelera, "Cartelera"),
-                );
-                btnProximamente.addEventListener("click", () =>
-                    actualizarBotones(btnProximamente, "Proximamente"),
-                );
-                btnTodas.addEventListener("click", () =>
-                    actualizarBotones(btnTodas, "todas"),
-                );
-
-                // Eventos de los menús selectores
-                filtroGenero.addEventListener("change", aplicarFiltros);
-                filtroEdad.addEventListener("change", aplicarFiltros);
-                filtroSede.addEventListener("change", aplicarFiltros);
-
-                // Botón de limpiar filtros (resetea los selectores pero mantiene el botón actual)
-                btnLimpiar.addEventListener("click", () => {
-                    filtroGenero.value = "todos";
-                    filtroEdad.value = "todos";
-                    filtroSede.value = "todos";
-                    aplicarFiltros();
                 });
 
-                // Ejecutar filtro inicial al cargar la página
+                if (peliculasVisibles === 0) {
+                    mensajeVacio.classList.remove("hidden");
+                } else {
+                    mensajeVacio.classList.add("hidden");
+                }
+            }
+
+            // Función para cambiar el diseño visual del botón activo
+            function actualizarBotones(botonActivo, nuevoEstado) {
+                estadoActual = nuevoEstado;
+
+                // Reiniciamos todos los botones al estilo "inactivo" oscuro
+                todosLosBotones.forEach((btn) => {
+                    btn.className =
+                        "btn-estado px-6 py-2 bg-[var(--charcoal)] text-[var(--cream)] font-display rounded-full border border-[var(--border)] hover:bg-[var(--asphalt)] transition-colors";
+                });
+
+                // Le damos el estilo "brillante/activo" solo al botón clickeado
+                botonActivo.className =
+                    "btn-estado px-6 py-2 bg-[var(--mustard)] text-[var(--charcoal)] font-display rounded-full border border-[var(--mustard)] glow-mustard transition-colors";
+
+                aplicarFiltros();
+            }
+
+            // Eventos de los botones de estado
+            btnCartelera.addEventListener("click", () =>
+                actualizarBotones(btnCartelera, "Cartelera"),
+            );
+            btnProximamente.addEventListener("click", () =>
+                actualizarBotones(btnProximamente, "Proximamente"),
+            );
+            btnTodas.addEventListener("click", () =>
+                actualizarBotones(btnTodas, "todas"),
+            );
+
+            // Eventos de los menús selectores
+            filtroGenero.addEventListener("change", aplicarFiltros);
+            filtroEdad.addEventListener("change", aplicarFiltros);
+            filtroSede.addEventListener("change", aplicarFiltros);
+
+            // Botón de limpiar filtros (resetea los selectores pero mantiene el botón actual)
+            btnLimpiar.addEventListener("click", () => {
+                filtroGenero.value = "todos";
+                filtroEdad.value = "todos";
+                filtroSede.value = "todos";
                 aplicarFiltros();
             });
-        </script>
-    </body>
+
+            // Ejecutar filtro inicial al cargar la página
+            aplicarFiltros();
+        });
+    </script>
+</body>
+
 </html>
