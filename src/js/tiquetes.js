@@ -219,21 +219,21 @@ function completarComprobante() {
 const peliculas = {
     pelicula1: {
         nombre: "Jurassic Park",
-        imagen: "../../img/jurassic-park.jpg",
+        imagen: "img/jurassic-park.jpg",
         clasificacion: "Clasificación: +12",
         duracion: "2 h 7 min"
     },
 
     pelicula2: {
         nombre: "Vaselina (Grease)",
-        imagen: "../../img/grease.jpg",
+        imagen: "img/grease.jpg",
         clasificacion: "Clasificación: +12",
         duracion: "1 h 50 min"
     },
 
     pelicula3: {
         nombre: "E.T. El extraterrestre",
-        imagen: "../../img/et.jpg",
+        imagen: "img/et.jpg",
         clasificacion: "Clasificación: +7",
         duracion: "1 h 55 min"
     }
