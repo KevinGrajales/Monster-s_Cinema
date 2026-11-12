@@ -13,10 +13,10 @@
 
 <body>
     <div class="flex min-h-screen flex-col">
-       <header class="no-print sticky top-0 z-[1100] border-b-2 border-mustard/30 bg-charcoal/90 backdrop-blur-md">
+        <header class="no-print sticky top-0 z-[1100] border-b-2 border-mustard/30 bg-charcoal/90 backdrop-blur-md">
         <div class="h-1.5 checker opacity-80" aria-hidden="true"></div>
         <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
-            <a aria-label="Monster's Cinema — Inicio" class="group inline-flex items-center gap-2.5" href="../index.html">
+            <a aria-label="Monster's Cinema — Inicio" class="group inline-flex items-center gap-2.5" href="index.html">
                 <span
                     class="grid place-items-center rounded-full bg-marquee border-2 border-mustard glow-red transition-transform group-hover:rotate-12 h-11 w-11">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -41,14 +41,14 @@
             <nav class="hidden items-center gap-1 lg:flex" aria-label="Navegación principal">
                 <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard "
                     href="../index.html">Inicio</a>
-                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard "
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
                     href="cartelera.html">Cartelera</a>
                 <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
                     href="tiquetes.html">Comprar tiquetes</a>
                 <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
                     href="menu.html">Menú</a>
                 <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard !text-mustard neon-mustard"
-                    href="ubicaciones.html" data-status="active" aria-current="page">Ubicaciones</a>
+                    href="pubicaciones.html" data-status="active" aria-current="page">Ubicaciones</a>
             </nav>
 
             <div class="flex items-center gap-2">
@@ -86,258 +86,332 @@
 <main class="flex-1">
 <section class="relative overflow-hidden border-b-2 border-mustard/20 starfield">
     <div class="absolute inset-0 bg-gradient-to-b from-vintage-red/25 via-transparent to-transparent" aria-hidden="true"></div>
-    <div class="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
+        <div class="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
         <p class="font-script text-3xl text-mustard neon-mustard sm:text-4xl">Encuéntranos</p>
         <h1 class="mt-2 text-4xl text-cream sm:text-6xl">Ubicaciones</h1>
         <div class="mt-4 max-w-2xl text-lg text-cream/75">Tres autocines en la misma ciudad, cada uno con su propio encanto.</div>
-    </div>
+        </div>
 </section>
-
-
-
-
-
-
 
 <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6">
-<article class="flex flex-col border rounded-xl overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
-    
-    <img src="../img/sede-norte.jpg" alt="Fotografía de la Sede" class="w-full h-56 object-cover">
-    
+<div class="grid gap-6 lg:grid-cols-3">
+    <article class="flex flex-col overflow-hidden rounded-2xl border-2 bg-card shadow-ticket transition-all border-cream/10">
+        <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="../img/CC-norte1.jpg" alt="Fotografía de la Sede Norte" loading="lazy" width="1024" height="768" class="h-full w-full object-cover">
+            <span class="absolute left-4 top-4 rounded-md bg-charcoal/85 px-3 py-1 font-display text-sm text-mustard">Sede <!-- -->Norte</span>
+        </div>
+        <div class="flex flex-1 flex-col gap-4 p-5">
+            <div>
+                <h2 class="text-xl text-cream">Monster's Cinema Norte</h2>
+                </div>
+                <ul class="space-y-3 text-sm text-cream/85">
+                    <li class="flex gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin mt-0.5 h-4 w-4 shrink-0 text-mustard" aria-hidden="true">
+                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Avenida Juston # 20-30, Zona Norte</li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"></path>
+                            </svg>
+                            <span>
+                                <span class="block">Lunes a jueves<!-- -->: 
+                                    <span class="text-muted-foreground">5:30 p. m. - 11:30 p. m.</span>
+                                </span>
+                                <span class="block">Viernes a domingo<!-- -->: 
+                                    <span class="text-muted-foreground">4:30 p. m. - 1:00 a. m.</span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone mt-0.5 h-4 w-4 shrink-0 text-mustard" aria-hidden="true">
+                                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                            </svg>
+                            +57 301 000 0000
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail mt-0.5 h-4 w-4 shrink-0 text-mustard" aria-hidden="true">
+                                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            </svg>
+                            norte@monsterscinema.example
+                        </li>
+                    </ul>
+                    <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-marquee text-primary-foreground font-display uppercase tracking-wide border-2 border-mustard/70 shadow-ticket hover:glow-red hover:-translate-y-0.5 transition-all h-9 px-4 py-2 mt-auto w-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-navigation" aria-hidden="true">
+                            <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                        </svg>
+                         Cómo llegar
+                        </button>
+                    </div>
+                </article>
+                <article class="flex flex-col overflow-hidden rounded-2xl border-2 bg-card shadow-ticket transition-all border-cream/10">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="../img/Centro.jpg" alt=alt="Fotografía de la Sede Centro" loading="lazy" width="1024" height="768" class="h-full w-full object-cover">
+                        <span class="absolute left-4 top-4 rounded-md bg-charcoal/85 px-3 py-1 font-display text-sm text-mustard">
+                            Sede <!-- -->Centro
+                        </span>
+                    </div>
+                    <div class="flex flex-1 flex-col gap-4 p-5">
+                        <div>
+                            <h2 class="text-xl text-cream">Monster's Cinema Centro</h2>
+                             </div>
+                             <ul class="space-y-3 text-sm text-cream/85">
+                                <li class="flex gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin mt-0.5 h-4 w-4 shrink-0 text-mustard" aria-hidden="true">
+                                        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    Calle 50 # 10-15, Zona Centro
+                                </li>
+                                <li class="flex gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 6v6l4 2"></path>
+                                    </svg>
+                                    <span>
+                                        <span class="block">
+                                            Lunes a jueves<!-- -->: 
+                                            <span class="text-muted-foreground">6:00 p. m. - 11:30 p. m.</span>
+                                        </span>
+                                        <span class="block">
+                                            Viernes a domingo<!-- -->: 
+                                            <span class="text-muted-foreground">5:00 p. m. - 1:00 a. m.</span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone mt-0.5 h-4 w-4 shrink-0 text-mustard" aria-hidden="true">
+                                        <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                                    </svg>
+                                    +57 302 000 0000 </li>
+                                    <li class="flex gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail mt-0.5 h-4 w-4 shrink-0 text-mustard" aria-hidden="true">
+                                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        </svg>
+                                        centro@monsterscinema.example
+                                    </li>
+                                </ul>
+                                <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-marquee text-primary-foreground font-display uppercase tracking-wide border-2 border-mustard/70 shadow-ticket hover:glow-red hover:-translate-y-0.5 transition-all h-9 px-4 py-2 mt-auto w-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-navigation" aria-hidden="true">
+                                        <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                                    </svg> 
+                                    Cómo llegar
+                                </button>
+                            </div>
+                        </article>
+                        <article class="flex flex-col overflow-hidden rounded-2xl border-2 bg-card shadow-ticket transition-all border-cream/10">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img src="../img/Sue.jpg" alt="Fotografía de la Sede Sur" loading="lazy" width="1024" height="768" class="h-full w-full object-cover">
+                                <span class="absolute left-4 top-4 rounded-md bg-charcoal/85 px-3 py-1 font-display text-sm text-mustard">
+                                    Sede <!-- -->Sur
+                                </span>
+                            </div>
+                            <div class="flex flex-1 flex-col gap-4 p-5">
+                                <div>
+                                    <h2 class="text-xl text-cream">Monster's Cinema Sur</h2>
+                                    </div>
+                                    <ul class="space-y-3 text-sm text-cream/85">
+                                        <li class="flex gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin mt-0.5 h-4 w-4 shrink-0 text-mustard" aria-hidden="true">
+                                                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                                                <circle cx="12" cy="10" r="3"></circle>
+                                            </svg>
+                                            Carrera 30 # 70 Sur-80, Zona Sur
+                                        </li>
+                                        <li class="flex gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard" aria-hidden="true">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <path d="M12 6v6l4 2"></path>
+                                            </svg>
+                                            <span>
+                                                <span class="block">
+                                                    Lunes a jueves<!-- -->: 
+                                                    <span class="text-muted-foreground">6:00 p. m. - 11:30 p. m.</span>
+                                                </span>
+                                                <span class="block">Viernes a domingo<!-- -->: 
+                                                    <span class="text-muted-foreground">4:30 p. m. - 12:30 a. m.</span>
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone mt-0.5 h-4 w-4 shrink-0 text-mustard" aria-hidden="true">
+                                                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                                            </svg>
+                                            +57 303 000 0000
+                                        </li>
+                                        <li class="flex gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail mt-0.5 h-4 w-4 shrink-0 text-mustard" aria-hidden="true">
+                                                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                            </svg>
+                                            sur@monsterscinema.example
+                                        </li>
+                                    </ul>
+                                    <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-marquee text-primary-foreground font-display uppercase tracking-wide border-2 border-mustard/70 shadow-ticket hover:glow-red hover:-translate-y-0.5 transition-all h-9 px-4 py-2 mt-auto w-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-navigation" aria-hidden="true">
+                                            <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                                        </svg>
+                                        Cómo llegar
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
 
-<div class="p-6 flex flex-col flex-grow justify-between">
-<div>
-    <span class="text-xs font-semibold uppercase tracking-wider block mb-1">SEDE NORTE</span>
+                        <div class="mt-12">
+                            <h2 class="text-2xl text-cream">Mapa de sedes</h2>
+                            <p class="mt-1 text-sm text-muted-foreground">Conoce nuestras increíbles sedes.</p>
+                            <div class="relative mt-4 h-[460px] overflow-hidden rounded-2xl border-2 border-mustard/40 shadow-ticket">
+                               <img src="../img/mapa-sedes-2.png" alt="Mapa de sedes de Monster's Cinema" class="h-full w-full object-cover object-center">
+                            </div>
 
-    <h2 class="text-2xl font-bold mb-3">MONSTER'S CINEMA NORTE</h2>
-</div>
-<ul class="space-y-3.5 border-t pt-4 mb-6 text-sm">
-      <li class="flex items-start gap-2.5">
-        <span> Avenida Juston # 20-30, Zona Norte</span>
-      </li>
-      <li class="flex items-start gap-2.5">
-        <span>Lunes a jueves: 5:30 p.m. - 11:30 p.m.</span>
-      </li>
-      <li class="flex items-start gap-2.5">
-        <span>Viernes a domingo: 4:30 p.m. - 1:00 a.m.</span>
-      </li>
-      <li class="flex items-start gap-2.5">
-        <span>+57 301 000 0000</span>
-      </li>
-      <li class="flex items-start gap-2.5">
-        <span>norte@monsterscinema.example</span>
-      </li>
-    
-
-<p>CÓMO LLEGAR</p>
-
-</article>
-
-<p>SEDE CENTRO</p>
-<h2>MONSTER'S CINEMA CENTRO</h2>
-<p>Calle 50 # 10-15</p>
-<p>Lunes a jueves: 6:00 p.m. - 11:30 p.m.</p>
-<p>Viernes a domingo: 5:00 p.m. - 1:00 a.m.</p>
-<p>+57 302 000 0000</p>
-<p>centro@monsterscinema.example</p>
-<p>CÓMO LLEGAR</p>
-
-
-<p>SEDE SUR</p>
-<h2>MONSTER'S CINEMA SUR</h2>
-<p>Carrera 30 # 70 Sur-80</p>
-<p>Lunes a jueves: 6:00 p.m. - 11:30 p.m.</p>
-<p>Viernes a domingo: 4:30 p.m. - 12:30 a.m.</p>
-<p>+57 303 000 0000</p>
-<p>sur@monsterscinema.example</p>
-<p>CÓMO LLEGAR</p>
-
-</section>
-
-<h2>MAPA DE SEDES</h2>
-<p>Toca un marcador para ver la información de la sede. Puntos ilustrativos sobre OpenStreetMap.</p>
-
+                    </section>
 
 </main>
 
 
-         <!-- fOOTER -->
-
 <footer class="no-print relative mt-24 border-t-2 border-mustard/30 bg-asphalt">
-        <div class="h-2 checker opacity-70" aria-hidden="true"></div>
-        <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:flex lg:justify-between">
-            <div class="space-y-4">
-                <a aria-label="Monster's Cinema — Inicio" class="group inline-flex items-center gap-2.5" href="../index.html">
-                    <span
-                        class="grid place-items-center rounded-full bg-marquee border-2 border-mustard glow-red transition-transform group-hover:rotate-12 h-14 w-14">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-film text-mustard h-7 w-7" aria-hidden="true">
-                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
-                            <path d="M7 3v18"></path>
-                            <path d="M3 7.5h4"></path>
-                            <path d="M3 12h18"></path>
-                            <path d="M3 16.5h4"></path>
-                            <path d="M17 3v18"></path>
-                            <path d="M17 7.5h4"></path>
-                            <path d="M17 16.5h4"></path>
-                        </svg>
-                    </span>
-                    <span class="flex flex-col leading-none">
-                        <span class="font-script text-mustard neon-mustard -rotate-3 text-4xl">Monster's</span>
-                        <span class="font-display tracking-[0.3em] text-cream text-base">CINEMA</span>
-                    </span>
-                </a>
-                <p class="text-sm leading-relaxed text-muted-foreground">
-                    El autocine retro de la ciudad. Clásicos y estrenos en pantalla gigante, crispetas recién hechas y
-                    la noche estrellada como techo.
-                </p>
+   <div class="h-2 checker opacity-70" aria-hidden="true"></div>
+   <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:flex lg:justify-between">
+    <div class="space-y-4">
+        <a aria-label="Monster's Cinema — Inicio" class="group inline-flex items-center gap-2.5" href="/">
+            <span class="grid place-items-center rounded-full bg-marquee border-2 border-mustard glow-red transition-transform group-hover:rotate-12 h-14 w-14">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film text-mustard h-7 w-7" aria-hidden="true">
+                    <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                    <path d="M7 3v18"></path>
+                    <path d="M3 7.5h4"></path>
+                    <path d="M3 12h18"></path>
+                    <path d="M3 16.5h4"></path>
+                    <path d="M17 3v18"></path>
+                    <path d="M17 7.5h4"></path>
+                    <path d="M17 16.5h4"></path>
+                </svg>
+            </span>
+            <span class="flex flex-col leading-none">
+                <span class="font-script text-mustard neon-mustard -rotate-3 text-4xl">Monster's</span>
+                <span class="font-display tracking-[0.3em] text-cream text-base">CINEMA</span>
+            </span>
+        </a>
+        <p class="text-sm leading-relaxed text-muted-foreground">
+        El autocine retro de la ciudad. Clásicos y estrenos en pantalla gigante, crispetas recién hechas y la noche estrellada como techo.
+        </p>
 
-                <div class="flex gap-2">
-                    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard"
-                        href="https://www.instagram.com/" target="_blank" rel="noreferrer"
-                        aria-label="Instagram (enlace de ejemplo a la plataforma)">
-                        <svg class="lucide lucide-instagram h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                        </svg>
-                    </a>
+        <div class="flex gap-2">
+            <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram (enlace de ejemplo a la plataforma)">
+          <svg class="lucide lucide-instagram h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+        </svg>
+    </a>
 
-                    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard"
-                        href="https://www.facebook.com/" target="_blank" rel="noreferrer"
-                        aria-label="Facebook (enlace de ejemplo a la plataforma)">
-                        <svg class="lucide lucide-facebook h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                        </svg>
-                    </a>
+    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook (enlace de ejemplo a la plataforma)">
+       <svg class="lucide lucide-facebook h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path> 
+       </svg>
+    </a>
 
-                    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard"
-                        href="https://www.youtube.com/" target="_blank" rel="noreferrer"
-                        aria-label="YouTube (enlace de ejemplo a la plataforma)">
-                        <svg class="lucide lucide-youtube h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path
-                                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17">
-                            </path>
-                            <path d="m10 15 5-3-5-3z"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard" href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube (enlace de ejemplo a la plataforma)">
+        <svg class="lucide lucide-youtube h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>    
+        <path d="m10 15 5-3-5-3z"></path>
+        </svg>
+        </a>
+    </div>
+    </div>
 
-            <div>
-                <h3 class="mb-4 text-sm text-mustard">Navega</h3>
-                <ul class="space-y-2 text-sm">
-                    <li>
-                        <a class="text-cream/80 transition-colors hover:text-mustard" href="../index.html">Inicio</a>
-                    </li>
+<div>
+<h3 class="mb-4 text-sm text-mustard">Navega</h3>
+<ul class="space-y-2 text-sm">
+    <li>
+        <a class="text-cream/80 transition-colors hover:text-mustard" href="../index.html">Inicio</a>
+    </li>
+        
+        <li>
+            <a class="text-cream/80 transition-colors hover:text-mustard" href="cartelera.html
+            ">Cartelera</a>
+        </li>
+        
+        <li>
+            <a class="text-cream/80 transition-colors hover:text-mustard" href="tiquetes.html">Comprar tiquetes</a>
+        </li>
+        
+        <li>
+            <a class="text-cream/80 transition-colors hover:text-mustard" href="menu.html">Menú</a>
+        </li>
 
-                    <li>
-                        <a class="text-cream/80 transition-colors hover:text-mustard" href="cartelera.html">Cartelera</a>
-                    </li>
+        <li>
+            <a class="text-cream/80 transition-colors hover:text-mustard active" href="ubicaciones.html" data-status="active" aria-current="page">Ubicaciones</a>
+        </li>
+    </ul>
+</div>
 
-                    <li>
-                        <a class="text-cream/80 transition-colors hover:text-mustard" href="tiquetes.html">Comprar
-                            tiquetes</a>
-                    </li>
+<div>
+    <h3 class="mb-4 text-sm text-mustard">Contacto</h3>
+    <ul class="space-y-3 text-sm text-cream/80">
+        <li class="flex items-start gap-2">
+            <svg class="lucide lucide-phone mt-0.5 h-4 w-4 shrink-0 text-mustard" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+            </svg>
+            <span>+57 300 000 0000 </span>
+        </li>
+        <li class="flex items-start gap-2">
+            <svg class="lucide lucide-mail mt-0.5 h-4 w-4 shrink-0 text-mustard" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            </svg>
+            <span>hola@monsterscinema.example</span>
+        </li>
+        
+    </ul>
+</div>
 
-                    <li>
-                        <a class="text-cream/80 transition-colors hover:text-mustard" href="menu.html">Menú</a>
-                    </li>
+<div>
+    <h3 class="mb-4 text-sm text-mustard">Horarios</h3>
+    <ul class="space-y-3 text-sm text-cream/80">
+        <li class="flex items-start gap-2">
+            <svg class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+            </svg>
+            <span>
+                Lunes a jueves
+                <br>
+                <span class="text-muted-foreground">5:30 p. m. - 11:30 p. m.</span>
+            </span>
+        </li>
+        <li class="flex items-start gap-2">
+            <svg class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard"xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+            </svg>
+            <span>
+                Viernes a domingo y festivos
+                <br>
+                <span class="text-muted-foreground">4:30 p. m. - 1:00 a. m.</span>
+            </span>
+        </li>
+    </ul>
+</div>
+</div>
 
-                    <li>
-                        <a class="text-cream/80 transition-colors hover:text-mustard active" href="ubicaciones.html"
-                            data-status="active" aria-current="page">Ubicaciones</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="mb-4 text-sm text-mustard">Contacto</h3>
-                <ul class="space-y-3 text-sm text-cream/80">
-                    <li class="flex items-start gap-2">
-                        <svg class="lucide lucide-phone mt-0.5 h-4 w-4 shrink-0 text-mustard"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path
-                                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
-                            </path>
-                        </svg>
-                        <span>+57 300 000 0000 </span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="lucide lucide-mail mt-0.5 h-4 w-4 shrink-0 text-mustard"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
-                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                        </svg>
-                        <span>hola@monsterscinema.example</span>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="mb-4 text-sm text-mustard">Horarios</h3>
-                <ul class="space-y-3 text-sm text-cream/80">
-                    <li class="flex items-start gap-2">
-                        <svg class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 6v6l4 2"></path>
-                        </svg>
-                        <span>
-                            Lunes a jueves
-                            <br>
-                            <span class="text-muted-foreground">5:30 p. m. - 11:30 p. m.</span>
-                        </span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 6v6l4 2"></path>
-                        </svg>
-                        <span>
-                            Viernes a domingo y festivos
-                            <br>
-                            <span class="text-muted-foreground">4:30 p. m. - 1:00 a. m.</span>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="border-t border-border">
-            <div
-                class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:px-6">
-                <p>
-                    © 2026 Monster's Cinema. Todos los derechos reservados. Sitio demostrativo.
-                </p>
-                <div class="flex gap-4">
-                    <a class="hover:text-mustard" href="/privacidad">
-                        Política de privacidad</a>
-                    <a class="hover:text-mustard" href="/terminos">
-                        Términos y condiciones</a>
+<div class="border-t border-border">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:px-6">
+        <p>
+            © 2026 Monster's Cinema. Todos los derechos reservados. Sitio demostrativo.
+        </p>
+        <div class="flex gap-4">
+            <a class="hover:text-mustard" href="/privacidad">
+                Política de privacidad</a>
+                <a class="hover:text-mustard" href="/terminos">
+                    Términos y condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
-
-
     </div>
 
     <section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"></section>
@@ -345,15 +419,6 @@
 
 
 
-
-
-
-</div>
-
-
-
 </body>
-
-
 
 </html>
