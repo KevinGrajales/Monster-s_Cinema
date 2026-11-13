@@ -559,16 +559,20 @@ svg.leaflet-zoom-animated {
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-red-700: oklch(50.5% 0.213 27.518);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
+    --color-yellow-600: oklch(68.1% 0.162 75.834);
     --color-green-300: oklch(87.1% 0.15 154.449);
     --color-green-400: oklch(79.2% 0.209 151.711);
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-green-600: oklch(62.7% 0.194 149.214);
+    --color-blue-400: oklch(70.7% 0.165 254.624);
+    --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-md: 28rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
@@ -816,6 +820,9 @@ svg.leaflet-zoom-animated {
   .top-5 {
     top: calc(var(--spacing) * 5);
   }
+  .top-24 {
+    top: calc(var(--spacing) * 24);
+  }
   .top-full {
     top: 100%;
   }
@@ -861,14 +868,35 @@ svg.leaflet-zoom-animated {
   .z-20 {
     z-index: 20;
   }
+  .z-40 {
+    z-index: 40;
+  }
   .z-\[1100\] {
     z-index: 1100;
   }
   .z-\[1200\] {
     z-index: 1200;
   }
+  .m-2 {
+    margin: calc(var(--spacing) * 2);
+  }
+  .m-3 {
+    margin: calc(var(--spacing) * 3);
+  }
+  .m-4 {
+    margin: calc(var(--spacing) * 4);
+  }
+  .m-5 {
+    margin: calc(var(--spacing) * 5);
+  }
+  .m-20 {
+    margin: calc(var(--spacing) * 20);
+  }
   .mx-auto {
     margin-inline: auto;
+  }
+  .my-5 {
+    margin-block: calc(var(--spacing) * 5);
   }
   .mt-0 {
     margin-top: 0px;
@@ -903,6 +931,9 @@ svg.leaflet-zoom-animated {
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
   }
+  .mt-16 {
+    margin-top: calc(var(--spacing) * 16);
+  }
   .mt-24 {
     margin-top: calc(var(--spacing) * 24);
   }
@@ -936,9 +967,6 @@ svg.leaflet-zoom-animated {
   .block {
     display: block;
   }
-  .contents {
-    display: contents;
-  }
   .flex {
     display: flex;
   }
@@ -969,6 +997,9 @@ svg.leaflet-zoom-animated {
   .aspect-\[4\/3\] {
     aspect-ratio: 4/3;
   }
+  .aspect-\[16\/10\] {
+    aspect-ratio: 16/10;
+  }
   .h-1 {
     height: var(--spacing);
   }
@@ -977,6 +1008,12 @@ svg.leaflet-zoom-animated {
   }
   .h-2 {
     height: calc(var(--spacing) * 2);
+  }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
+  }
+  .h-3\.5 {
+    height: calc(var(--spacing) * 3.5);
   }
   .h-4 {
     height: calc(var(--spacing) * 4);
@@ -1029,11 +1066,29 @@ svg.leaflet-zoom-animated {
   .h-px {
     height: 1px;
   }
+  .h-screen {
+    height: 100vh;
+  }
+  .max-h-72 {
+    max-height: calc(var(--spacing) * 72);
+  }
+  .min-h-4 {
+    min-height: calc(var(--spacing) * 4);
+  }
+  .min-h-44 {
+    min-height: calc(var(--spacing) * 44);
+  }
   .min-h-\[88vh\] {
     min-height: 88vh;
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
+  .w-3\.5 {
+    width: calc(var(--spacing) * 3.5);
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
@@ -1130,6 +1185,9 @@ svg.leaflet-zoom-animated {
   .resize {
     resize: both;
   }
+  .scroll-mt-36 {
+    scroll-margin-top: calc(var(--spacing) * 36);
+  }
   .appearance-none {
     appearance: none;
   }
@@ -1224,6 +1282,11 @@ svg.leaflet-zoom-animated {
     margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
   }
+  :where(.space-y-10 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 10) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 10) * calc(1 - var(--tw-space-y-reverse)));
+  }
   .gap-x-6 {
     column-gap: calc(var(--spacing) * 6);
   }
@@ -1235,6 +1298,9 @@ svg.leaflet-zoom-animated {
   }
   .overflow-hidden {
     overflow: hidden;
+  }
+  .overflow-y-auto {
+    overflow-y: auto;
   }
   .rounded-2xl {
     border-radius: calc(var(--radius) + 8px);
@@ -1330,10 +1396,22 @@ svg.leaflet-zoom-animated {
       border-color: color-mix(in oklab, var(--cream) 10%, transparent);
     }
   }
+  .border-cream\/15 {
+    border-color: var(--cream);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--cream) 15%, transparent);
+    }
+  }
   .border-cream\/20 {
     border-color: var(--cream);
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--cream) 20%, transparent);
+    }
+  }
+  .border-cream\/25 {
+    border-color: var(--cream);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--cream) 25%, transparent);
     }
   }
   .border-cream\/60 {
@@ -1367,6 +1445,12 @@ svg.leaflet-zoom-animated {
     border-color: var(--mustard);
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--mustard) 20%, transparent);
+    }
+  }
+  .border-mustard\/25 {
+    border-color: var(--mustard);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--mustard) 25%, transparent);
     }
   }
   .border-mustard\/30 {
@@ -1425,6 +1509,9 @@ svg.leaflet-zoom-animated {
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
     }
+  }
+  .border-yellow-400 {
+    border-color: var(--color-yellow-400);
   }
   .checker {
     background-image: linear-gradient( 45deg, var(--cream) 25%, transparent 25%, transparent 75%, var(--cream) 75% ), linear-gradient( 45deg, var(--cream) 25%, transparent 25%, transparent 75%, var(--cream) 75% );
@@ -1489,6 +1576,12 @@ svg.leaflet-zoom-animated {
       background-color: color-mix(in oklab, var(--charcoal) 90%, transparent);
     }
   }
+  .bg-charcoal\/95 {
+    background-color: var(--charcoal);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--charcoal) 95%, transparent);
+    }
+  }
   .bg-green-600 {
     background-color: var(--color-green-600);
   }
@@ -1521,6 +1614,13 @@ svg.leaflet-zoom-animated {
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
     }
+  }
+  .bg-linear-to-b {
+    --tw-gradient-position: to bottom;
+    @supports (background-image: linear-gradient(in lab, red, red)) {
+      --tw-gradient-position: to bottom in oklab;
+    }
+    background-image: linear-gradient(var(--tw-gradient-stops));
   }
   .bg-gradient-to-b {
     --tw-gradient-position: to bottom in oklab;
@@ -1584,6 +1684,20 @@ svg.leaflet-zoom-animated {
     }
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .from-vintage-red\/40 {
+    --tw-gradient-from: var(--vintage-red);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-gradient-from: color-mix(in oklab, var(--vintage-red) 40%, transparent);
+    }
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-vintage-red\/45 {
+    --tw-gradient-from: var(--vintage-red);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-gradient-from: color-mix(in oklab, var(--vintage-red) 45%, transparent);
+    }
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .via-charcoal {
     --tw-gradient-via: var(--charcoal);
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
@@ -1607,6 +1721,19 @@ svg.leaflet-zoom-animated {
   }
   .via-transparent {
     --tw-gradient-via: transparent;
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .via-vintage-red {
+    --tw-gradient-via: var(--vintage-red);
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .via-vintage-red\/15 {
+    --tw-gradient-via: var(--vintage-red);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-gradient-via: color-mix(in oklab, var(--vintage-red) 15%, transparent);
+    }
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-via-stops);
   }
@@ -1669,11 +1796,17 @@ svg.leaflet-zoom-animated {
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
   .px-7 {
     padding-inline: calc(var(--spacing) * 7);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
   }
   .py-1 {
     padding-block: var(--spacing);
@@ -1690,6 +1823,9 @@ svg.leaflet-zoom-animated {
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
@@ -1705,6 +1841,9 @@ svg.leaflet-zoom-animated {
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
   }
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
+  }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
@@ -1716,6 +1855,12 @@ svg.leaflet-zoom-animated {
   }
   .pt-32 {
     padding-top: calc(var(--spacing) * 32);
+  }
+  .pr-1 {
+    padding-right: var(--spacing);
+  }
+  .pb-3 {
+    padding-bottom: calc(var(--spacing) * 3);
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
@@ -1783,6 +1928,9 @@ svg.leaflet-zoom-animated {
   }
   .text-\[0\.7rem\] {
     font-size: 0.7rem;
+  }
+  .text-\[0\.65rem\] {
+    font-size: 0.65rem;
   }
   .text-\[10px\] {
     font-size: 10px;
@@ -1864,6 +2012,9 @@ svg.leaflet-zoom-animated {
   .text-black {
     color: var(--color-black);
   }
+  .text-blue-400 {
+    color: var(--color-blue-400);
+  }
   .text-charcoal {
     color: var(--charcoal);
   }
@@ -1942,6 +2093,9 @@ svg.leaflet-zoom-animated {
       color: color-mix(in oklab, var(--color-white) 50%, transparent);
     }
   }
+  .text-yellow-400 {
+    color: var(--color-yellow-400);
+  }
   .normal-case {
     text-transform: none;
   }
@@ -1995,6 +2149,10 @@ svg.leaflet-zoom-animated {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .invert {
+    --tw-invert: invert(100%);
+    filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
+  }
   .filter {
     filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
   }
@@ -2045,6 +2203,10 @@ svg.leaflet-zoom-animated {
     --tw-duration: 300ms;
     transition-duration: 300ms;
   }
+  .duration-500 {
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+  }
   .outline-none {
     --tw-outline-style: none;
     outline-style: none;
@@ -2055,6 +2217,12 @@ svg.leaflet-zoom-animated {
   @media (hover: hover) {
     :is(:where(.group):hover .group-hover\:block) {
       display: block;
+    }
+    :is(:where(.group):hover .group-hover\:scale-105) {
+      --tw-scale-x: 105%;
+      --tw-scale-y: 105%;
+      --tw-scale-z: 105%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
     }
     :is(:where(.group):hover .group-hover\:rotate-12) {
       rotate: 12deg;
@@ -2078,6 +2246,14 @@ svg.leaflet-zoom-animated {
     }
     .hover\:border-mustard:hover {
       border-color: var(--mustard);
+    }
+    .hover\:border-mustard\/40:hover {
+      border-color: var(--mustard);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:border-mustard\/40:hover {
+        border-color: color-mix(in oklab, var(--mustard) 40%, transparent);
+      }
     }
     .hover\:bg-\[var\(--asphalt\)\]:hover {
       background-color: var(--asphalt);
@@ -2115,6 +2291,9 @@ svg.leaflet-zoom-animated {
     .hover\:glow-red:hover {
       box-shadow: var(--shadow-neon-red);
     }
+    .hover\:shadow-ticket:hover {
+      box-shadow: var(--shadow-ticket);
+    }
   }
   .focus\:border-\[var\(--mustard\)\]:focus {
     border-color: var(--mustard);
@@ -2125,6 +2304,13 @@ svg.leaflet-zoom-animated {
   .focus-visible\:ring-1:focus-visible {
     --tw-ring-shadow: var(--tw-ring-inset, ) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .focus-visible\:ring-2:focus-visible {
+    --tw-ring-shadow: var(--tw-ring-inset, ) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .focus-visible\:ring-mustard:focus-visible {
+    --tw-ring-color: var(--mustard);
   }
   .focus-visible\:ring-ring:focus-visible {
     --tw-ring-color: var(--ring);
@@ -2162,8 +2348,14 @@ svg.leaflet-zoom-animated {
     .sm\:inline-flex {
       display: inline-flex;
     }
+    .sm\:h-4 {
+      height: calc(var(--spacing) * 4);
+    }
     .sm\:h-9 {
       height: calc(var(--spacing) * 9);
+    }
+    .sm\:w-4 {
+      width: calc(var(--spacing) * 4);
     }
     .sm\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2189,6 +2381,10 @@ svg.leaflet-zoom-animated {
     .sm\:pb-24 {
       padding-bottom: calc(var(--spacing) * 24);
     }
+    .sm\:text-3xl {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
     .sm\:text-4xl {
       font-size: var(--text-4xl);
       line-height: var(--tw-leading, var(--text-4xl--line-height));
@@ -2208,6 +2404,10 @@ svg.leaflet-zoom-animated {
     .sm\:text-8xl {
       font-size: var(--text-8xl);
       line-height: var(--tw-leading, var(--text-8xl--line-height));
+    }
+    .sm\:text-lg {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
     }
     .sm\:text-sm {
       font-size: var(--text-sm);
@@ -2236,6 +2436,9 @@ svg.leaflet-zoom-animated {
     }
     .md\:px-12 {
       padding-inline: calc(var(--spacing) * 12);
+    }
+    .md\:py-16 {
+      padding-block: calc(var(--spacing) * 16);
     }
     .md\:text-2xl {
       font-size: var(--text-2xl);
@@ -2274,6 +2477,9 @@ svg.leaflet-zoom-animated {
     .lg\:w-auto {
       width: auto;
     }
+    .lg\:max-w-md {
+      max-width: var(--container-md);
+    }
     .lg\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -2302,6 +2508,9 @@ svg.leaflet-zoom-animated {
     .lg\:p-0 {
       padding: 0px;
     }
+    .lg\:py-10 {
+      padding-block: calc(var(--spacing) * 10);
+    }
     .lg\:text-8xl {
       font-size: var(--text-8xl);
       line-height: var(--tw-leading, var(--text-8xl--line-height));
@@ -2311,6 +2520,52 @@ svg.leaflet-zoom-animated {
       line-height: var(--tw-leading, var(--text-9xl--line-height));
     }
     .lg\:shadow-none {
+      --tw-shadow: 0 0 #0000;
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  @media (width >= 80rem) {
+    .xl\:static {
+      position: static;
+    }
+    .xl\:sticky {
+      position: sticky;
+    }
+    .xl\:top-36 {
+      top: calc(var(--spacing) * 36);
+    }
+    .xl\:flex {
+      display: flex;
+    }
+    .xl\:hidden {
+      display: none;
+    }
+    .xl\:w-auto {
+      width: auto;
+    }
+    .xl\:grid-cols-\[minmax\(0\,1fr\)_22rem\] {
+      grid-template-columns: minmax(0,1fr) 22rem;
+    }
+    .xl\:flex-row {
+      flex-direction: row;
+    }
+    .xl\:items-center {
+      align-items: center;
+    }
+    .xl\:gap-1 {
+      gap: var(--spacing);
+    }
+    .xl\:border-0 {
+      border-style: var(--tw-border-style);
+      border-width: 0px;
+    }
+    .xl\:bg-transparent {
+      background-color: transparent;
+    }
+    .xl\:p-0 {
+      padding: 0px;
+    }
+    .xl\:shadow-none {
       --tw-shadow: 0 0 #0000;
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }

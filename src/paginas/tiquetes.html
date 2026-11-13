@@ -102,11 +102,20 @@
     </header>
 
    <!-- PORTADA DE LA PÁGINA DE TIQUETES -->
-<section class="starfield border-b border-mustard/30 bg-gradient-to-b from-vintage-red/30 to-charcoal px-6 py-16 md:px-12 print:hidden">
+<!-- PORTADA DE LA PÁGINA DE TIQUETES -->
+<section class="relative isolate overflow-hidden border-b border-mustard/30 bg-charcoal px-6 py-16 md:px-12 print:hidden">
 
-    <div class="mx-auto max-w-7xl">
+    <!-- Fondo de estrellas -->
+    <div class="starfield absolute inset-0" aria-hidden="true"></div>
 
-        <p class="font-script text-3xl text-mustard md:text-4xl">
+    <!-- Sombreado rojo -->
+    <div class="absolute inset-0 bg-gradient-to-b from-vintage-red/40 via-vintage-red/15 to-transparent"
+         aria-hidden="true"></div>
+
+    <!-- Contenido de la portada -->
+    <div class="relative z-10 mx-auto max-w-7xl">
+
+        <p class="font-script text-3xl text-mustard neon-mustard md:text-4xl">
             Tu noche de cine
         </p>
 
@@ -229,9 +238,15 @@
                             >
 
                                 <option value="">Elige una película...</option>
-                                <option value="pelicula1">Jurassic Park</option>
-                                <option value="pelicula2">Vaselina (Grease)</option>
-                                <option value="pelicula3">E.T. El extraterrestre</option>
+                                <option value="pelicula1">Antes de ti</option>
+                                <option value="pelicula2">Thor</option>
+                                <option value="pelicula3">La tierra errante</option>
+                                <option value="pelicula4">Backrooms</option>
+                                <option value="pelicula5">La Monja </option>
+                                <option value="pelicula6">Stray Kids </option>
+                                <option value="pelicula7">APEX: Live event</option>
+
+
 
                             </select>
 

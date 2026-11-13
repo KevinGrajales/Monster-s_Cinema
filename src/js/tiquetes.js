@@ -218,24 +218,48 @@ function completarComprobante() {
 
 const peliculas = {
     pelicula1: {
-        nombre: "Jurassic Park",
-        imagen: "../img/jurassic-park.jpg",
+        nombre: "Antes de ti",
+        imagen: "../img/Antes-nuevo.jpeg",
         clasificacion: "Clasificación: +12",
         duracion: "2 h 7 min"
     },
 
     pelicula2: {
-        nombre: "Vaselina (Grease)",
-        imagen: "../img/grease.jpg",
+        nombre: "Thor",
+        imagen: "../img/thor.jpg",
         clasificacion: "Clasificación: +12",
-        duracion: "1 h 50 min"
+        duracion: "2 h 20 min"
     },
 
     pelicula3: {
-        nombre: "E.T. El extraterrestre",
-        imagen: "../img/et.jpg",
-        clasificacion: "Clasificación: +7",
-        duracion: "1 h 55 min"
+        nombre: "La tierra errante",
+        imagen: "../img/movi4.jpeg",
+        clasificacion: "Clasificación: +12",
+        duracion: "2 h 15 min"
+    },
+    pelicula4: {
+        nombre: "Backrooms",
+        imagen: "../img/Backrooms.jpg",
+        clasificacion: "Clasificación: +18",
+        duracion: "1 h 45 min"
+    },
+    pelicula5: {
+        nombre: "La Monja ",
+        imagen: "../img/LaMonja.jpeg",
+        clasificacion: "Clasificación: +18",
+        duracion: "1 h 30 min"
+    },
+    pelicula6: {
+        nombre: "Stray Kids ",
+        imagen: "../img/Stray.jpeg",
+        clasificacion: "Clasificación: +12",
+        duracion: "2 h 15 min"
+    },
+    pelicula7: {
+        nombre: "APEX: Live event",
+        imagen: "../img/apex.webp",
+        clasificacion: "Clasificación: +12",
+        duracion: "2 h 30 min"
     }
 };
 
