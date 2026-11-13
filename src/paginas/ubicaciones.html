@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Bungee&family=Yellowtail&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/output.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
 </head>
 
 
@@ -282,12 +286,15 @@
                             </article>
                         </div>
 
-                        <div class="mt-12">
-                            <h2 class="text-2xl text-cream">Mapa de sedes</h2>
-                            <p class="mt-1 text-sm text-muted-foreground">Conoce nuestras increíbles sedes.</p>
-                            <div class="relative mt-4 h-[460px] overflow-hidden rounded-2xl border-2 border-mustard/40 shadow-ticket">
-                               <img src="../img/mapa-sedes-2.png" alt="Mapa de sedes de Monster's Cinema" class="h-full w-full object-cover object-center">
-                            </div>
+                       <div class="mt-12">
+                        <h2 class="text-2xl text-cream">Mapa de sedes</h2>
+                        <p class="mt-1 text-sm text-muted-foreground">Conoce nuestras increíbles sedes.</p>
+
+                        <div
+                            id="mapa-sedes"
+                            class="relative mt-4 h-[460px] overflow-hidden rounded-2xl border-2 border-mustard/40 shadow-ticket z-0">
+                        </div>
+                    </div>
 
                     </section>
 
@@ -444,7 +451,222 @@
     <section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"></section>
     <script type="module" async="" src="/assets/index-C0M1GLqR.js"></script>
 
-<script src="../js/menu.js" defer></script>
+
+<script type="module" async="" src="/assets/index-C0M1GLqR.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const mapa = L.map("mapa-sedes").setView([6.2442, -75.5812], 12);
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(mapa);
+
+        const sedes = [
+            {
+                nombre: "Monster's Cinema Norte",
+                direccion: "Avenida Juston # 20-30, Zona Norte",
+                coordenadas: [6.2850, -75.5650]
+            },
+            {
+                nombre: "Monster's Cinema Centro",
+                direccion: "Calle 50 # 10-15, Zona Centro",
+                coordenadas: [6.2510, -75.5700]
+            },
+            {
+                nombre: "Monster's Cinema Sur",
+                direccion: "Carrera 30 # 70 Sur-80, Zona Sur",
+                coordenadas: [6.1900, -75.5750]
+            }
+        ];
+
+        // Capas para mostrar la ruta y la ubicación actual
+let rutaActual = null;
+let marcadorUsuario = null;
+
+sedes.forEach(function (sede) {
+
+    const marcador = L.marker(sede.coordenadas).addTo(mapa);
+
+    marcador.bindPopup(`
+        <div style="text-align:center; min-width:180px;">
+            <strong>${sede.nombre}</strong>
+
+            <p style="margin:5px 0;">
+                ${sede.direccion}
+            </p>
+
+            <button
+                class="btn-como-llegar"
+                style="
+                    margin-top:8px;
+                    padding:8px 12px;
+                    background:#b91c1c;
+                    color:white;
+                    border:none;
+                    border-radius:5px;
+                    cursor:pointer;
+                    font-weight:bold;
+                ">
+                Cómo llegar
+            </button>
+
+            <p class="estado-ruta" style="font-size:12px; margin-top:8px;">
+            </p>
+        </div>
+    `);
+
+    // Detectar cuando se abre la ventana del marcador
+    marcador.on("popupopen", function (evento) {
+
+        const popup = evento.popup.getElement();
+
+        const boton = popup.querySelector(".btn-como-llegar");
+        const estado = popup.querySelector(".estado-ruta");
+
+        boton.addEventListener("click", function () {
+
+            // Validar disponibilidad de geolocalización
+            if (!navigator.geolocation) {
+                estado.textContent = "Tu navegador no admite geolocalización.";
+                return;
+            }
+
+            boton.disabled = true;
+            boton.textContent = "Calculando ruta...";
+            estado.textContent = "Solicitando tu ubicación...";
+
+            // Obtener ubicación actual
+            navigator.geolocation.getCurrentPosition(
+
+                async function (posicion) {
+
+                    const latUsuario = posicion.coords.latitude;
+                    const lonUsuario = posicion.coords.longitude;
+
+                    const latDestino = sede.coordenadas[0];
+                    const lonDestino = sede.coordenadas[1];
+
+                    try {
+
+                        // Eliminar ruta y marcador anteriores
+                        if (rutaActual) {
+                            mapa.removeLayer(rutaActual);
+                        }
+
+                        if (marcadorUsuario) {
+                            mapa.removeLayer(marcadorUsuario);
+                        }
+
+                        // Mostrar ubicación actual
+                        marcadorUsuario = L.marker([
+                            latUsuario,
+                            lonUsuario
+                        ]).addTo(mapa);
+
+                        marcadorUsuario.bindPopup(
+                            "Tu ubicación actual"
+                        );
+
+                        // Consultar ruta en OSRM
+                        const url = `https://router.project-osrm.org/route/v1/driving/${lonUsuario},${latUsuario};${lonDestino},${latDestino}?overview=full&geometries=geojson`;
+
+                        const respuesta = await fetch(url);
+                        const datos = await respuesta.json();
+
+                        if (datos.code !== "Ok" || !datos.routes.length) {
+                            throw new Error("No se encontró una ruta.");
+                        }
+
+                        // Dibujar recorrido en el mapa
+                        rutaActual = L.geoJSON(
+                            datos.routes[0].geometry,
+                            {
+                                style: {
+                                    color: "#b91c1c",
+                                    weight: 6,
+                                    opacity: 0.85
+                                }
+                            }
+                        ).addTo(mapa);
+
+                        // Ajustar mapa para mostrar todo el recorrido
+                        mapa.fitBounds(rutaActual.getBounds(), {
+                            padding: [40, 40]
+                        });
+
+                        // Mostrar distancia y duración
+                        const distancia = (
+                            datos.routes[0].distance / 1000
+                        ).toFixed(2);
+
+                        const duracion = Math.round(
+                            datos.routes[0].duration / 60
+                        );
+
+                        estado.textContent =
+                            `Distancia: ${distancia} km | Tiempo aproximado: ${duracion} min`;
+
+                        boton.textContent = "Ruta calculada";
+
+                    } catch (error) {
+
+                        console.error("Error al calcular la ruta:", error);
+
+                        estado.textContent =
+                            "No fue posible calcular la ruta. Intenta nuevamente.";
+
+                        boton.textContent = "Cómo llegar";
+
+                    } finally {
+
+                        boton.disabled = false;
+
+                    }
+
+                },
+
+                function (error) {
+
+                    console.error("Error de ubicación:", error);
+
+                    if (error.code === 1) {
+                        estado.textContent =
+                            "Debes permitir el acceso a tu ubicación.";
+                    } else if (error.code === 2) {
+                        estado.textContent =
+                            "No se pudo obtener tu ubicación.";
+                    } else {
+                        estado.textContent =
+                            "Se agotó el tiempo para obtener tu ubicación.";
+                    }
+
+                    boton.disabled = false;
+                    boton.textContent = "Cómo llegar";
+
+                },
+
+                {
+                    enableHighAccuracy: true,
+                    timeout: 15000,
+                    maximumAge: 0
+                }
+
+            );
+
+        });
+
+    });
+
+});
+
+    });
+</script>
+
+    <script src="../js/menu.js" defer></script>
 
 </body>
 
