@@ -22,8 +22,10 @@
 
      <header class="no-print sticky top-0 z-[1100] border-b-2 border-mustard/30 bg-charcoal/90 backdrop-blur-md">
         <div class="h-1.5 checker opacity-80" aria-hidden="true"></div>
-        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
-            <a aria-label="Monster's Cinema — Inicio" class="group inline-flex items-center gap-2.5" href="../index.html">
+
+        <div class="relative mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
+    
+    <a aria-label="Monster's Cinema — Inicio" class="group inline-flex items-center gap-2.5" href="../index.html">
                 <span
                     class="grid place-items-center rounded-full bg-marquee border-2 border-mustard glow-red transition-transform group-hover:rotate-12 h-11 w-11">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -45,7 +47,12 @@
                 </span>
             </a>
 
-            <nav class="hidden items-center gap-1 lg:flex" aria-label="Navegación principal">
+<nav
+    id="menu-principal"
+    class="hidden absolute left-0 top-full z-[1200] w-full flex-col gap-2 border-b-2 border-mustard/30 bg-charcoal p-4 shadow-ticket
+    lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-1 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none"
+    aria-label="Navegación principal">
+    
                 <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard "
                     href="../index.html">Inicio</a>
                 <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard "
@@ -74,10 +81,14 @@
                     </svg>
                     Comprar ahora
                 </a>
-                <button
-                    class="grid h-10 w-10 place-items-center rounded-md border border-cream/20 text-cream transition-colors hover:border-mustard hover:text-mustard cursor-pointer lg:hidden"
-                    aria-label="Abrir menú" type="button" aria-haspopup="dialog" aria-expanded="false"
-                    data-state="closed">
+               <button
+    id="boton-menu"
+    class="grid h-10 w-10 place-items-center rounded-md border border-cream/20 text-cream transition-colors hover:border-mustard hover:text-mustard cursor-pointer lg:hidden"
+    aria-label="Abrir menú"
+    type="button"
+    aria-controls="menu-principal"
+    aria-expanded="false">
+    
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-menu h-5 w-5" aria-hidden="true">
@@ -1305,5 +1316,6 @@
 
 
     <script src="../js/tiquetes.js"></script>
+    <script src="../js/menu.js" defer></script>
 </body>
 </html>
