@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+    <title>Monster's Cinema — Inicio</title>
 
     <meta name="description" content="Autocine retro: películas, experiencia y sedes demostrativas de Monster’s Cinema.">
 
@@ -18,10 +18,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Bungee&family=Yellowtail&display=swap">
 
     <link rel="stylesheet" href="css/output.css">
-    <link rel="icon" type="image/png" href="img/favicon.png">  
+    <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 
+<body class="bg-background text-foreground font-sans">
 
+    <!-- HEADER -->
     <header class="no-print sticky top-0 z-[1100] border-b-2 border-mustard/30 bg-charcoal/90 backdrop-blur-md">
         <div class="h-1.5 checker opacity-80" aria-hidden="true"></div>
         <div class="relative mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
@@ -54,7 +56,7 @@
               aria-label="Navegación principal">
 
                 <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard !text-mustard neon-mustard"
-                    href="index.html">Inicio</a>
+                    href="index.html" data-status="active" aria-current="page">Inicio</a>
                 <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
                     href="paginas/cartelera.html">Cartelera</a>
                 <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
@@ -62,72 +64,64 @@
                 <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
                     href="paginas/menu.html">Menú</a>
                 <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
-                    href="paginas/ubicaciones.html" data-status="active" aria-current="page">Ubicaciones</a>
+                    href="paginas/ubicaciones.html">Ubicaciones</a>
             </nav>
 
             <div class="flex items-center gap-2">
 
                 <a
-    class="inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-md text-xs sm:text-sm font-medium
-    bg-marquee text-primary-foreground font-display uppercase tracking-wide
-    border-2 border-mustard/70 shadow-ticket
-    hover:glow-red hover:-translate-y-0.5 transition-all
-    h-8 px-2 sm:h-9 sm:px-4
-    [&_svg]:size-3 sm:[&_svg]:size-4"
-    href="paginas/tiquetes.html">
+                    class="inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-md text-xs sm:text-sm font-medium
+                    bg-marquee text-primary-foreground font-display uppercase tracking-wide
+                    border-2 border-mustard/70 shadow-ticket
+                    hover:glow-red hover:-translate-y-0.5 transition-all
+                    h-8 px-2 sm:h-9 sm:px-4
+                    [&_svg]:size-3 sm:[&_svg]:size-4"
+                    href="paginas/tiquetes.html">
 
-    <svg xmlns="http://www.w3.org/2000/svg"
-        width="24" height="24" viewBox="0 0 24 24"
-        fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
 
-        <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
-        <path d="M13 5v2"></path>
-        <path d="M13 17v2"></path>
-        <path d="M13 11v2"></path>
-    </svg>
+                        <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
+                        <path d="M13 5v2"></path>
+                        <path d="M13 17v2"></path>
+                        <path d="M13 11v2"></path>
+                    </svg>
 
-    <span class="hidden sm:inline">Comprar ahora</span>
-    <span class="sm:hidden">Comprar</span>
-</a>
+                    <span class="hidden sm:inline">Comprar ahora</span>
+                    <span class="sm:hidden">Comprar</span>
+                </a>
 
-                      <button
-          id="boton-menu"
-          class="grid h-10 w-10 place-items-center rounded-md border border-cream/20 text-cream transition-colors hover:border-mustard hover:text-mustard cursor-pointer lg:hidden"
-          aria-label="Abrir menú"
-          type="button"
-          aria-controls="menu-principal"
-          aria-expanded="false">
+                <button
+                    id="boton-menu"
+                    class="grid h-10 w-10 place-items-center rounded-md border border-cream/20 text-cream transition-colors hover:border-mustard hover:text-mustard cursor-pointer lg:hidden"
+                    aria-label="Abrir menú"
+                    type="button"
+                    aria-controls="menu-principal"
+                    aria-expanded="false">
 
-          <svg xmlns="http://www.w3.org/2000/svg"
-              width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-menu h-5 w-5"
-              aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-menu h-5 w-5"
+                        aria-hidden="true">
 
-              <path d="M4 5h16"></path>
-              <path d="M4 12h16"></path>
-              <path d="M4 19h16"></path>
+                        <path d="M4 5h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 19h16"></path>
 
-          </svg>
-      </button>
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
 
-
-<title>Monster's Cinema — Inicio</title>
-
-<body class="bg-background text-foreground font-sans">
-
-    <!-- C.P -->
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="pb-16">
-
-        <p>
-        </p>
 
         <!-- 01. La portada -->
         <section
@@ -150,7 +144,10 @@
 
                 <header class="max-w-3xl">
 
-                    <p class="inline-flex items-center gap-2 rounded-full border border-mustard/50 bg-charcoal/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-mustard backdrop-blur">
+                    <!-- 🥚 Easter egg: al hacer clic aquí se activa el "modo película antigua" -->
+                    <p id="insignia-67"
+                       title="¿Un viaje en el tiempo?"
+                       class="cursor-pointer inline-flex items-center gap-2 rounded-full border border-mustard/50 bg-charcoal/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-mustard backdrop-blur">
                         AUTOCINE - Desde el 67'
                     </p>
 
@@ -158,7 +155,7 @@
                         La magia del cine
 
                         <span class="block font-script text-6xl normal-case text-mustard neon-mustard sm:text-8xl lg:text-9xl">
-                          Bajo las estrellas 
+                          Bajo las estrellas
                         </span>
                     </h1>
 
@@ -175,7 +172,7 @@
 
                         <a href="paginas/tiquetes.html"
                            class="inline-flex items-center justify-center bg-marquee text-primary-foreground font-display uppercase tracking-wide border-2 border-mustard/70 shadow-ticket h-12 rounded-lg px-7 text-base">
-                           COMPRAR TIQUETES 
+                           COMPRAR TIQUETES
                         </a>
 
                     </nav>
@@ -186,7 +183,7 @@
         </section>
 
 
-        <!-- 02.La cartelera actual -->
+        <!-- 02. La cartelera actual -->
         <section
             id="02-hoy-en-pantalla"
             aria-label="Películas disponibles actualmente"
@@ -195,9 +192,7 @@
             <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4 font-display text-sm uppercase text-cream">
 
                 <h2 class="text-mustard text-sm">
-                    
-                    HOY EN CARTELERA: 
-
+                    HOY EN CARTELERA:
                 </h2>
 
                 <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2">
@@ -208,7 +203,7 @@
                     <li>★ <strong> APEX LIVE EVENT </strong> </li>
                     <li>★ Antes de ti </li>
                     <li>★ Stray kids live event</li>
-                    <li>★ Tiera Errante </li>
+                    <li>★ Tierra Errante </li>
 
                 </ul>
 
@@ -216,7 +211,7 @@
         </section>
 
 
-       <!-- 03. Aqui van los estreno -->
+        <!-- 03. Próximos estrenos -->
         <section
             id="03-proximos-estrenos"
             class="mx-auto max-w-7xl px-4 py-20 sm:px-6"
@@ -227,7 +222,7 @@
                 <div class="max-w-2xl">
 
                     <p class="font-script text-3xl text-mustard neon-mustard">
-                    Muy pronto
+                        Muy pronto
                     </p>
 
                     <h2 id="titulo-estrenos" class="mt-1 text-3xl text-cream sm:text-4xl">
@@ -235,14 +230,12 @@
                     </h2>
 
                     <p class="mt-4 text-muted-foreground">
-                        
-                  Disfruta de los estrenos más recientes con una experiencia retro! 
-
+                        Disfruta de los estrenos más recientes con una experiencia retro!
                     </p>
 
                 </div>
 
-                <a href=""
+                <a href="paginas/cartelera.html"
                    class="inline-flex items-center justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
                     VER TODA LA CARTELERA
                 </a>
@@ -250,342 +243,259 @@
             </header>
 
 
-            
+            <!-- Próximos estrenos: una sola grilla con las 7 películas -->
+            <div class="mt-10 mb-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
+                <!-- Película 1 -->
+                <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
 
+                    <figure class="relative aspect-[2/3] overflow-hidden">
+                        <img
+                            src="img/Lamonja.jpeg"
+                            alt="La monja"
+                            width="768"
+                            height="1152"
+                            loading="lazy"
+                            class="h-full w-full object-cover">
 
-<!-- Próximos estrenos: una sola grilla con las 6 películas -->
-<section class="mt-10 mb-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
- 
-  <!-- Película 1 -->
-  <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
- 
-    <figure class="relative aspect-[2/3] overflow-hidden">
-      <img
-        src="img/Lamonja.jpeg"
-        alt="La monja"
-        width="768"
-        height="1152"
-        loading="lazy"
-        class="h-full w-full object-cover">
- 
-      <figcaption class="absolute inset-x-0 bottom-0 p-4">
-        <p class="text-xs uppercase tracking-widest text-mustard">
-          <!-- Género --> TERROR
-        </p>
-        <h3 class="mt-1 text-xl text-cream">
-          <!-- Título --> LA MONJA
-        </h3>
-      </figcaption>
-    </figure>
- 
-    <div class="flex flex-1 flex-col gap-3 p-4">
-      <p class="text-sm text-muted-foreground">
-        Clasificación: +18
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Estreno:
-        <time datetime=""
-          <!-- Fecha -->
-           24/12/2026
-        </time>
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Duración: 2H y 30M
-      </p>
- 
-      <a href=""
-         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
-        Ver detalles
-      </a>
-    </div>
- 
-  </article>
- 
-  <!-- Película 2 -->
-  <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
- 
-    <figure class="relative aspect-[2/3] overflow-hidden">
-      <img
-        src="img/apex.webp"
-        alt="APEX"
-        width="768"
-        height="1152"
-        loading="lazy"
-        class="h-full w-full object-cover">
- 
-      <figcaption class="absolute inset-x-0 bottom-0 p-4">
-        <p class="text-xs uppercase tracking-widest text-mustard">
-          <!-- Género --> ACCION - PELEA
-        </p>
-        <h3 class="mt-1 text-xl text-cream">
-          <!-- Título --> APEX LIVE EVENT
-        </h3>
-      </figcaption>
-    </figure>
- 
-    <div class="flex flex-1 flex-col gap-3 p-4">
-      <p class="text-sm text-muted-foreground">
-        Clasificación: +18
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Estreno:
-        <time datetime="">
-          <!-- Fecha --> 26/12/2026
-        </time>
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Duración: <strong>LIVE</strong>
-      </p>
- 
-      <a href=""
-         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
-        Ver detalles
-      </a>
-    </div>
- 
-  </article>
- 
-  <!-- Película 3 -->
-  <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
- 
-    <figure class="relative aspect-[2/3] overflow-hidden">
-      <img
-        src="img/Thor3.jpg"
-        alt="Thor"
-        width="768"
-        height="1152"
-        loading="lazy"
-        class="h-full w-full object-cover">
- 
-      <figcaption class="absolute inset-x-0 bottom-0 p-4">
-        <p class="text-xs uppercase tracking-widest text-mustard">
-          <!-- Género --> ACCION
-        </p>
-        <h3 class="mt-1 text-xl text-cream">
-          <!-- Título --> THOR
-        </h3>
-      </figcaption>
-    </figure>
- 
-    <div class="flex flex-1 flex-col gap-3 p-4">
-      <p class="text-sm text-muted-foreground">
-        Clasificación: +15
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Estreno: 8/12/2026
-        <time datetime="">
-          <!-- Fecha -->
-        </time>
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Duración: 2H
-      </p>
- 
-      <a href=""
-         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
-        Ver detalles
-      </a>
-    </div>
- 
-  </article>
- 
-  <!-- Película 4 -->
-  <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
- 
-    <figure class="relative aspect-[2/3] overflow-hidden">
-      <img
-        src="img/Tierra-errante.jpeg"
-        alt="Tierra errante"
-        width="768"
-        height="1152"
-        loading="lazy"
-        class="h-full w-full object-cover">
- 
-      <figcaption class="absolute inset-x-0 bottom-0 p-4">
-        <p class="text-xs uppercase tracking-widest text-mustard">
-          <!-- Género --> SUSPENSO - CIENCIA FICCION
-        </p>
-        <h3 class="mt-1 text-xl text-cream">
-          <!-- Título --> TIERRA ERRANTE
-        </h3>
-      </figcaption>
-    </figure>
- 
-    <div class="flex flex-1 flex-col gap-3 p-4">
-      <p class="text-sm text-muted-foreground">
-        Clasificación: +16
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Estreno: 1/12/2026
-        <time datetime="">
-          <!-- Fecha -->
-        </time>
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Duración:1H y 45M
-      </p>
- 
-      <a href=""
-         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
-        Ver detalles
-      </a>
-    </div>
- 
-  </article>
- 
-  <!-- Película 5 -->
-  <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
- 
-    <figure class="relative aspect-[2/3] overflow-hidden">
-      <img
-        src="img/Backrooms.jpeg"
-        alt="Backrooms"
-        width="768"
-        height="1152"
-        loading="lazy"
-        class="h-full w-full object-cover">
- 
-      <figcaption class="absolute inset-x-0 bottom-0 p-4">
-        <p class="text-xs uppercase tracking-widest text-mustard">
-          <!-- Género --> TERROR
-        </p>
-        <h3 class="mt-1 text-xl text-cream">
-          <!-- Título --> BACKROOMS
-        </h3>
-      </figcaption>
-    </figure>
- 
-    <div class="flex flex-1 flex-col gap-3 p-4">
-      <p class="text-sm text-muted-foreground">
-        Clasificación: +12
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Estreno:20/12/2026
-        <time datetime="">
-          <!-- Fecha -->
-        </time>
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Duración: 2H
-      </p>
- 
-      <a href=""
-         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
-        Ver detalles
-      </a>
-    </div>
- 
-  </article>
- 
-  <!-- Película 6 -->
-  <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
- 
-    <figure class="relative aspect-[2/3] overflow-hidden">
-      <img
-        src="img/Stray.jpeg"
-        alt="Stray Kids Live Event"
-        width="768"
-        height="1152"
-        loading="lazy"
-        class="h-full w-full object-cover">
- 
-      <figcaption class="absolute inset-x-0 bottom-0 p-4">
-        <p class="text-xs uppercase tracking-widest text-mustard">
-          <!-- Género --> POP - DRAMA
-        </p>
-        <h3 class="mt-1 text-xl text-cream">
-          <!-- Título --> STRAY KIDS 
-        </h3>
-      </figcaption>
-    </figure>
- 
-    <div class="flex flex-1 flex-col gap-3 p-4">
-      <p class="text-sm text-muted-foreground">
-        Clasificación: +12
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Estreno: 18/12/2026
-        <time datetime="">
-          <!-- Fecha -->
-        </time>
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Duración:1H y 50M
-      </p>
- 
-      <a href=""
-         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
-        Ver detalles
-      </a>
-    </div>
- 
-  </article>
- 
-<!-- Pelicula 7 -->
+                        <figcaption class="absolute inset-x-0 bottom-0 p-4">
+                            <p class="text-xs uppercase tracking-widest text-mustard">TERROR</p>
+                            <h3 class="mt-1 text-xl text-cream">LA MONJA</h3>
+                        </figcaption>
+                    </figure>
 
-<article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
- 
-    <figure class="relative aspect-[2/3] overflow-hidden">
-      <img
-        src="img/Antes-nuevo.jpeg"
-        alt="Antes de ti"
-        width="768"
-        height="1152"
-        loading="lazy"
-        class="h-full w-full object-cover">
- 
-      <figcaption class="absolute inset-x-0 bottom-0 p-4">
-        <p class="text-xs uppercase tracking-widest text-mustard">
-          <!-- Género --> DRAMA - ROMANCE
-        </p>
-        <h3 class="mt-1 text-xl text-cream">
-          <!-- Título -->
-           ANTES DE TI
-        </h3>
-      </figcaption>
-    </figure>
- 
-    <div class="flex flex-1 flex-col gap-3 p-4">
-      <p class="text-sm text-muted-foreground">
-        Clasificación: +18
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Estreno:
-        <time datetime="">
-          <!-- Fecha --> 26/12/2026
-        </time>
-      </p>
- 
-      <p class="text-sm text-muted-foreground">
-        Duración: 1H y 30M
-      </p>
- 
-      <a href=""
-         class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
-        Ver detalles
-      </a>
-    </div>
- 
-  </article>
- 
+                    <div class="flex flex-1 flex-col gap-3 p-4">
+                        <p class="text-sm text-muted-foreground">Clasificación: +18</p>
+
+                        <p class="text-sm text-muted-foreground">
+                            Estreno: <time datetime="2026-12-24">24/12/2026</time>
+                        </p>
+
+                        <p class="text-sm text-muted-foreground">Duración: 2H y 30M</p>
+
+                        <a href="paginas/cartelera.html"
+                           class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+                            Ver detalles
+                        </a>
+                    </div>
+
+                </article>
+
+                <!-- Película 2 -->
+                <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+
+                    <figure class="relative aspect-[2/3] overflow-hidden">
+                        <img
+                            src="img/apex.webp"
+                            alt="APEX"
+                            width="768"
+                            height="1152"
+                            loading="lazy"
+                            class="h-full w-full object-cover">
+
+                        <figcaption class="absolute inset-x-0 bottom-0 p-4">
+                            <p class="text-xs uppercase tracking-widest text-mustard">ACCION - PELEA</p>
+                            <h3 class="mt-1 text-xl text-cream">APEX LIVE EVENT</h3>
+                        </figcaption>
+                    </figure>
+
+                    <div class="flex flex-1 flex-col gap-3 p-4">
+                        <p class="text-sm text-muted-foreground">Clasificación: +18</p>
+
+                        <p class="text-sm text-muted-foreground">
+                            Estreno: <time datetime="2026-12-26">26/12/2026</time>
+                        </p>
+
+                        <p class="text-sm text-muted-foreground">
+                            Duración: <strong>LIVE</strong>
+                        </p>
+
+                        <a href="paginas/cartelera.html"
+                           class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+                            Ver detalles
+                        </a>
+                    </div>
+
+                </article>
+
+                <!-- Película 3 -->
+                <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+
+                    <figure class="relative aspect-[2/3] overflow-hidden">
+                        <img
+                            src="img/Thor3.jpg"
+                            alt="Thor"
+                            width="768"
+                            height="1152"
+                            loading="lazy"
+                            class="h-full w-full object-cover">
+
+                        <figcaption class="absolute inset-x-0 bottom-0 p-4">
+                            <p class="text-xs uppercase tracking-widest text-mustard">ACCION</p>
+                            <h3 class="mt-1 text-xl text-cream">THOR</h3>
+                        </figcaption>
+                    </figure>
+
+                    <div class="flex flex-1 flex-col gap-3 p-4">
+                        <p class="text-sm text-muted-foreground">Clasificación: +15</p>
+
+                        <p class="text-sm text-muted-foreground">
+                            Estreno: <time datetime="2026-12-08">8/12/2026</time>
+                        </p>
+
+                        <p class="text-sm text-muted-foreground">Duración: 2H</p>
+
+                        <a href="paginas/cartelera.html"
+                           class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+                            Ver detalles
+                        </a>
+                    </div>
+
+                </article>
+
+                <!-- Película 4 -->
+                <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+
+                    <figure class="relative aspect-[2/3] overflow-hidden">
+                        <img
+                            src="img/Tierra-errante.jpeg"
+                            alt="Tierra errante"
+                            width="768"
+                            height="1152"
+                            loading="lazy"
+                            class="h-full w-full object-cover">
+
+                        <figcaption class="absolute inset-x-0 bottom-0 p-4">
+                            <p class="text-xs uppercase tracking-widest text-mustard">SUSPENSO - CIENCIA FICCION</p>
+                            <h3 class="mt-1 text-xl text-cream">TIERRA ERRANTE</h3>
+                        </figcaption>
+                    </figure>
+
+                    <div class="flex flex-1 flex-col gap-3 p-4">
+                        <p class="text-sm text-muted-foreground">Clasificación: +16</p>
+
+                        <p class="text-sm text-muted-foreground">
+                            Estreno: <time datetime="2026-12-01">1/12/2026</time>
+                        </p>
+
+                        <p class="text-sm text-muted-foreground">Duración: 1H y 45M</p>
+
+                        <a href="paginas/cartelera.html"
+                           class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+                            Ver detalles
+                        </a>
+                    </div>
+
+                </article>
+
+                <!-- Película 5 -->
+                <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+
+                    <figure class="relative aspect-[2/3] overflow-hidden">
+                        <img
+                            src="img/Backrooms.jpeg"
+                            alt="Backrooms"
+                            width="768"
+                            height="1152"
+                            loading="lazy"
+                            class="h-full w-full object-cover">
+
+                        <figcaption class="absolute inset-x-0 bottom-0 p-4">
+                            <p class="text-xs uppercase tracking-widest text-mustard">TERROR</p>
+                            <h3 class="mt-1 text-xl text-cream">BACKROOMS</h3>
+                        </figcaption>
+                    </figure>
+
+                    <div class="flex flex-1 flex-col gap-3 p-4">
+                        <p class="text-sm text-muted-foreground">Clasificación: +12</p>
+
+                        <p class="text-sm text-muted-foreground">
+                            Estreno: <time datetime="2026-12-20">20/12/2026</time>
+                        </p>
+
+                        <p class="text-sm text-muted-foreground">Duración: 2H</p>
+
+                        <a href="paginas/cartelera.html"
+                           class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+                            Ver detalles
+                        </a>
+                    </div>
+
+                </article>
+
+                <!-- Película 6 -->
+                <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+
+                    <figure class="relative aspect-[2/3] overflow-hidden">
+                        <img
+                            src="img/Stray.jpeg"
+                            alt="Stray Kids Live Event"
+                            width="768"
+                            height="1152"
+                            loading="lazy"
+                            class="h-full w-full object-cover">
+
+                        <figcaption class="absolute inset-x-0 bottom-0 p-4">
+                            <p class="text-xs uppercase tracking-widest text-mustard">POP - DRAMA</p>
+                            <h3 class="mt-1 text-xl text-cream">STRAY KIDS</h3>
+                        </figcaption>
+                    </figure>
+
+                    <div class="flex flex-1 flex-col gap-3 p-4">
+                        <p class="text-sm text-muted-foreground">Clasificación: +12</p>
+
+                        <p class="text-sm text-muted-foreground">
+                            Estreno: <time datetime="2026-12-18">18/12/2026</time>
+                        </p>
+
+                        <p class="text-sm text-muted-foreground">Duración: 1H y 50M</p>
+
+                        <a href="paginas/cartelera.html"
+                           class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+                            Ver detalles
+                        </a>
+                    </div>
+
+                </article>
+
+                <!-- Película 7 -->
+                <article class="group flex flex-col overflow-hidden rounded-xl border-2 border-cream/10 bg-card shadow-ticket">
+
+                    <figure class="relative aspect-[2/3] overflow-hidden">
+                        <img
+                            src="img/Antes-nuevo.jpeg"
+                            alt="Antes de ti"
+                            width="768"
+                            height="1152"
+                            loading="lazy"
+                            class="h-full w-full object-cover">
+
+                        <figcaption class="absolute inset-x-0 bottom-0 p-4">
+                            <p class="text-xs uppercase tracking-widest text-mustard">DRAMA - ROMANCE</p>
+                            <h3 class="mt-1 text-xl text-cream">ANTES DE TI</h3>
+                        </figcaption>
+                    </figure>
+
+                    <div class="flex flex-1 flex-col gap-3 p-4">
+                        <p class="text-sm text-muted-foreground">Clasificación: +18</p>
+
+                        <p class="text-sm text-muted-foreground">
+                            Estreno: <time datetime="2026-12-26">26/12/2026</time>
+                        </p>
+
+                        <p class="text-sm text-muted-foreground">Duración: 1H y 30M</p>
+
+                        <a href="paginas/cartelera.html"
+                           class="mt-auto inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2">
+                            Ver detalles
+                        </a>
+                    </div>
+
+                </article>
+
+            </div>
         </section>
 
-
- 
 
         <!-- 04. Experiencia -->
         <section
@@ -607,45 +517,33 @@
 
                 </header>
 
-
                 <div class="mt-12 grid gap-6 md:grid-cols-3">
 
                     <article class="rounded-2xl border-2 border-cream/10 bg-charcoal p-8 text-center shadow-ticket">
-
                         <h3 class="mt-6 text-xl text-cream">
                             Cine desde tu vehículo
                         </h3>
-
                         <p class="mt-3 text-muted-foreground">
                             Estaciona, sintoniza el audio de la película en la radio de tu carro y disfruta con total comodidad y privacidad.
                         </p>
-
                     </article>
 
-
                     <article class="rounded-2xl border-2 border-cream/10 bg-charcoal p-8 text-center shadow-ticket">
-
                         <h3 class="mt-6 text-xl text-cream">
                             Comida durante la función
                         </h3>
-
                         <p class="mt-3 text-muted-foreground">
                             Crispetas, perros calientes y malteadas llevados directamente a tu ventana, sin perderte ni una escena.
                         </p>
-
                     </article>
 
-
                     <article class="rounded-2xl border-2 border-cream/10 bg-charcoal p-8 text-center shadow-ticket">
-
                         <h3 class="mt-6 text-xl text-cream">
                             Experiencia retro bajo las estrellas
                         </h3>
-
                         <p class="mt-3 text-muted-foreground">
                             Marquesinas de neón, música de los 50 antes de la función y una pantalla gigante bajo el cielo nocturno.
                         </p>
-
                     </article>
 
                 </div>
@@ -653,10 +551,8 @@
             </div>
         </section>
 
-        
 
-
-        <!-- 05 Ubicacione -->
+        <!-- 05. Ubicaciones -->
         <section
             id="05-sedes"
             class="mx-auto max-w-7xl px-4 py-20 sm:px-6"
@@ -678,14 +574,12 @@
 
             </header>
 
-
             <div class="mt-10 grid gap-6 md:grid-cols-3">
 
-                <!-- Sede del norte -->
+                <!-- Sede norte -->
                 <article class="group overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket">
 
                     <figure class="relative aspect-[4/3] overflow-hidden">
-
                         <img
                             src="img/CC-norte1.jpg"
                             alt="Fotografía representativa de Monster's Cinema Norte"
@@ -697,14 +591,10 @@
                         <figcaption class="absolute left-4 top-4 rounded-md bg-charcoal/80 px-3 py-1 font-display text-sm text-mustard">
                             Norte
                         </figcaption>
-
                     </figure>
 
                     <div class="space-y-3 p-5">
-
-                        <h3 class="text-lg text-cream">
-                            Monster's Cinema Norte
-                        </h3>
+                        <h3 class="text-lg text-cream">Monster's Cinema Norte</h3>
 
                         <address class="text-sm text-muted-foreground not-italic">
                             Avenida Ficticia 100 # 20-30, Zona Norte.
@@ -716,17 +606,14 @@
                            class="inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2 w-full">
                             Ver ubicación
                         </a>
-
                     </div>
 
                 </article>
 
-
-                <!-- Sede central -->
+                <!-- Sede centro -->
                 <article class="group overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket">
 
                     <figure class="relative aspect-[4/3] overflow-hidden">
-
                         <img
                             src="img/Centro.jpg"
                             alt="Fotografía representativa de Monster's Cinema Centro"
@@ -738,14 +625,10 @@
                         <figcaption class="absolute left-4 top-4 rounded-md bg-charcoal/80 px-3 py-1 font-display text-sm text-mustard">
                             Centro
                         </figcaption>
-
                     </figure>
 
                     <div class="space-y-3 p-5">
-
-                        <h3 class="text-lg text-cream">
-                            Monster's Cinema Centro
-                        </h3>
+                        <h3 class="text-lg text-cream">Monster's Cinema Centro</h3>
 
                         <address class="text-sm text-muted-foreground not-italic">
                             Calle Demostrativa 50 # 10-15, Zona Centro.
@@ -757,17 +640,14 @@
                            class="inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2 w-full">
                             Ver ubicación
                         </a>
-
                     </div>
 
                 </article>
-
 
                 <!-- Sede sur -->
                 <article class="group overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket">
 
                     <figure class="relative aspect-[4/3] overflow-hidden">
-
                         <img
                             src="img/Sue.jpg"
                             alt="Fotografía representativa de Monster's Cinema Sur"
@@ -779,14 +659,10 @@
                         <figcaption class="absolute left-4 top-4 rounded-md bg-charcoal/80 px-3 py-1 font-display text-sm text-mustard">
                             Sur
                         </figcaption>
-
                     </figure>
 
                     <div class="space-y-3 p-5">
-
-                        <h3 class="text-lg text-cream">
-                            Monster's Cinema Sur
-                        </h3>
+                        <h3 class="text-lg text-cream">Monster's Cinema Sur</h3>
 
                         <address class="text-sm text-muted-foreground not-italic">
                             Carrera Ejemplo 30 # 70-80 Sur, Zona Sur.
@@ -798,7 +674,6 @@
                            class="inline-flex justify-center border-2 border-cream/70 text-cream font-display uppercase h-9 px-4 py-2 w-full">
                             Ver ubicación
                         </a>
-
                     </div>
 
                 </article>
@@ -807,26 +682,25 @@
         </section>
 
 
-        <!-- 06. Recuadro que te redirecciona a la cartelera -->
-          <section class="mx-auto max-w-7xl px-4 sm:px-6">
-    <div class="marquee-bulbs relative overflow-hidden rounded-3xl border-4 border-mustard bg-marquee px-6 py-16 text-center shadow-ticket sm:px-12">
-      <p class="font-script text-3xl text-mustard neon-mustard sm:text-4xl">¡Luces, cámara, motor!</p>
-      <h2 class="mx-auto mt-3 max-w-3xl text-3xl leading-tight text-cream sm:text-5xl">
-        ¡Prepara tu vehículo, nosotros ponemos la película!
-      </h2>
-      <a href="paginas/cartelera.html"
-         class="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-lg border-2 border-charcoal bg-mustard px-7 font-display text-base uppercase tracking-wide text-charcoal shadow-ticket transition-all hover:-translate-y-0.5 hover-glow-mustard">
-        <svg aria-hidden="true" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18M3 7.5h4M3 12h18M3 16.5h4"/></svg>
-        Consultar la cartelera
-      </a>
-    </div>
-  </section>
-</main>
+        <!-- 06. Recuadro que redirige a la cartelera -->
+        <section class="mx-auto max-w-7xl px-4 sm:px-6">
+            <div class="marquee-bulbs relative overflow-hidden rounded-3xl border-4 border-mustard bg-marquee px-6 py-16 text-center shadow-ticket sm:px-12">
+                <p class="font-script text-3xl text-mustard neon-mustard sm:text-4xl">¡Luces, cámara, motor!</p>
+                <h2 class="mx-auto mt-3 max-w-3xl text-3xl leading-tight text-cream sm:text-5xl">
+                    ¡Prepara tu vehículo, nosotros ponemos la película!
+                </h2>
+                <a href="paginas/cartelera.html"
+                   class="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-lg border-2 border-charcoal bg-mustard px-7 font-display text-base uppercase tracking-wide text-charcoal shadow-ticket transition-all hover:-translate-y-0.5 hover-glow-mustard">
+                    <svg aria-hidden="true" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18M3 7.5h4M3 12h18M3 16.5h4"/></svg>
+                    Consultar la cartelera
+                </a>
+            </div>
+        </section>
+    </main>
 
 
-        
-            <!-- fOOTER -->
- <footer class="no-print relative mt-24 border-t-2 border-mustard/30 bg-asphalt">
+    <!-- FOOTER -->
+    <footer class="no-print relative mt-24 border-t-2 border-mustard/30 bg-asphalt">
         <div class="h-2 checker opacity-70" aria-hidden="true"></div>
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:flex lg:justify-between">
             <div class="space-y-4">
@@ -898,25 +772,19 @@
                 <h3 class="mb-4 text-sm text-mustard">Navega</h3>
                 <ul class="space-y-2 text-sm">
                     <li>
-                        <a class="text-cream/80 transition-colors hover:text-mustard" href="index.html">Inicio</a>
+                        <a class="text-cream/80 transition-colors hover:text-mustard" href="index.html" aria-current="page">Inicio</a>
                     </li>
-
                     <li>
                         <a class="text-cream/80 transition-colors hover:text-mustard" href="paginas/cartelera.html">Cartelera</a>
                     </li>
-
                     <li>
-                        <a class="text-cream/80 transition-colors hover:text-mustard" href="paginas/tiquetes.html">Comprar
-                            tiquetes</a>
+                        <a class="text-cream/80 transition-colors hover:text-mustard" href="paginas/tiquetes.html">Comprar tiquetes</a>
                     </li>
-
                     <li>
                         <a class="text-cream/80 transition-colors hover:text-mustard" href="paginas/menu.html">Menú</a>
                     </li>
-
                     <li>
-                        <a class="text-cream/80 transition-colors hover:text-mustard active" href="paginas/ubicaciones.html"
-                            data-status="active" aria-current="page">Ubicaciones</a>
+                        <a class="text-cream/80 transition-colors hover:text-mustard" href="paginas/ubicaciones.html">Ubicaciones</a>
                     </li>
                 </ul>
             </div>
@@ -933,7 +801,7 @@
                                 d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
                             </path>
                         </svg>
-                        <span>+57 300 000 0000 </span>
+                        <span>+57 300 000 0000</span>
                     </li>
                     <li class="flex items-start gap-2">
                         <svg class="lucide lucide-mail mt-0.5 h-4 w-4 shrink-0 text-mustard"
@@ -945,7 +813,6 @@
                         </svg>
                         <span>hola@monsterscinema.example</span>
                     </li>
-
                 </ul>
             </div>
 
@@ -991,17 +858,80 @@
                     © 2026 Monster's Cinema. Todos los derechos reservados. Sitio demostrativo.
                 </p>
                 <div class="flex gap-4">
-                    <a class="hover:text-mustard" href="/privacidad">
-                        Política de privacidad</a>
-                    <a class="hover:text-mustard" href="/terminos">
-                        Términos y condiciones</a>
+                    <a class="hover:text-mustard" href="#">Política de privacidad</a>
+                    <a class="hover:text-mustard" href="#">Términos y condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
 
 
-      <script src="js/menu.js" defer></script>
+    <!-- Script del menú hamburguesa -->
+    <script src="js/menu.js" defer></script>
+
+    <!-- 🥚 Easter egg: modo película antigua (clic en "AUTOCINE - Desde el 67'") -->
+    <script>
+    (function () {
+        const insignia = document.getElementById('insignia-67');
+        if (!insignia) return;
+
+        // Estilos del efecto, inyectados desde JS (no hace falta recompilar Tailwind)
+        const estilos = document.createElement('style');
+        estilos.textContent = `
+            body.cine-antiguo > *:not(.capa-cine) {
+                filter: grayscale(1) sepia(0.6) contrast(1.15) brightness(0.95);
+                animation: parpadeo-cine 0.15s steps(2) infinite;
+            }
+            .capa-cine {
+                position: fixed;
+                inset: 0;
+                z-index: 9999;
+                pointer-events: none;
+                background:
+                    radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,.75) 100%),
+                    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+                animation: grano-cine 0.4s steps(4) infinite;
+            }
+            @keyframes grano-cine {
+                0%   { background-position: 0 0, 0 0; }
+                25%  { background-position: 0 0, -40px 30px; }
+                50%  { background-position: 0 0, 25px -50px; }
+                75%  { background-position: 0 0, -30px -20px; }
+                100% { background-position: 0 0, 0 0; }
+            }
+            @keyframes parpadeo-cine {
+                0%   { opacity: 1; }
+                50%  { opacity: .93; }
+                100% { opacity: 1; }
+            }
+        `;
+        document.head.appendChild(estilos);
+
+        let capa = null;
+        let temporizador = null;
+
+        function activar() {
+            capa = document.createElement('div');
+            capa.className = 'capa-cine';
+            capa.setAttribute('aria-hidden', 'true');
+            document.body.appendChild(capa);
+            document.body.classList.add('cine-antiguo');
+            console.log('🎞️ Modo película antigua: ON');
+            temporizador = setTimeout(desactivar, 8000); // se apaga solo a los 8 segundos
+        }
+
+        function desactivar() {
+            clearTimeout(temporizador);
+            document.body.classList.remove('cine-antiguo');
+            if (capa) capa.remove();
+            capa = null;
+        }
+
+        insignia.addEventListener('click', function () {
+            document.body.classList.contains('cine-antiguo') ? desactivar() : activar();
+        });
+    })();
+    </script>
 
 </body>
 </html>
