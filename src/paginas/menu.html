@@ -1,349 +1,802 @@
 <!DOCTYPE html>
-<html lang="es-CO">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conoce el menú de Monster's Cinema: crispetas, comidas, bebidas y combos para disfrutar durante la función.">
-    <title>Menú de comidas | Monster's Cinema</title>
+
+    <title>Comprar tiquetes | Monster's Cinema</title>
+
+    <!-- Tipografías de la marca -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Bungee&family=Yellowtail&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Bungee&family=Yellowtail&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS compilado -->
     <link rel="stylesheet" href="../css/output.css">
 </head>
+
 <body class="min-h-screen bg-charcoal font-sans text-cream">
-    <!-- HEADER COMPARTIDO DE MONSTER'S CINEMA -->
-    <header class="no-print sticky top-0 z-[1100] border-b-2 border-mustard/30 bg-charcoal/95 backdrop-blur-md">
+
+    <header class="no-print sticky top-0 z-[1100] border-b-2 border-mustard/30 bg-charcoal/90 backdrop-blur-md">
         <div class="h-1.5 checker opacity-80" aria-hidden="true"></div>
-        <div class="relative mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6">
-            <a aria-label="Monster's Cinema — Inicio" class="group inline-flex shrink-0 items-center gap-2.5" href="../index.html">
-                <span class="grid h-11 w-11 place-items-center rounded-full border-2 border-mustard bg-marquee glow-red transition-transform group-hover:rotate-12">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-mustard" aria-hidden="true">
-                        <rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M7 3v18"></path><path d="M3 7.5h4"></path><path d="M3 12h18"></path><path d="M3 16.5h4"></path><path d="M17 3v18"></path><path d="M17 7.5h4"></path><path d="M17 16.5h4"></path>
+
+        <div class="relative mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
+            <a aria-label="Monster's Cinema — Inicio" class="group inline-flex items-center gap-2.5"
+                href="../index.html">
+                <span
+                    class="grid place-items-center rounded-full bg-marquee border-2 border-mustard glow-red transition-transform group-hover:rotate-12 h-11 w-11">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-film text-mustard h-5 w-5" aria-hidden="true">
+                        <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        <path d="M7 3v18"></path>
+                        <path d="M3 7.5h4"></path>
+                        <path d="M3 12h18"></path>
+                        <path d="M3 16.5h4"></path>
+                        <path d="M17 3v18"></path>
+                        <path d="M17 7.5h4"></path>
+                        <path d="M17 16.5h4"></path>
                     </svg>
                 </span>
                 <span class="flex flex-col leading-none">
-                    <span class="font-script text-2xl text-mustard neon-mustard">Monster's</span>
-                    <span class="font-display text-[0.7rem] tracking-[0.3em] text-cream">CINEMA</span>
+                    <span class="font-script text-mustard neon-mustard -rotate-3 text-2xl">Monster's</span>
+                    <span class="font-display tracking-[0.3em] text-cream text-[0.7rem]">CINEMA</span>
                 </span>
             </a>
 
-            <nav id="menu-principal" class="absolute left-0 top-full z-[1200] hidden w-full flex-col gap-2 border-b-2 border-mustard/30 bg-charcoal p-4 shadow-ticket xl:static xl:flex xl:w-auto xl:flex-row xl:items-center xl:gap-1 xl:border-0 xl:bg-transparent xl:p-0 xl:shadow-none" aria-label="Navegación principal">
-                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard" href="../index.html">Inicio</a>
-                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard" href="cartelera.html">Cartelera</a>
-                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard" href="tiquetes.html">Comprar tiquetes</a>
-                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-mustard neon-mustard transition-colors" href="menu.html" aria-current="page">Menú</a>
-                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard" href="ubicaciones.html">Ubicaciones</a>
-                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard" href="nosotros.html">Sobre Nosotros</a>
+            <nav id="menu-principal"
+                class="hidden absolute left-0 top-full z-[1200] w-full flex-col gap-2 border-b-2 border-mustard/30 bg-charcoal p-4 shadow-ticket lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-1 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none"
+                aria-label="Navegación principal">
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard "
+                    href="../index.html">Inicio</a>
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard "
+                    href="cartelera.html">Cartelera</a>
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard "
+                    href="tiquetes.html">Comprar tiquetes</a>
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard !text-mustard neon-mustard"
+                    href="menu.html">Menú</a>
+                <a class="rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-cream/80 transition-colors hover:text-mustard"
+                    href="ubicaciones.html" data-status="active" aria-current="page">Ubicaciones</a>
             </nav>
 
-            <div class="flex shrink-0 items-center gap-2">
-                <a class="inline-flex h-8 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border-2 border-mustard/70 bg-marquee px-2 font-display text-xs uppercase tracking-wide text-primary-foreground shadow-ticket transition-all hover:-translate-y-0.5 hover:glow-red sm:h-9 sm:px-4 sm:text-sm" href="tiquetes.html" aria-label="Comprar tiquetes">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path><path d="M13 5v2"></path><path d="M13 17v2"></path><path d="M13 11v2"></path></svg>
-                    <span class="sm:hidden">Comprar</span><span class="hidden sm:inline">Comprar ahora</span>
+            <div class="flex items-center gap-2">
+                <a class="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-marquee text-primary-foreground font-display uppercase tracking-wide border-2 border-mustard/70 shadow-ticket hover:glow-red hover:-translate-y-0.5 transition-all h-9 px-4 py-2 hidden sm:inline-flex"
+                    href="tiquetes.html ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-ticket" aria-hidden="true">
+                        <path
+                            d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z">
+                        </path>
+                        <path d="M13 5v2"></path>
+                        <path d="M13 17v2"></path>
+                        <path d="M13 11v2"></path>
+                    </svg>
+                    Comprar ahora
                 </a>
-                <button id="boton-menu" class="grid h-10 w-10 place-items-center rounded-md border border-cream/20 text-cream transition-colors hover:border-mustard hover:text-mustard xl:hidden" aria-label="Abrir menú" type="button" aria-controls="menu-principal" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+                <button id="boton-menu"
+                    class="grid h-10 w-10 place-items-center rounded-md border border-cream/20 text-cream transition-colors hover:border-mustard hover:text-mustard cursor-pointer lg:hidden"
+                    aria-label="Abrir menú" type="button" aria-controls="menu-principal" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-menu h-5 w-5" aria-hidden="true">
+                        <path d="M4 5h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 19h16"></path>
+                    </svg>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- PORTADA CON DEGRADADO ROJO Y ESTRELLAS -->
-    <section class="relative isolate overflow-hidden border-b-2 border-mustard/30 bg-charcoal px-4 py-14 sm:px-6 md:py-16" aria-labelledby="titulo-menu">
-        <div class="starfield absolute inset-0 opacity-70" aria-hidden="true"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-vintage-red/45 via-vintage-red/15 to-charcoal" aria-hidden="true"></div>
-        <div class="relative z-10 mx-auto max-w-7xl">
-            <p class="font-script text-3xl text-mustard neon-mustard sm:text-4xl">Snack bar</p>
-            <h1 id="titulo-menu" class="mt-1 font-display text-4xl uppercase leading-tight text-cream sm:text-5xl md:text-6xl">Menú de comidas</h1>
-            <p class="mt-4 max-w-2xl text-base leading-relaxed text-cream/80 sm:text-lg">Todo se entrega en la ventana de tu vehículo durante la función. Precios en pesos colombianos (COP).</p>
+    <hr class="border-mustard/20">
+    <section class="w-full py-12 bg-gradient-to-b from-vintage-red/25">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-mustard neon-mustard text-3xl font-script">Snack bar</p>
+            <br>
+            <h1 class="text-5xl">Menú de comida</h1>
+            <br>
+            <p class="font-bol">Todo se entrega en la ventana de tu vehículo durante la función.</p>
         </div>
     </section>
+    <hr class="border-mustard/20 border-1">
 
-    <!-- NAVEGACIÓN POR CATEGORÍAS -->
-    <nav class="sticky top-24 z-40 border-b border-mustard/25 bg-charcoal/95 px-4 py-3 backdrop-blur-md sm:px-6" aria-label="Categorías del menú">
-        <div class="mx-auto flex max-w-7xl flex-wrap gap-2">
-            <a href="#crispetas" class="category-link rounded-full border border-mustard bg-mustard px-4 py-2 font-display text-xs uppercase text-charcoal transition-colors">Crispetas</a>
-            <a href="#comidas" class="category-link rounded-full border border-cream/25 px-4 py-2 font-display text-xs uppercase text-cream/80 transition-colors hover:border-mustard hover:text-mustard">Comidas</a>
-            <a href="#bebidas" class="category-link rounded-full border border-cream/25 px-4 py-2 font-display text-xs uppercase text-cream/80 transition-colors hover:border-mustard hover:text-mustard">Bebidas</a>
-            <a href="#combos" class="category-link rounded-full border border-cream/25 px-4 py-2 font-display text-xs uppercase text-cream/80 transition-colors hover:border-mustard hover:text-mustard">Combos</a>
+    <div class="m-3 justify-between">
+        <br>
+        <span
+            class="rounded-full m-2 border-2 border-gray-500 px-4 py-1 text-sm font-display font-medium text-white hover:border-mustard hover:text-mustard">
+            <a href="#crispetas">Crispetas</a>
+        </span>
+        <span
+            class="rounded-full border-2 m-2 border-gray-500 px-4 py-1 text-sm font-display font-medium text-white hover:border-mustard hover:text-mustard">
+            <a href="#comidas">Comidas</a>
+        </span>
+        <span
+            class="rounded-full border-2 m-2 border-gray-500 px-4 py-1 text-sm font-display font-medium text-white hover:border-mustard hover:text-mustard">
+            <a href="#bebidas">Bebidas</a>
+        </span>
+        <span
+            class="rounded-full border-2 m-2 border-gray-500 px-4 py-1 text-sm font-display font-medium text-white hover:border-mustard hover:text-mustard">
+            <a href="#combos">Combos</a>
+        </span>
+    </div>
+    <br>
+
+    <!-- CONTENEDOR PRINCIPAL: Menú + Carrito ARREGLADO -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 flex flex-col lg:flex-row gap-10 items-start relative">
+
+        <!-- COLUMNA IZQUIERDA: Lista de Productos (70%) -->
+        <div class="w-full lg:w-[70%] xl:w-[75%] min-w-0 space-y-16">
+
+            <!-- SECCIÓN: CRISPETAS -->
+            <section id="crispetas" class="scroll-mt-32">
+                <h2 class="text-4xl font-display text-cream uppercase tracking-wide">Crispetas</h2>
+                <p class="text-mustard font-script text-xl mb-6">Recién hechas, con mantequilla dorada</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Tarjeta 1 -->
+                    <div class="bg-[#1a1c23] border border-gray-700 rounded-xl overflow-hidden shadow-lg flex flex-col">
+                        <img src="../img/crispetas-pequenas.jpg" alt="Crispetas Pequeñas"
+                            class="w-full h-48 object-cover">
+                        <div class="p-5 flex flex-col flex-1 justify-between">
+                            <div>
+                                <h3 class="font-display text-cream text-xl uppercase mb-2">Crispetas Pequeñas</h3>
+                                <p class="text-sm text-gray-400">Porción individual de crispetas con mantequilla o sal
+                                    (85 g).</p>
+                            </div>
+                            <div class="flex items-center justify-between mt-6">
+                                <span class="text-mustard font-bold text-xl font-display">$ 12.000</span>
+                                <button
+                                    class="btn-agregar group relative flex items-center justify-center gap-2 bg-gradient-to-t from-[#991b1b] to-[#c33131] hover:from-red-600 hover:to-red-500 text-cream px-4 py-2 rounded-lg text-sm font-bold font-display tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(220,38,38,0.6)] active:scale-95 border border-red-400/30"
+                                    data-id="c1" data-nombre="Crispetas Pequeñas" data-precio="12000">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    AGREGAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div
+                        class="bg-[#1a1c23] border border-mustard/50 rounded-xl overflow-hidden shadow-lg flex flex-col relative">
+                        <span
+                            class="absolute top-3 left-3 bg-mustard text-charcoal text-[10px] font-bold px-2 py-1 rounded-sm uppercase">Favorita</span>
+                        <img src="../img/crispetas-medianas.jpg" alt="Crispetas Medianas"
+                            class="w-full h-48 object-cover">
+                        <div class="p-5 flex flex-col flex-1 justify-between">
+                            <div>
+                                <h3 class="font-display text-cream text-xl uppercase mb-2">Crispetas Medianas</h3>
+                                <p class="text-sm text-gray-400">Para compartir entre dos. Mantequilla, sal o caramelo
+                                    (130 g).</p>
+                            </div>
+                            <div class="flex items-center justify-between mt-6">
+                                <span class="text-mustard font-bold text-xl font-display">$ 16.000</span>
+                                <button
+                                    class="btn-agregar group relative flex items-center justify-center gap-2 bg-gradient-to-t from-[#991b1b] to-[#c33131] hover:from-red-600 hover:to-red-500 text-cream px-4 py-2 rounded-lg text-sm font-bold font-display tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(220,38,38,0.6)] active:scale-95 border border-red-400/30"
+                                    data-id="c2" data-nombre="Crispetas Medianas" data-precio="16000">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    AGREGAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="bg-[#1a1c23] border border-gray-700 rounded-xl overflow-hidden shadow-lg flex flex-col">
+                        <img src="../img/crispetas-grandes.jpg"
+                            alt="Crispetas Grandes" class="w-full h-48 object-cover">
+                        <div class="p-5 flex flex-col flex-1 justify-between">
+                            <div>
+                                <h3 class="font-display text-cream text-xl uppercase mb-2">Crispetas Grandes</h3>
+                                <p class="text-sm text-gray-400">El balde clásico para todo el carro. Recarga de
+                                    mantequilla incluida (200 g).</p>
+                            </div>
+                            <div class="flex items-center justify-between mt-6">
+                                <span class="text-mustard font-bold text-xl font-display">$ 20.000</span>
+                                <button
+                                    class="btn-agregar group relative flex items-center justify-center gap-2 bg-gradient-to-t from-[#991b1b] to-[#c33131] hover:from-red-600 hover:to-red-500 text-cream px-4 py-2 rounded-lg text-sm font-bold font-display tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(220,38,38,0.6)] active:scale-95 border border-red-400/30"
+                                    data-id="c3" data-nombre="Crispetas Grandes" data-precio="20000">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    AGREGAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: COMIDAS -->
+            <section id="comidas" class="scroll-mt-32">
+                <h2 class="text-4xl font-display text-cream uppercase tracking-wide">Comidas</h2>
+                <p class="text-mustard font-script text-xl mb-6">Clásicos de autocine para la función</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Tarjeta 4 -->
+                    <div class="bg-[#1a1c23] border border-gray-700 rounded-xl overflow-hidden shadow-lg flex flex-col">
+                        <img src="../img/perro-caliente.jpg"
+                            alt="Perro Caliente" class="w-full h-48 object-cover">
+                        <div class="p-5 flex flex-col flex-1 justify-between">
+                            <div>
+                                <h3 class="font-display text-cream text-xl uppercase mb-2">Perro Caliente</h3>
+                                <p class="text-sm text-gray-400">Salchicha americana, pan brioche, cebolla crocante,
+                                    papitas y salsas.</p>
+                            </div>
+                            <div class="flex items-center justify-between mt-6">
+                                <span class="text-mustard font-bold text-xl font-display">$ 14.000</span>
+                                <button
+                                    class="btn-agregar group relative flex items-center justify-center gap-2 bg-gradient-to-t from-[#991b1b] to-[#c33131] hover:from-red-600 hover:to-red-500 text-cream px-4 py-2 rounded-lg text-sm font-bold font-display tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(220,38,38,0.6)] active:scale-95 border border-red-400/30"
+                                    data-id="f1" data-nombre="Perro Caliente" data-precio="14000">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    AGREGAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <div
+                        class="bg-[#1a1c23] border border-gray-700 rounded-xl overflow-hidden shadow-lg flex flex-col relative">
+                        <span
+                            class="absolute top-3 left-3 bg-mustard text-charcoal text-[10px] font-bold px-2 py-1 rounded-sm uppercase">Nueva</span>
+                        <img src="../img/hamburguesa.jpg"
+                            alt="Hamburguesa Monster" class="w-full h-48 object-cover">
+                        <div class="p-5 flex flex-col flex-1 justify-between">
+                            <div>
+                                <h3 class="font-display text-cream text-xl uppercase mb-2">Hamburguesa Monster</h3>
+                                <p class="text-sm text-gray-400">Carne de res 150 g, queso cheddar, tocineta, lechuga y
+                                    salsa de la casa.</p>
+                            </div>
+                            <div class="flex items-center justify-between mt-6">
+                                <span class="text-mustard font-bold text-xl font-display">$ 22.000</span>
+                                <button
+                                    class="btn-agregar group relative flex items-center justify-center gap-2 bg-gradient-to-t from-[#991b1b] to-[#c33131] hover:from-red-600 hover:to-red-500 text-cream px-4 py-2 rounded-lg text-sm font-bold font-display tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(220,38,38,0.6)] active:scale-95 border border-red-400/30"
+                                    data-id="f2" data-nombre="Hamburguesa Monster" data-precio="22000">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    AGREGAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: BEBIDAS -->
+            <section id="bebidas" class="scroll-mt-32 mt-16">
+                <h2 class="text-4xl font-display text-cream uppercase tracking-wide">Bebidas</h2>
+                <p class="text-mustard font-script text-xl mb-6">Refrescantes y clásicas</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Tarjeta Bebida 1 -->
+                    <div
+                        class="bg-[#1a1c23] border border-gray-700 rounded-xl overflow-hidden shadow-lg flex flex-col hover:border-gray-500 transition-colors">
+                        <img src="../img/gaseosa.jpg"
+                            alt="Gaseosa Clásica" class="w-full h-48 object-cover">
+                        <div class="p-5 flex flex-col flex-1 justify-between">
+                            <div>
+                                <h3 class="font-display text-cream text-xl uppercase mb-2">Gaseosa Clásica</h3>
+                                <p class="text-sm text-gray-400">Vaso de 16 oz bien frío. Sabores surtidos a elección.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between mt-6">
+                                <span class="text-mustard font-bold text-xl font-display">$ 8.000</span>
+                                <button
+                                    class="btn-agregar group relative flex items-center justify-center gap-2 bg-gradient-to-t from-[#991b1b] to-[#c33131] hover:from-red-600 hover:to-red-500 text-cream px-4 py-2 rounded-lg text-sm font-bold font-display tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(220,38,38,0.6)] active:scale-95 border border-red-400/30"
+                                    data-id="b1" data-nombre="Gaseosa Clásica" data-precio="8000">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    AGREGAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Bebida 2 -->
+                    <div
+                        class="bg-[#1a1c23] border border-gray-700 rounded-xl overflow-hidden shadow-lg flex flex-col hover:border-gray-500 transition-colors">
+                        <img src="../img/malteada.jpg"
+                            alt="Malteada Monster" class="w-full h-48 object-cover">
+                        <div class="p-5 flex flex-col flex-1 justify-between">
+                            <div>
+                                <h3 class="font-display text-cream text-xl uppercase mb-2">Malteada Monster</h3>
+                                <p class="text-sm text-gray-400">Batido espeso de vainilla o chocolate con crema batida
+                                    y cereza.</p>
+                            </div>
+                            <div class="flex items-center justify-between mt-6">
+                                <span class="text-mustard font-bold text-xl font-display">$ 14.000</span>
+                                <button
+                                    class="btn-agregar group relative flex items-center justify-center gap-2 bg-gradient-to-t from-[#991b1b] to-[#c33131] hover:from-red-600 hover:to-red-500 text-cream px-4 py-2 rounded-lg text-sm font-bold font-display tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(220,38,38,0.6)] active:scale-95 border border-red-400/30"
+                                    data-id="b2" data-nombre="Malteada Monster" data-precio="14000">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    AGREGAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: COMBOS -->
+            <section id="combos" class="scroll-mt-32 mt-16">
+                <h2 class="text-4xl font-display text-cream uppercase tracking-wide">Combos</h2>
+                <p class="text-mustard font-script text-xl mb-6">La mejor experiencia para compartir</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Tarjeta Combo 1 -->
+                    <div
+                        class="bg-[#1a1c23] border border-mustard/60 rounded-xl overflow-hidden shadow-lg flex flex-col relative glow-mustard-subtle">
+                        <span
+                            class="absolute top-3 left-3 bg-mustard text-charcoal text-[10px] font-bold px-2 py-1 rounded-sm uppercase">Más
+                            vendido</span>
+                        <img src="../img/combo-pareja.jpg"
+                            alt="Combo Pareja" class="w-full h-48 object-cover">
+                        <div class="p-5 flex flex-col flex-1 justify-between">
+                            <div>
+                                <h3 class="font-display text-cream text-xl uppercase mb-2">Combo Pareja</h3>
+                                <p class="text-sm text-gray-400">1 Crispetas Grandes + 2 Gaseosas Clásicas. Ideal para
+                                    la función doble.</p>
+                            </div>
+                            <div class="flex items-center justify-between mt-6">
+                                <span class="text-mustard font-bold text-xl font-display">$ 32.000</span>
+                                <button
+                                    class="btn-agregar group relative flex items-center justify-center gap-2 bg-gradient-to-t from-[#991b1b] to-[#c33131] hover:from-red-600 hover:to-red-500 text-cream px-4 py-2 rounded-lg text-sm font-bold font-display tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(220,38,38,0.6)] active:scale-95 border border-red-400/30"
+                                    data-id="cb1" data-nombre="Combo Pareja" data-precio="32000">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    AGREGAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Combo 2 -->
+                    <div
+                        class="bg-[#1a1c23] border border-gray-700 rounded-xl overflow-hidden shadow-lg flex flex-col hover:border-gray-500 transition-colors">
+                        <img src="../img/combo-familiar.jpg"
+                            alt="Combo Drive-In" class="w-full h-48 object-cover">
+                        <div class="p-5 flex flex-col flex-1 justify-between">
+                            <div>
+                                <h3 class="font-display text-cream text-xl uppercase mb-2">Combo Drive-In</h3>
+                                <p class="text-sm text-gray-400">2 Hamburguesas Monster + 1 Crispetas Medianas + 2
+                                    Gaseosas.</p>
+                            </div>
+                            <div class="flex items-center justify-between mt-6">
+                                <span class="text-mustard font-bold text-xl font-display">$ 65.000</span>
+                                <button
+                                    class="btn-agregar group relative flex items-center justify-center gap-2 bg-gradient-to-t from-[#991b1b] to-[#c33131] hover:from-red-600 hover:to-red-500 text-cream px-4 py-2 rounded-lg text-sm font-bold font-display tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(220,38,38,0.6)] active:scale-95 border border-red-400/30"
+                                    data-id="cb2" data-nombre="Combo Drive-In" data-precio="65000">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    AGREGAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </nav>
 
-    <main class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:py-10">
-        <div class="grid grid-cols-1 items-start gap-8 xl:grid-cols-[minmax(0,1fr)_22rem]">
-            <div class="min-w-0 space-y-10">
-                <section id="crispetas" class="scroll-mt-36" aria-labelledby="titulo-crispetas">
-                    <header class="mb-5 border-b-2 border-dashed border-cream/15 pb-3">
-                        <h2 id="titulo-crispetas" class="font-display text-2xl text-cream sm:text-3xl">Crispetas</h2>
-                        <p class="font-script text-xl text-mustard neon-mustard">Recién hechas, con mantequilla dorada</p>
-                    </header>
-                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/crispetas-pequenas.jpg" alt="Crispetas pequeñas en recipiente clásico rojo y blanco" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Crispetas pequeñas</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Porción individual de crispetas con mantequilla o sal (85 g).</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 12.000</p>
-                            <button type="button" data-add-item data-id="pop-small" data-name="Crispetas pequeñas" data-price="12000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/crispetas-medianas.jpg" alt="Crispetas medianas en recipiente clásico rojo y blanco" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Crispetas medianas</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Para compartir entre dos. Mantequilla, sal o caramelo (130 g).</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 16.000</p>
-                            <button type="button" data-add-item data-id="pop-medium" data-name="Crispetas medianas" data-price="16000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/crispetas-grandes.jpg" alt="Crispetas grandes en recipiente clásico rojo y blanco" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Crispetas grandes</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">El balde clásico para todo el carro. Recarga de mantequilla incluida (200 g).</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 20.000</p>
-                            <button type="button" data-add-item data-id="pop-large" data-name="Crispetas grandes" data-price="20000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>
-                    </div>
-                </section>
+        <!-- COLUMNA DERECHA: Carrito de Compras (30%) -->
+        <div class="w-full lg:w-[30%] xl:w-[25%] lg:max-w-[350px] shrink-0 sticky top-28">
+            <div class="bg-[#1a1c23] border border-gray-700 rounded-xl p-5 shadow-xl">
+                <!-- Cabecera del carrito -->
+                <div class="flex items-center justify-between border-b border-gray-700 pb-4 mb-4">
+                    <h3 class="text-mustard font-display text-xl flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                            <path d="M3 6h18" />
+                            <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
+                        TU PEDIDO
+                    </h3>
+                    <button id="btnVaciar"
+                        class="text-gray-400 text-sm hover:text-white transition-colors">Vaciar</button>
+                </div>
 
-                <section id="comidas" class="scroll-mt-36" aria-labelledby="titulo-comidas">
-                    <header class="mb-5 border-b-2 border-dashed border-cream/15 pb-3">
-                        <h2 id="titulo-comidas" class="font-display text-2xl text-cream sm:text-3xl">Comidas</h2>
-                        <p class="font-script text-xl text-mustard neon-mustard">Clásicos de autocine, perfectos para la función</p>
-                    </header>
-                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/perro-caliente.jpg" alt="Perro caliente estilo autocine" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Perro caliente</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Salchicha americana, pan brioche, cebolla crocante, mostaza, kétchup y salsas.</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 14.000</p>
-                            <button type="button" data-add-item data-id="hotdog" data-name="Perro caliente" data-price="14000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/hamburguesa.jpg" alt="Hamburguesa Monster con queso y vegetales" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <span class="absolute left-3 top-3 rounded-full bg-mustard px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-charcoal">Nuevo</span>
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Hamburguesa Monster</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Carne de res (150 g), queso cheddar, tocineta, lechuga y salsa de la casa.</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 22.000</p>
-                            <button type="button" data-add-item data-id="burger" data-name="Hamburguesa Monster" data-price="22000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/nachos.jpg" alt="Nachos con queso cheddar y jalapeños" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Nachos con queso</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Totopos crujientes bañados en queso cheddar caliente y jalapeños.</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 16.000</p>
-                            <button type="button" data-add-item data-id="nachos" data-name="Nachos con queso" data-price="16000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/papas.jpg" alt="Porción de papas fritas en recipiente rojo y blanco" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Papas fritas</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Papas a la francesa doradas con sal de la casa y salsa a elección.</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 10.000</p>
-                            <button type="button" data-add-item data-id="fries" data-name="Papas fritas" data-price="10000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>
-                    </div>
-                </section>
+                <!-- Lista de productos añadidos -->
+                <div id="listaCarrito" class="space-y-4 max-h-96 overflow-y-auto pr-2 mb-6">
+                    <p id="carritoVacio" class="text-gray-500 text-center py-6 text-sm">Tu carrito está vacío.</p>
+                </div>
 
-                <section id="bebidas" class="scroll-mt-36" aria-labelledby="titulo-bebidas">
-                    <header class="mb-5 border-b-2 border-dashed border-cream/15 pb-3">
-                        <h2 id="titulo-bebidas" class="font-display text-2xl text-cream sm:text-3xl">Bebidas</h2>
-                        <p class="font-script text-xl text-mustard neon-mustard">Bien frías, directo a tu ventana</p>
-                    </header>
-                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/gaseosa.jpg" alt="Gaseosa fría en vaso de cine" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Gaseosa</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Vaso de 22 oz con hielo. Sabores cola, naranja, limón o uva.</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 7.000</p>
-                            <button type="button" data-add-item data-id="soda" data-name="Gaseosa" data-price="7000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
+                <!-- Resumen y botón de pago -->
+                <div class="border-t border-gray-700 pt-4">
+                    <div class="flex justify-between items-end mb-4">
+                        <div class="flex flex-col">
+                            <span class="text-gray-400 text-xs mb-1">Productos: <span id="cantidadTotal">0</span></span>
+                            <span class="font-display text-cream text-lg uppercase">Total</span>
                         </div>
+                        <span id="precioTotal" class="font-display text-mustard text-2xl">$ 0</span>
                     </div>
-                </article>                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/agua.jpg" alt="Botella de agua" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Agua</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Botella de agua de 600 ml, con o sin gas.</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 5.000</p>
-                            <button type="button" data-add-item data-id="water" data-name="Agua" data-price="5000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/jugo.jpg" alt="Jugo natural de fruta tropical" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Jugo natural</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Jugo de fruta natural de 16 oz: mango, mora, lulo o maracuyá.</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 8.000</p>
-                            <button type="button" data-add-item data-id="juice" data-name="Jugo natural" data-price="8000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/malteada.jpg" alt="Malteada de chocolate con crema batida" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Malteada</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Malteada cremosa de vainilla, chocolate o fresa con crema batida.</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 13.000</p>
-                            <button type="button" data-add-item data-id="shake" data-name="Malteada" data-price="13000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>
-                    </div>
-                </section>
-
-                <section id="combos" class="scroll-mt-36" aria-labelledby="titulo-combos">
-                    <header class="mb-5 border-b-2 border-dashed border-cream/15 pb-3">
-                        <h2 id="titulo-combos" class="font-display text-2xl text-cream sm:text-3xl">Combos</h2>
-                        <p class="font-script text-xl text-mustard neon-mustard">Más sabor, mejor precio</p>
-                    </header>
-                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/combo-clasico.jpg" alt="Combo clásico con crispetas medianas y dos gaseosas" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <span class="absolute left-3 top-3 rounded-full bg-mustard px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-charcoal">Ahorra $ 4.000</span>
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Combo clásico</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Crispetas medianas + dos gaseosas.</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 26.000</p>
-                            <button type="button" data-add-item data-id="combo-classic" data-name="Combo clásico" data-price="26000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/combo-pareja.jpg" alt="Combo para dos personas con crispetas, bebidas y perros calientes" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <span class="absolute left-3 top-3 rounded-full bg-mustard px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-charcoal">Ahorra $ 8.000</span>
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Combo pareja</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Crispetas grandes + dos bebidas + dos perros calientes.</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 54.000</p>
-                            <button type="button" data-add-item data-id="combo-couple" data-name="Combo pareja" data-price="54000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>                <article class="group flex h-full flex-col overflow-hidden rounded-2xl border-2 border-cream/10 bg-card shadow-ticket transition-all duration-300 hover:-translate-y-1 hover:border-mustard/40">
-                    <figure class="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                        <img src="../img/combo-familiar.jpg" alt="Combo familiar con crispetas, bebidas y perros calientes" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <span class="absolute left-3 top-3 rounded-full bg-mustard px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-charcoal">Ahorra $ 15.000</span>
-                    </figure>
-                    <div class="flex flex-1 flex-col gap-3 p-4">
-                        <div><h3 class="font-display text-base leading-tight text-cream">Combo familiar</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Para compartir en familia: crispetas grandes, dos bebidas y dos perros calientes.</p></div>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
-                            <p class="font-display text-xl text-mustard">$ 89.000</p>
-                            <button type="button" data-add-item data-id="combo-family" data-name="Combo familiar" data-price="89000" class="inline-flex h-9 items-center justify-center gap-2 rounded-lg border-2 border-mustard bg-marquee px-3 font-display text-xs uppercase text-cream transition-all hover:-translate-y-0.5 hover:glow-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mustard"><span aria-hidden="true">＋</span> Agregar</button>
-                        </div>
-                    </div>
-                </article>
-                    </div>
-                </section>
+                    <p class="text-gray-500 text-[10px] mb-4">Impuestos incluidos. Pago simulado en sede.</p>
+                    <button id="btnPagar"
+                        class="w-full bg-mustard hover:bg-yellow-500 text-charcoal font-display text-lg py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled>
+                        REALIZAR PEDIDO
+                    </button>
+                </div>
             </div>
-
-            <!-- RESUMEN DEL PEDIDO: INTERACTIVO EN EL FRONTEND -->
-            <aside class="rounded-3xl border-2 border-mustard/60 bg-card p-5 shadow-ticket xl:sticky xl:top-36" aria-labelledby="titulo-pedido">
-                <div class="flex items-center justify-between gap-3">
-                    <h2 id="titulo-pedido" class="flex items-center gap-2 font-display text-lg text-cream"><span class="text-xl text-mustard" aria-hidden="true">▣</span> Tu pedido</h2>
-                    <button id="vaciar-pedido" type="button" class="hidden text-xs font-semibold text-cream/60 underline transition-colors hover:text-mustard">Vaciar</button>
-                </div>
-                <div id="carrito-vacio" class="flex min-h-44 flex-col items-center justify-center gap-3 text-center">
-                    <span class="text-4xl" aria-hidden="true">🍿</span>
-                    <p class="text-sm text-muted-foreground">Tu carrito está vacío. ¡Agrega algo rico!</p>
-                </div>
-                <ul id="lista-pedido" class="my-5 hidden max-h-72 space-y-3 overflow-y-auto pr-1" aria-live="polite"></ul>
-                <div class="space-y-3 border-t-2 border-dashed border-cream/20 pt-5">
-                    <div class="flex items-center justify-between text-sm text-muted-foreground"><span>Productos</span><span id="cantidad-productos">0</span></div>
-                    <div class="flex items-center justify-between"><span class="font-display text-lg text-cream">Total</span><span id="total-pedido" class="font-display text-2xl text-mustard">$ 0</span></div>
-                    <p class="text-xs leading-relaxed text-muted-foreground">Impuestos incluidos. Pago simulado en sede.</p>
-                    <button id="realizar-pedido" type="button" disabled class="w-full rounded-xl border-2 border-mustard/50 bg-mustard px-5 py-3 font-display text-sm uppercase text-charcoal opacity-50 transition-all hover:-translate-y-0.5 hover:shadow-ticket disabled:cursor-not-allowed disabled:hover:translate-y-0">Realizar pedido</button>
-                    <p id="mensaje-pedido" class="min-h-4 text-center text-xs text-mustard" role="status" aria-live="polite"></p>
-                </div>
-            </aside>
         </div>
-    </main>
+    </div>
 
-    <!-- FOOTER COMPARTIDO -->
-    <footer class="no-print relative mt-16 border-t-2 border-mustard/30 bg-asphalt">
+    <!-- TOAST NOTIFICATION (Mensaje emergente verde) -->
+    <div id="toast"
+        class="fixed top-24 left-1/2 -translate-x-1/2 bg-green-400 text-green-950 px-6 py-3 rounded-md font-medium shadow-lg transition-all duration-300 opacity-0 pointer-events-none z-[2000] flex items-center gap-2 transform -translate-y-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd" />
+        </svg>
+        <span id="toastMensaje">Agregado al carrito</span>
+    </div>
+
+    <!-- MODAL DE COMPRA EXITOSA -->
+    <div id="modalCompra"
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[3000] flex items-center justify-center hidden opacity-0 transition-opacity">
+        <div class="bg-[#1a1c23] border-2 border-mustard p-8 rounded-xl max-w-md w-full text-center shadow-[0_0_30px_rgba(234,179,8,0.2)] transform scale-95 transition-transform"
+            id="modalCuerpo">
+            <div class="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-500" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+            <h2 class="text-4xl font-display text-mustard mb-2">¡Compra Hecha!</h2>
+            <p class="text-cream mb-6">Tu pedido ha sido procesado. Te lo llevaremos a tu vehículo en breve.</p>
+            <div class="bg-charcoal border border-gray-700 p-4 rounded-lg mb-6 text-left">
+                <p class="text-sm text-gray-400 mb-1">Total pagado:</p>
+                <p id="modalTotal" class="text-2xl font-display text-white">$ 0</p>
+            </div>
+            <button id="btnCerrarModal"
+                class="w-full bg-vintage-red hover:bg-red-700 text-white font-bold py-3 rounded-lg transition-colors">
+                VOLVER AL MENÚ
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Estado del carrito
+            let carrito = [];
+
+            // Referencias al DOM
+            const listaCarrito = document.getElementById("listaCarrito");
+            const carritoVacio = document.getElementById("carritoVacio");
+            const cantidadTotal = document.getElementById("cantidadTotal");
+            const precioTotal = document.getElementById("precioTotal");
+            const btnPagar = document.getElementById("btnPagar");
+            const btnVaciar = document.getElementById("btnVaciar");
+
+            const toast = document.getElementById("toast");
+            const toastMensaje = document.getElementById("toastMensaje");
+
+            const modalCompra = document.getElementById("modalCompra");
+            const modalCuerpo = document.getElementById("modalCuerpo");
+            const modalTotal = document.getElementById("modalTotal");
+            const btnCerrarModal = document.getElementById("btnCerrarModal");
+
+            // Formateador de moneda colombiana
+            const formatearDinero = (valor) => {
+                return "$ " + valor.toLocaleString("es-CO");
+            };
+
+            // Actualizar la interfaz del carrito
+            const actualizarCarrito = () => {
+                // Limpiar lista
+                listaCarrito.innerHTML = "";
+                let totalPagar = 0;
+                let totalItems = 0;
+
+                if (carrito.length === 0) {
+                    carritoVacio.style.display = "block";
+                    btnPagar.disabled = true;
+                } else {
+                    carritoVacio.style.display = "none";
+                    btnPagar.disabled = false;
+
+                    carrito.forEach((item, index) => {
+                        totalPagar += item.precio * item.cantidad;
+                        totalItems += item.cantidad;
+
+                        // Crear elemento visual del carrito
+                        const itemHTML = `
+                <div class="flex items-center justify-between bg-charcoal p-3 rounded-lg border border-gray-800">
+                    <div class="flex-1">
+                        <h4 class="text-cream text-sm font-bold">${item.nombre}</h4>
+                        <p class="text-gray-400 text-xs">${formatearDinero(item.precio)} c/u</p>
+                        
+                        <div class="flex items-center gap-3 mt-2">
+                            <button class="btn-restar w-6 h-6 rounded bg-gray-700 text-white flex items-center justify-center hover:bg-gray-600 transition-colors" data-id="${item.id}">-</button>
+                            <span class="text-white text-sm w-4 text-center">${item.cantidad}</span>
+                            <button class="btn-sumar w-6 h-6 rounded bg-gray-700 text-white flex items-center justify-center hover:bg-gray-600 transition-colors" data-id="${item.id}">+</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end gap-2 ml-4">
+                        <span class="text-mustard font-bold">${formatearDinero(item.precio * item.cantidad)}</span>
+                        <button class="btn-eliminar text-gray-500 hover:text-vintage-red transition-colors" data-id="${item.id}">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                        </button>
+                    </div>
+                </div>
+            `;
+                        listaCarrito.insertAdjacentHTML("beforeend", itemHTML);
+                    });
+                }
+
+                cantidadTotal.textContent = totalItems;
+                precioTotal.textContent = formatearDinero(totalPagar);
+
+                // Re-asignar eventos a los botones generados dinámicamente
+                asignarEventosBotonesCarrito();
+            };
+
+            // Función para mostrar el Toast emergente verde
+            let toastTimeout;
+            const mostrarToast = (mensaje) => {
+                toastMensaje.textContent = mensaje;
+                toast.classList.remove("opacity-0", "-translate-y-4");
+                toast.classList.add("opacity-100", "translate-y-0");
+
+                clearTimeout(toastTimeout);
+                toastTimeout = setTimeout(() => {
+                    toast.classList.remove("opacity-100", "translate-y-0");
+                    toast.classList.add("opacity-0", "-translate-y-4");
+                }, 3000);
+            };
+
+            // Agregar producto al carrito
+            document.querySelectorAll(".btn-agregar").forEach((boton) => {
+                boton.addEventListener("click", (e) => {
+                    const id = e.target.dataset.id;
+                    const nombre = e.target.dataset.nombre;
+                    const precio = parseInt(e.target.dataset.precio);
+
+                    const existe = carrito.find((item) => item.id === id);
+
+                    if (existe) {
+                        existe.cantidad++;
+                    } else {
+                        carrito.push({ id, nombre, precio, cantidad: 1 });
+                    }
+
+                    actualizarCarrito();
+                    mostrarToast(`${nombre} agregado al carrito`);
+                });
+            });
+
+            // Controladores de los botones dentro del carrito
+            const asignarEventosBotonesCarrito = () => {
+                // Sumar
+                document.querySelectorAll(".btn-sumar").forEach((btn) => {
+                    btn.addEventListener("click", (e) => {
+                        const id = e.target.dataset.id;
+                        const item = carrito.find((i) => i.id === id);
+                        if (item) item.cantidad++;
+                        actualizarCarrito();
+                    });
+                });
+
+        // Restar
+        document.querySelectorAll(".btn-restar").forEach((btn) => {
+                    btn.addEventListener("click", (e) => {
+                        const id = e.target.dataset.id;
+                        const item = carrito.find((i) => i.id === id);
+                        if (item) {
+                            item.cantidad--;
+                            if (item.cantidad === 0) {
+                                carrito = carrito.filter((i) => i.id !== id);
+                            }
+                        }
+                        actualizarCarrito();
+                    });
+                });
+
+                // Eliminar por completo
+                document.querySelectorAll(".btn-eliminar").forEach((btn) => {
+                    btn.addEventListener("click", (e) => {
+                        const id = e.target.dataset.id;
+                        carrito = carrito.filter((i) => i.id !== id);
+                        actualizarCarrito();
+                    });
+                });
+            };
+
+            // Vaciar todo el carrito
+            btnVaciar.addEventListener("click", () => {
+                carrito = [];
+                actualizarCarrito();
+            });
+
+            // --- LÓGICA DEL RECIBO (MODAL) ---
+            btnPagar.addEventListener("click", () => {
+                if (carrito.length > 0) {
+                    // Pasar el total al modal
+                    modalTotal.textContent = precioTotal.textContent;
+
+                    // Mostrar modal
+                    modalCompra.classList.remove("hidden");
+                    // Pequeño delay para la animación de entrada
+                    setTimeout(() => {
+                        modalCompra.classList.remove("opacity-0");
+                        modalCuerpo.classList.remove("scale-95");
+                        modalCuerpo.classList.add("scale-100");
+                    }, 10);
+
+                    // Vaciar el carrito en el fondo
+                    carrito = [];
+                    actualizarCarrito();
+                }
+            });
+
+            // Cerrar el modal
+            btnCerrarModal.addEventListener("click", () => {
+                modalCompra.classList.add("opacity-0");
+                modalCuerpo.classList.remove("scale-100");
+                modalCuerpo.classList.add("scale-95");
+
+                setTimeout(() => {
+                    modalCompra.classList.add("hidden");
+                }, 300);
+            });
+        });
+    </script>
+    
+    <footer class="no-print relative mt-24 border-t-2 border-mustard/30 bg-asphalt">
         <div class="h-2 checker opacity-70" aria-hidden="true"></div>
-        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:flex lg:justify-between">
-            <div class="space-y-4 lg:max-w-md">
+        <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:flex lg:justify-between">
+            <div class="space-y-4">
                 <a aria-label="Monster's Cinema — Inicio" class="group inline-flex items-center gap-2.5" href="../index.html">
-                    <span class="grid h-14 w-14 place-items-center rounded-full border-2 border-mustard bg-marquee glow-red transition-transform group-hover:rotate-12">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-mustard" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M7 3v18"></path><path d="M3 7.5h4"></path><path d="M3 12h18"></path><path d="M3 16.5h4"></path><path d="M17 3v18"></path><path d="M17 7.5h4"></path><path d="M17 16.5h4"></path></svg>
+                    <span class="grid place-items-center rounded-full bg-marquee border-2 border-mustard glow-red transition-transform group-hover:rotate-12 h-14 w-14">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film text-mustard h-7 w-7" aria-hidden="true">
+                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                            <path d="M7 3v18"></path>
+                            <path d="M3 7.5h4"></path>
+                            <path d="M3 12h18"></path>
+                            <path d="M3 16.5h4"></path>
+                            <path d="M17 3v18"></path>
+                            <path d="M17 7.5h4"></path>
+                            <path d="M17 16.5h4"></path>
+                        </svg>
                     </span>
-                    <span class="flex flex-col leading-none"><span class="font-script text-4xl text-mustard neon-mustard">Monster's</span><span class="font-display text-base tracking-[0.3em] text-cream">CINEMA</span></span>
+                    <span class="flex flex-col leading-none">
+                        <span class="font-script text-mustard neon-mustard -rotate-3 text-4xl">Monster's</span>
+                        <span class="font-display tracking-[0.3em] text-cream text-base">CINEMA</span>
+                    </span>
                 </a>
-                <p class="text-sm leading-relaxed text-muted-foreground">El autocine retro de la ciudad. Clásicos y estrenos en pantalla gigante, crispetas recién hechas y la noche estrellada como techo.</p>
+                <p class="text-sm leading-relaxed text-muted-foreground">
+                    El autocine retro de la ciudad. Clásicos y estrenos en pantalla gigante, crispetas recién hechas y la noche estrellada como techo.
+                </p>
+
                 <div class="flex gap-2">
-                    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
-                    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-                    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard" href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube"><svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg></a>
+                    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                        <svg class="lucide lucide-instagram h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                        </svg>
+                    </a>
+
+                    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook">
+                        <svg class="lucide lucide-facebook h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+
+                    <a class="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream transition-all hover:-translate-y-0.5 hover:border-mustard hover:text-mustard" href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube">
+                        <svg class="lucide lucide-youtube h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+                            <path d="m10 15 5-3-5-3z"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
-            <div><h3 class="mb-4 text-sm text-mustard">Navega</h3><ul class="space-y-2 text-sm">
-                <li><a class="text-cream/80 transition-colors hover:text-mustard" href="../index.html">Inicio</a></li>
-                <li><a class="text-cream/80 transition-colors hover:text-mustard" href="cartelera.html">Cartelera</a></li>
-                <li><a class="text-cream/80 transition-colors hover:text-mustard" href="tiquetes.html">Comprar tiquetes</a></li>
-                <li><a class="text-mustard neon-mustard" href="menu.html" aria-current="page">Menú</a></li>
-                <li><a class="text-cream/80 transition-colors hover:text-mustard" href="ubicaciones.html">Ubicaciones</a></li>
-                <li><a class="text-cream/80 transition-colors hover:text-mustard" href="nosotros.html">Nosotros</a></li>
-            </ul></div>
-            <div><h3 class="mb-4 text-sm text-mustard">Contacto</h3><ul class="space-y-3 text-sm text-cream/80">
-                <li class="flex items-start gap-2"><span class="text-mustard">☎</span><span>+57 300 000 0000</span></li>
-                <li class="flex items-start gap-2"><span class="text-mustard">✉</span><span>hola@monsterscinema.example</span></li>
-            </ul></div>
-            <div><h3 class="mb-4 text-sm text-mustard">Horarios</h3><ul class="space-y-3 text-sm text-cream/80">
-                <li class="flex items-start gap-2"><span class="text-mustard">◷</span><span>Lunes a jueves<br><span class="text-muted-foreground">5:30 p. m. - 11:30 p. m.</span></span></li>
-                <li class="flex items-start gap-2"><span class="text-mustard">◷</span><span>Viernes a domingo y festivos<br><span class="text-muted-foreground">4:30 p. m. - 1:00 a. m.</span></span></li>
-            </ul></div>
+
+            <div>
+                <h3 class="mb-4 text-sm text-mustard">Navega</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a class="text-cream/80 transition-colors hover:text-mustard" href="../index.html">Inicio</a></li>
+                    <li><a class="text-cream/80 transition-colors hover:text-mustard" href="cartelera.html">Cartelera</a></li>
+                    <li><a class="text-cream/80 transition-colors hover:text-mustard" href="tiquetes.html">Comprar tiquetes</a></li>
+                    <li><a class="text-cream/80 transition-colors hover:text-mustard" href="menu.html">Menú</a></li>
+                    <li><a class="text-cream/80 transition-colors hover:text-mustard active" href="ubicaciones.html" data-status="active" aria-current="page">Ubicaciones</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="mb-4 text-sm text-mustard">Contacto</h3>
+                <ul class="space-y-3 text-sm text-cream/80">
+                    <li class="flex items-start gap-2">
+                        <svg class="lucide lucide-phone mt-0.5 h-4 w-4 shrink-0 text-mustard" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                        </svg>
+                        <span>+57 300 000 0000 </span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="lucide lucide-mail mt-0.5 h-4 w-4 shrink-0 text-mustard" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        </svg>
+                        <span>hola@monsterscinema.example</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="mb-4 text-sm text-mustard">Horarios</h3>
+                <ul class="space-y-3 text-sm text-cream/80">
+                    <li class="flex items-start gap-2">
+                        <svg class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                        <span>
+                            Lunes a jueves
+                            <br>
+                            <span class="text-muted-foreground">5:30 p. m. - 11:30 p. m.</span>
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0 text-mustard" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                        <span>
+                            Viernes a domingo y festivos
+                            <br>
+                            <span class="text-muted-foreground">4:30 p. m. - 1:00 a. m.</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="border-t border-border"><div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:px-6">
-            <p>© 2026 Monster's Cinema. Todos los derechos reservados. Sitio demostrativo.</p>
-            <div class="flex gap-4"><a class="hover:text-mustard" href="../privacidad.html">Política de privacidad</a><a class="hover:text-mustard" href="../terminos.html">Términos y condiciones</a></div>
-        </div></div>
+        <div class="border-t border-border">
+            <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:px-6">
+                <p>
+                    © 2026 Monster's Cinema. Todos los derechos reservados. Sitio demostrativo.
+                </p>
+                <div class="flex gap-4">
+                    <a class="hover:text-mustard" href="/privacidad">Política de privacidad</a>
+                    <a class="hover:text-mustard" href="/terminos">Términos y condiciones</a>
+                </div>
+            </div>
+        </div>
     </footer>
-    <script src="../js/menu.js" defer></script>
-    <script src="../js/pedido-menu.js" defer></script>
+
 </body>
 </html>
