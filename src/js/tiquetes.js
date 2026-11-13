@@ -226,7 +226,7 @@ const peliculas = {
 
     pelicula2: {
         nombre: "Thor",
-        imagen: "../img/thor.jpg",
+        imagen: "../img/Thor3.jpg",
         clasificacion: "Clasificación: +12",
         duracion: "2 h 20 min"
     },
@@ -239,13 +239,13 @@ const peliculas = {
     },
     pelicula4: {
         nombre: "Backrooms",
-        imagen: "../img/Backrooms.jpg",
+        imagen: "../img/Backrooms.jpeg",
         clasificacion: "Clasificación: +18",
         duracion: "1 h 45 min"
     },
     pelicula5: {
         nombre: "La Monja ",
-        imagen: "../img/LaMonja.jpeg",
+        imagen: "../img/Lamonja.jpeg",
         clasificacion: "Clasificación: +18",
         duracion: "1 h 30 min"
     },
