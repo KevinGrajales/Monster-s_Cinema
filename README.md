@@ -1,4 +1,6 @@
-Monster's Cinema: https://kevingrajales.github.io/Monster-s_Cinema/
+Monster's Cinema Pagina Principal: https://kevingrajales.github.io/Monster-s_Cinema/
+
+branding: https://github.com/KevinGrajales/Branding-MonstersCinema
 
 
 
@@ -86,3 +88,5 @@ Se implementaron ajustes en la navegación, incluyendo un menú hamburguesa para
 
 
 Monster's Cinema: revive la magia del cine bajo las estrellas. 
+
+
